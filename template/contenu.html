@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	#INCLURE "template/meta_contenu.html"
+#INCLURE "template/js.html"
+</head>
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+        #INCLURE "template/menuaccueil.html"
+		<div id="degMenu"></div>
+		#INCLURE"template/menunochemin.html"
+		<THELIA_CONTENU type="CONTENU"  id="#CONTENU_ID">	
+		<div id="contenu">
+			<h2>#TITRE</h2>
+            #DESCRIPTION
+		</div>
+		</THELIA_CONTENU>
+</div>
+	</div>
+            #INCLURE "template/pied.html"
+		 
+</body>
+</html>

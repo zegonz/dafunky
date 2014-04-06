@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	#INCLURE "template/meta.html"
+	#INCLURE "template/js.html"
+<!-- <link rel="stylesheet" type="text/css" href="js//fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.1.pack.js"></script> -->
+<script type="text/javascript">
+/*        (function($){
+                $(function(){
+                        $("a#modal_auto").fancybox({
+                                "hideOnContentClick": false,
+								"overlayOpacity":"0.5"
+                        }).trigger("click");
+                });
+				setTimeout("parent.$.fancybox.close()", 5000);
+        })(jQuery);*/
+</script>
+</head>
+<body>
+<div id="global" class="sansAriane tunnel">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+        #INCLURE "template/menuaccueil.html"
+		<div id="degMenu"></div>
+		#INCLURE"template/menunochemin.html"
+		<div id="contenu">
+			<div id="etapesDeCommande">
+				<ul>
+					<li class="selection"><span class="chiffreSelection">1</span>Panier</li>
+					<li><span>2</span>Facturation et livraison</li>
+					<li><span>3</span>Je v&eacute;rifie ma c ommande</li>
+					<li><span>4</span>Paiement s&eacute;curis&eacute;</li>
+				</ul>
+			</div>
+            <div class="clear"></div>
+			<h2 class="titre-special">Contenu de mon panier</h2>
+			<T_CONTENU_PANIER>
+			<table width="100%" border="0" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th colspan="2" align="center">Nom du produit</th>
+                    <th align="center">Prix unitaire</th>
+                  <th align="center">Quantit&eacute;</th>
+                  <th align="center">Taille</th>
+                  <th align="center">Total TTC</th>
+                  <th align="center">Vider</th>
+                </tr>
+				<THELIA_CONTENU_PANIER type="PANIER">
+				<tr>
+					<td class="ligne">
+                   	  <THELIA_IMAGE type="IMAGE" num="1" produit="#ID" largeur="50">
+						<img src="#IMAGE" alt="#PRODTITRE " title="#PRODTITRE"/>
+						</THELIA_IMAGE>
+					</td>
+                    <td class="ligne">#TITRE </td>
+                    <td align="center" class="ligne">#PRIXU &euro;</td>
+		    <td align="center" class="ligne">
+
+<form action="#URLPANIER" method="post" name="formpanier#ARTICLE" id="formpanier#ARTICLE">
+<input type="hidden" name="article" value="#ARTICLE" />
+<input type="hidden" name="action" value="modifier" />
+<select name="quantite" size="1" onchange="document.formpanier#ARTICLE.submit()">
+
+<T_DECVAL>
+<THELIA_DEC type="DECVAL" article="#ARTICLE"  ref="#REF">
+<THELIA_stock1 type="declinaison" article="#ARTICLE" produit="#ID" declidisp="#DECLIDISP">
+<option value="1" #SELECTED>1</option>
+</THELIA_stock1>
+</THELIA_DEC>
+</T_DECVAL>
+<THELIA_quantite type="QUANTITE" article="#ARTICLE">
+<option value="#NUM" #SELECTED>#NUM</option>
+</THELIA_quantite>
+<//T_DECVAL>
+</select>
+</form>
+
+					</td>
+                   <td align="center" class="ligne">#DECTEXTE
+                   </td>
+
+				  <td align="center" class="ligne">#TOTAL &euro;</td>
+                  				  
+
+				  <td class="ligne" align="center"><a href="#SUPPRURL">Supprimer</a></td>
+				</tr>
+
+                </THELIA_CONTENU_PANIER>
+                <tr>
+                	<th colspan="5">&nbsp;</th>
+					<th align="right">TOTAL DU PANIER :</th>
+					<th align="center" class="total">#PANIER_TOTAL &euro;</th>
+				</tr>
+			</table>
+       		<div class="queFaire">
+            	<a href="#URLPREC" class="bouton left"><span> &lt; Retour page précédente</span></a>
+  				<a href="#URLFOND(adresse)" class="bouton"><span> &gt; Finaliser ma commande</span></a>
+			</div>
+			</T_CONTENU_PANIER>
+			<h4>Votre panier est vide</h4>
+            <div class="queFaire">
+            	<a href="#URLPREC" class="bouton"><span>Retour page précédente</span></a>
+				<a class="bouton" href="#URLSOMMAIRE"><span> &lt; Retour &agrave; la boutique</span></a>
+			</div>		
+			<//T_CONTENU_PANIER>			
+          <!--  <h3>Information :</h3>
+                <p>ATTENTION : L'&eacute;quipe de DAfunkyplace.com est en <strong class="blue">vacances du 9 au 17 novembre. </strong><br/> Les commandes pass&eacute;es dans cette p&eacute;riode seront exp&eacute;di&eacute;e <strong class="blue">le 19 novembre !</strong>
+                </p>-->
+		</div>
+	</div>
+	</div>
+    	 
+    	#INCLURE "template/pied.html"
+        <!--<a id="modal_auto" href="images/dafunkyplace-holidays.jpg"></a>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<div id="top">
+<div id="logo">
+    <a href="#URLSOMMAIRE" title="retour en page d'accueil"><img src="template/images/logo-dafunky-place.png" alt="logo accueil dafunky place" /></a>
+    <!--<img id="slogan" src="template/images/slogan-party.jpg" alt="accessoires de soirée"  width="197" height="18"/>-->
+   </div>
+    <div id="monPanier">
+        <span class="titreTop">Mon panier</span>
+        <ul id="contenuPanier">
+            <li>
+                <T_PANIER>
+                <a href="#URLPANIER" class="panier">Votre panier contient #PANIER_NBART article(s)</a>
+                <THELIA_PANIER type="PANIER">
+                </THELIA_PANIER>		
+                <ul class="listeProduits">
+                    <THELIA_panier type="PANIER">
+                    <li><a href="#URLPANIER"><span class="nomArticle">#TITRE</span><span class="quantite">x #QUANTITE</span><span class="total">#TOTAL &euro;</span></a></li>
+                    </THELIA_panier>
+					<li><a href="#URLPANIER" class="totalCommande"><span class="titreTotal">TOTAL :</span><span class="total">#PANIER_TOTAL &euro;</span></a></li>			
+				</ul>
+                </T_PANIER>
+                Il n'y a pas de produit dans votre panier.
+                <//T_PANIER>
+            </li>
+        </ul>
+    </div>
+    <div id="monCompte">
+        <span class="titreTop">Mon compte</span>
+        <THELIA SI NON CONNECTE>
+        <form action="#URLCOURANTE" method="post" id="connex" >
+        <input type="hidden" name="action" value="connexion" />
+        <input name="email" type="text" value="e-mail" size="13" onclick="this.value='';" />
+        <input name="motdepasse" type="password" value="000000" size="13" onclick="this.value='';" />
+        <p><button type="submit" class="bouton"><span><span>OK</span></span></button></p>
+        <div class="menu"><a href="#URLFOND(mdpoublie)">Mot de passe perdu ?</a> | <a href="#URLCOMPTE">Mon compte</a></div>
+        </form>
+        </THELIA SI NON CONNECTE>
+        <THELIA SI CONNECTE>
+        Bonjour #CLIENT_PRENOM #CLIENT_NOM
+        <div class="menu">
+        	<a href="#URLFOND(moncompte)">Voir mon compte</a> | <a href="#URLDECONNEXION">Me d&eacute;connecter</a>
+        </div>
+        </THELIA SI CONNECTE>
+	</div>
+    <div id="menunavig">
+        <ul>
+            <li><a href="#URLSOMMAIRE">Boutique</a></li>
+            <li><a href="#VARIABLE(urlsite)/blog__2_.html">Blog</a></li>
+            <li><a href="#VARIABLE(urlsite)/a-propos__1_.html">A propos</a></li>
+            <li><a href="#URLFOND(contact)">Nous contacter</a></li>
+        </ul>
+    </div>
+</div>

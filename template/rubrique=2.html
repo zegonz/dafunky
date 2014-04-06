@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+#INCLURE "template/meta_rubrique.html"
+#INCLURE "template/js.html"
+</head>
+
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+		#INCLURE"template/menuaccueil.html"
+        <div id="degMenu"></div>
+		#INCLURE"template/menu.html"
+         <img  id="bandeau" src="template/images/diapo/Popobe-dark-vador.jpg" width="839" alt="Bandeau Popobe Bear dark vador" />
+        <div id="bandeauTitre">
+        	<h1>#RUBRIQUE_NOM #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
+        </div>
+        <div id="contenuPageRubrique">
+           <div id="choixPopobe">
+           		<h2>Choississez la taille de votre popobe :</h2>
+                <div id="vignetteChoixP">
+           		<a class="choixClefs" href="art-toys_3_popobe-porte-clefs-5-cm_.html">Popobe Bear Porte-clefs</a>
+                <a class="choix7" href="art-toys_24_popobe-porte-clefs-7-cm_.html">Popobe Bear 7cm</a>
+                <a class="choix12" href="art-toys_7_popobe-12-5-cm_.html">Popobe Bear 12,5cm</a>
+           		<a class="choix25" href="art-toys_4_popobe-25-cm_.html">Popobe Bear 25cm</a>
+           		<a class="choix38" href="art-toys_11_popobe-38-cm_.html">Popobe Bear 38cm</a>
+           		<a class="choix76" href="art-toys_25_popobe-76-cm_.html">Popobe Bear 76cm</a>
+                </div>
+           </div>
+		</div>
+	</div>
+</div>
+		 
+		#INCLURE "template/pied.html"
+</div>
+</body>
+</html>

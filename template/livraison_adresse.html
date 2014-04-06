@@ -1,0 +1,84 @@
+      #PARAM_FOND_securise=1 #PARAM_FOND_nopageret=1
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	#INCLURE "template/meta.html"
+	#INCLURE "template/js.html"
+</head>
+<body>
+	
+<div id="global" class="sansAriane">
+<div id="wrapper">
+	<div id="subwrapper">
+	#INCLURE "template/entete.html"
+		#INCLURE  "template/menuaccueil.html"
+        <div id="degMenu"></div>
+		#INCLURE "template/menunochemin.html"
+		<div id="contenu">
+            <h2 class="titre-special">Mon compte : Ajouter une adresse de livraison</h2>
+            <form action="#URLFOND(adresse)" method="post" name="nouveau" id="nouveau">
+            <input type="hidden" name="action" value="creerlivraison" />
+            <input type="hidden" name="urlok" value="#URLPAGERET" />
+            <input type="hidden" name="urlerr" value="#URLFOND(livraison_adresse_err,erradr=1)" />
+            <p>
+            <label for="libelle">Libell&eacute; de l'adresse* </label>
+            <input name="libelle" type="text" />
+            </p>
+            <p>
+            <label for="raison">Civilit&eacute;*</label>
+            <select name="raison" size="1"  >
+            <option value="" selected="selected">Choisissez ...</option>
+            <option value="1">Madame</option>
+            <option value="2">Mademoiselle</option>
+            <option value="3">Monsieur</option>
+            </select>
+            </p>
+            <p>
+            <label for="nom">Nom*</label>
+            <input type="text" name="nom" />			
+            </p>
+            <p>
+            <label for="prenom">Pr&eacute;nom*</label>
+            <input type="text" name="prenom" />		
+            </p>
+            <p>
+            <label for="adresse1">Adresse*</label>
+            <input type="text" name="adresse1" />	
+            </p>
+            <p>
+            <label for="adresse2">Compl&eacute;ment d'adresse </label>
+            <input type="text" name="adresse2" />		
+            </p>
+            <p>
+            <label for="cpostal">Code postal*</label>
+            <input type="text" name="cpostal" />
+            </p>
+            <p>
+            <label for="ville">Ville*</label>
+            <input type="text" name="ville" />
+            </p>
+            <p>
+            <label for="pays">Pays*</label>
+            <select name="pays" size="1"   >
+            <option value="" selected="selected">Choisissez ...</option>
+            <THELIA_pays type="PAYS" zdefinie="1">           
+            <option value="#ID">#TITRE</option>
+            </THELIA_pays>
+            </select>
+            </p>
+            <p>
+            <label for="tel">T&eacute;l&eacute;phone * </label>
+            <input type="text" name="tel" />
+            </p>
+            <p class="derniereLigne"><button type="submit" class="bouton"><span><span>Valider</span></span></button></p>
+            </form>
+		</div>
+
+	</div>
+
+</div>
+    		#INCLURE "template/pied.html"
+		 
+        </div>
+</body>
+</html>

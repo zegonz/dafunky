@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+#INCLURE "template/meta_rubrique.html"
+#INCLURE "template/js.html"
+</head>
+
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+		#INCLURE"template/menuaccueil.html"
+        <div id="degMenu"></div>
+		#INCLURE"template/menu.html"
+         <img  id="bandeau" src="template/images/art-toy-popobe.jpg" alt="Bandeau Popobe Bear" />
+        <div id="bandeauTitre">
+        	<h1>#RUBRIQUE_NOM #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
+        </div>
+		#INCLURE "template/listeProduit.html"
+		</div>
+	</div>
+</div>
+		 
+		#INCLURE "template/pied.html"
+</body>
+</html>

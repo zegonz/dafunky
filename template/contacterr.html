@@ -1,0 +1,73 @@
+#PARAM_FOND_obligenom=1
+#PARAM_FOND_obligeprenom=1
+#PARAM_FOND_obligetel=1
+#PARAM_FOND_obligesujet=1
+#PARAM_FOND_obligemessage=1
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	#INCLURE "template/meta_contenu.html"
+	#INCLURE "template/js.html"
+</head>
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+        #INCLURE "template/menuaccueil.html"
+		<div id="degMenu"></div>
+		#INCLURE"template/menunochemin.html"
+		<div id="contenu">
+                <div id="contact">
+                <h1>Contacter notre boutique Dafunkyplace</h1>
+        <p><span class="obligatoire">Vous avez oubli&eacute; de remplir certain(s) champs obligatoire(s)</span> </p>
+        <div id="formulaire">
+        <form action="#URLFOND(contactok)" method="POST">
+						<input type="hidden" name="action" value="contact" />
+							<div class="fieldset">
+            					<label for="nom">#NOM[<span class="obligatoire">obligatoire ></span>] Nom* : </label>
+								<input name="nom" type="text"  value="#NOM"/>
+							</div>
+							<div class="fieldset">
+            					<label for="prenom">#PRENOM[<span class="obligatoire">obligatoire ></span>] Pr&eacute;nom* : </label>
+								<input name="prenom" type="text" value="#PRENOM" />
+							</div>
+							<div class="fieldset">
+            					<label for="email"> #EMAIL[<span class="obligatoire">obligatoire ></span>] Mon e-mail* :</label>
+								<input name="email" type="text" value="#EMAIL" />
+							</div>
+   							<div class="fieldset">
+								<label for="sujet">#SUJET[<span class="obligatoire">obligatoire > </span>] Objet du message* : </label>
+            					<input name="sujet" type="text" class="objet" value="#SUJET"/>
+                             </div>
+                             <div class="fieldset">
+                                <label for="sujet">#MESSAGE[<span class="obligatoire">obligatoire ></span>] Votre message* : </label>
+                                <textarea name="message" type="message" rows="10" />#MESSAGE</textarea>
+                                </div>
+							<div class="colonneSubmit">
+								<input class="envoicct" type="submit" value="envoyer"></button>
+							</div>
+				</form>
+                </div>	
+            
+	       <div id="coordonnee">
+           	<h2>Coordonn&eacute;es </h2>
+              <p>Thomas BONNAMOUR</p>
+				<p>71C rue Marcel Thil</p>
+				<p>51100 REIMS</p>
+             	<p>Par t&eacute;l&eacute;phone : 06.22.45.64.00</p>
+           </div>  
+           </div>
+		</div>
+</div>
+	</div>
+            #INCLURE "template/pied.html"
+		 
+</div>
+</body>
+</html>
+
+    
+    
+    
+				

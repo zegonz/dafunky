@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	#INCLURE "template/meta_contenu.html"
+#INCLURE "template/js.html"
+<link rel="stylesheet" href="js/jquery.superbox.css" type="text/css" media="all" />
+	<script type="text/javascript" src="js/jquery.superbox-min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.superbox.settings = {
+				overlayOpacity: 0.7,
+				closeTxt: "Fermer",
+				loadTxt: "Chargement...",
+				nextTxt: "Image suivante",
+				prevTxt: "Image précédente"
+			};
+			$.superbox();
+		});
+	</script>
+</head>
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+        #INCLURE "template/menuaccueil.html"
+		<div id="degMenu"></div>
+		#INCLURE"template/menunochemin.html"
+		<THELIA_CONTENU type="CONTENU"  id="#CONTENU_ID">	
+		<div id="article">
+            <div id="titreNews">
+                <h1>#TITRE</h1>
+                <small>Post&eacute; le #FILTRE_datefrancaise(#DATE)</small>
+			</div>
+            <THELIA_IMAGE type="IMAGE" num="1" contenu="#ID"  largeur="500" >
+                <THELIA_ZOOM type="IMAGE"  num="1" id="#ID" largeur="800">
+                <div id="articleIllu">
+                    <a href="#IMAGE" rel="superbox[gallery][my_gallery]" class="grandeImage"  title="#TITRE">
+                    </THELIA_ZOOM>
+                    <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
+                    </a>
+                </div>
+             </THELIA_IMAGE>
+             <div id="articleContenu">
+                 #DESCRIPTION
+                   <T_vignette>
+                    <ul class="vignettes">
+                    	<THELIA_vignette type="IMAGE" contenu="#ID" debut="2" hauteur="100">
+						<li>
+							<THELIA_ZOOM_VIGNETTE type="IMAGE"  num="1" id="#ID" largeur="800" hauteur="600">
+                            <a href="#IMAGE" rel="superbox[gallery][my_gallery]">
+							</THELIA_ZOOM_VIGNETTE>
+                            <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
+							</a>
+						</li>
+                    	</THELIA_vignette>
+                    </ul>
+					</T_vignette>
+					<//T_vignette>
+             </div>
+             
+ 
+                    <div class="clear"></div>
+  					<div id="video">
+                    #POSTSCRIPTUM
+                    </div>
+        <div id="retourBlog">
+        	<a href="blog__2_.html">Retour sommaire blog</a>
+        </div>
+        <div id="socialLink">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+<a class="addthis_button_compact" ></a>
+
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e789c6f53725110"></script>
+<!-- AddThis Button END -->
+</div>            	
+        
+		</div>
+		</THELIA_CONTENU>
+</div>
+	</div>
+            #INCLURE "template/pied.html"
+		 
+</div>
+</body>
+</html>

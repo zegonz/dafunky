@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	#INCLURE "template/meta_dossier.html"
+#INCLURE "template/js.html"
+</head>
+<body>
+<div id="global" class="sansAriane">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+        #INCLURE "template/menuaccueil.html"
+		<div id="degMenu"></div>
+		#INCLURE "template/menunochemin.html"
+    	<THELIA_DOSSIER type="DOSSIER"  id="#DOSSIER_ID">
+		<div id="contenu">
+        	<div id="dossier">
+                <h1 class="titre-special">#TITRE</h1>
+                #DESCRIPTION	
+                <ul><THELIA_CONTENU type="CONTENU"  dossier="#ID">
+                <li><a href="#URL">#TITRE</a></li>
+<!--                <THELIA_IMAGE type="IMAGE" num="1" contenu="#ID"  largeur="150" >
+                <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="image"/>
+                </THELIA_IMAGE>
+                #DESCRIPTION	-->		
+                </THELIA_CONTENU></ul>
+            </div>
+		</div>
+		</THELIA_DOSSIER>
+	</div>
+    </div>
+    		 
+		#INCLURE "template/pied.html"
+</div>
+
+
+</body>
+</html>

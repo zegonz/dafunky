@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	#INCLURE "template/meta_dossier.html"
+	#INCLURE "template/js.html"
+</head>
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+        #INCLURE "template/menuaccueil.html"
+		<div id="degMenu"></div>
+		#INCLURE"template/menunochemin.html"
+    	<!--<THELIA_DOSSIER type="DOSSIER" id="#DOSSIER_ID">-->
+        
+		<div id="contenu">
+        	<div id="blog">
+                <h1><span class="da">DA</span><small>FUNKY BLOG</small></h1>
+                 <THELIA_CONTENU type="CONTENU" dossier="#ID" classement="manuel">
+                <div class="news">
+                    <div class="illu">
+                        <a href="#URL">
+                            <THELIA_IMAGE type="IMAGE" num="1" contenu="#ID" hauteur="190"   >
+                                <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
+                            </THELIA_IMAGE>
+                        </a>
+                    </div>
+                    <div class="sommaireDescription">
+                    <div class="titreNews">
+                        <h2><a href="#URL">#TITRE</a></h2>
+                        <small>Post&eacute; le #FILTRE_datefrancaise(#DATE)</small>
+					</div>
+                    <div class="sommaireDescription">
+						<p>#FILTRE_lengthmaxplus(#CHAPO||300)</p>
+                        <a class="lirePlus" href="#URL">Lire la suite</a>
+					</div>
+                    </div>
+					<div class="clear2"></div>
+                </div>	
+                
+                </THELIA_CONTENU>
+            </div>
+            
+            <!--</THELIA_DOSSIER>-->
+            
+<!--    		<T_CPAGE>
+                <THELIA_PAGEPREC type="PAGE" dossier="#ID" num="5" affmin="2" max="1" typeaff="1" avance="precedente">
+                <a href="dossier.php?id_dossier=#DOSSIER_ID&amp;page=#PAGE_PREC">Page pr&eacute;c&eacute;dente</a>
+                </THELIA_PAGEPREC>
+
+                <THELIA_PAGE_SUIVANTE type="PAGE" dossier="#ID" num="5" max="1" typeaff="1" avance="suivante">
+                | <a href="dossier.php?id_dossier=#DOSSIER_ID&amp;page=#PAGE_SUIV">Page suivante</a>
+                </THELIA_PAGE_SUIVANTE>
+        </T_CPAGE>
+
+        <//T_CPAGE>-->
+            
+		</div>      
+	</div>
+    </div>
+    		 
+		#INCLURE "template/pied.html"
+</div>
+
+
+</body>
+</html>

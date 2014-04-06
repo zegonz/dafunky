@@ -1,0 +1,39 @@
+<div id="contenuPageRubrique">
+	<THELIA_PROD type="PRODUIT" rubrique="#RUBRIQUE_ID" nouveaute="1" classement="inverse" num="50">
+	  <div class="petitBlocProduit">
+
+		<div class="contenu">
+			<a href="#REWRITEURL" class="image">
+			<THELIA_IMAGE type="IMAGE" num="1" produit="#ID" hauteur="200" largeur="260">
+						<img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"/>
+			</THELIA_IMAGE>
+			</a>                    
+		</div>
+		<div class="etiquettePromo"><img src="template/images/etiquetteNew.png" alt="" /></div>
+
+		<div class="infoProdRubrique">
+		<div class="barre"></div>
+			<!--<h2><a href="#URL">#TITRE</a></h2>--><h2>#TITRE</h2>
+			<span class="prixProduit">#PRIX &euro; </span>
+		</div>
+	</div>
+	#FILTRE_modulo(#COMPT||4||<div class="separation"></div>)
+	</THELIA_PROD>
+	 <THELIA_PROD2 type="PRODUIT" rubrique="#RUBRIQUE_ID" nouveaute="0" promo="#PRODUIT_PROMO" classement="promo" num="150">
+	  <div class="petitBlocProduit">
+		<div class="contenu">
+			<a href="#REWRITEURL" class="image">
+			<THELIA_IMAGE type="IMAGE" num="1" produit="#ID" hauteur="200" largeur="260">
+						<img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"/>
+			</THELIA_IMAGE>
+			</a>
+		</div>
+	   #FILTRE_egalite(#PROMO||1||<div class="etiquettePromo"><img src="template/images/etiquettePromo.png" alt="" /></div>)
+		<div class="infoProdRubrique">
+		<div class="barre"></div>
+			<!--<h2><a href="#URL">#TITRE</a></h2>--><h2>#TITRE</h2>
+			<span class="prixProduit">#PROMO[#PRIX2 &euro; <span class="chapo">au lieu de #PRIX </span>][#PRIX] &euro;</span>
+		</div>
+	</div>
+	</THELIA_PROD2>
+</div>

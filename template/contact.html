@@ -1,0 +1,78 @@
+	#PARAM_FOND_obligenom=1
+	#PARAM_FOND_obligeprenom=1
+	#PARAM_FOND_obligetel=1
+	#PARAM_FOND_obligesujet=1
+	#PARAM_FOND_obligemessage=1
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	#INCLURE "template/meta_contenu.html"
+#INCLURE "template/js.html"
+</head>
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper">
+		#INCLURE "template/entete.html"
+        #INCLURE "template/menuaccueil.html"
+		<div id="degMenu"></div>
+		#INCLURE"template/menunochemin.html"
+		<div id="contenu">
+       
+        <div id="contact">
+         <h1>Contacter notre boutique Dafunkyplace</h1>
+        <p>Un problème sur le site, une suggestion ou une remarque ? <br/>
+        Remplissez simplement le formulaire ci dessous :</p>
+        <div id="formulaire">
+			<form action="#URLFOND(contactok)" method="POST">
+						<input type="hidden" name="action" value="contact" />
+							<div class="fieldset">
+            					<label for="nom">Nom* :</label>
+								<input name="nom" type="text" />
+							</div>
+							<div class="fieldset">
+            					<label for="prenom">Pr&eacute;nom* :</label>
+								<input name="prenom" type="text" />
+							</div>
+							<div class="fieldset">
+            					<label for="email">Mon e-mail* :</label>
+								<input name="email" type="text" />
+							</div>
+   							<div class="fieldset">
+								<label for="sujet">Objet de votre message* :</label>
+            					<input name="sujet" type="text" class="objet"/>
+                             </div>
+                             <div class="fieldset">
+                                <label for="sujet">Votre message* :</label>
+                                <textarea name="message" type="message" rows="10" /></textarea>
+                                </div>
+							<div class="colonneSubmit">
+								<input class="envoicct" type="submit" value="envoyer"></button>
+							</div>
+				</form>	
+                <p><span class="obligatoire">*champs obligatoire</span></p>
+           </div>
+            <div id="coordonnee">
+           	<h2>Coordonnées </h2>
+              <p>Thomas BONNAMOUR</p>
+				<p>5 rue de Reims</p>
+				<p>51370 Ormes</p>
+             	<p>Par téléphone : 06.22.45.64.00</p>
+                <span class="FbLien">Suivez nous sur facebook : </span>
+                      <iframe class="FbLike" src="http://www.facebook.com/plugins/like.php?app_id=244702505541790&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fdafunkyplace%2F240522072626144&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+           </div>     
+           
+		</div>
+           
+		</div>
+</div>
+	</div>
+            #INCLURE "template/pied.html"
+		 
+</body>
+</html>
+
+    
+    
+    
+				

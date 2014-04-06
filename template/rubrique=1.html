@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+#INCLURE "template/meta_rubrique.html"
+#INCLURE "template/js.html"
+</head>
+
+<body>
+<div id="global">
+<div id="wrapper">
+	<div id="subwrapper"> 
+		#INCLURE "template/entete.html"
+		#INCLURE"template/menuaccueil.html"
+        <div id="degMenu"></div>
+		#INCLURE"template/menu.html"
+        <img id="bandeau" width="839px" height="306"  src="template/images/diapo/elektro-visor-alive.jpg" alt="bandeau Elektro Visor" />
+        <div id="bandeauTitre">
+        	<h1>#RUBRIQUE_NOM #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
+        </div>
+        <div id="contenu">
+		
+			<THELIA_RUB type="RUBRIQUE" id="#RUBRIQUE_ID" >
+            <div id="descRubElek">
+            	#DESCRIPTION
+            </div>
+            <div id="illuElek"><img src="template/images/gamme-elektro-visor_03.jpg" alt="gamme article visiére Elektro Visor" width="256" height="154" /></div>
+            <div class="clear"></div>
+			<h2 class="titre2">Elektro Visor Présent dans plusieurs coloris :</h2>
+            </THELIA_RUB>
+            
+            <THELIA_PROD type="PRODUIT" rubrique="#RUBRIQUE_ID" nouveaute="#PRODUIT_NOUVEAUTE" promo="#PRODUIT_PROMO" classement="inverse" num="12">
+			<div class="blocProduitElek">
+                <div class="contenu">
+                    <a href="#URL" class="image">
+                    <THELIA_IMAGE type="IMAGE" num="1" produit="#ID" largeur="220">
+                                <img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"  />
+                    </THELIA_IMAGE>
+                    </a>                    
+				</div>
+                #FILTRE_egalite(#PROMO||1||<div class="etiquettePromo"><img src="template/images/etiquettePromo.png" alt="" /></div>)
+                <div class="infoProdRubrique">
+                    <!--<h2><a href="#URL">#TITRE</a></h2>--><h3>#TITRE</h3>
+                    <span class="prixProduit">#PROMO[#PRIX2 &euro; <span class="chapo">au lieu de #PRIX </span>][#PRIX] &euro;</span>
+                </div>
+			</div>
+            </THELIA_PROD>
+
+		</div>
+
+		</div>
+	</div>
+</div>
+		 
+		#INCLURE "template/pied.html"
+</body>
+</html>
