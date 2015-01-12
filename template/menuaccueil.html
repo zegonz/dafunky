@@ -1,20 +1,20 @@
-    <div id="menuAccueil">	
-        <ul>
-            <THELIA_MENU_RUBRIQUES type="RUBRIQUE" parent="0" classement="manuel">
-            <li>
-            <a href="#URL" #FILTRE_egalite(#RUBRIQUE_ID||#ID||class="selection") #FILTRE_egalite(#ID||#RUBRIQUE_PARENT||class="selection") >#TITRE</a>
+<div id="menu" class="clearfix">	
+    <ul>
+        <THELIA_MENU_RUBRIQUES type="RUBRIQUE" parent="0" classement="manuel">
+        <li>
+        <a href="#URL" #FILTRE_egalite(#RUBRIQUE_ID||#ID||class="selection") #FILTRE_egalite(#ID||#RUBRIQUE_PARENT||class="selection") >#TITRE</a>
 
-	    <T_BLOC_SOUS_MENU>
-                <ul>
-                    <THELIA_BLOC_SOUS_MENU type="RUBRIQUE" parent="#ID">
-                    <li><a href="#URL">#TITRE</a></li>
-                    </THELIA_BLOC_SOUS_MENU>
-                </ul>
-	    </T_BLOC_SOUS_MENU>
-	    <//T_BLOC_SOUS_MENU>	
-            </li>
-            </THELIA_MENU_RUBRIQUES>
-            
-        </ul>
-    </div>
+        <T_BLOC_SOUS_MENU>
+            <ul>
+                <THELIA_BLOC_SOUS_MENU type="RUBRIQUE" parent="#ID">
+                <li><a href="#URL">#TITRE</a></li>
+                </THELIA_BLOC_SOUS_MENU>
+            </ul>
+        </T_BLOC_SOUS_MENU>
+        <//T_BLOC_SOUS_MENU>	
+        </li>
+        </THELIA_MENU_RUBRIQUES>
+        
+    </ul>
+</div>
 

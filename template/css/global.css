@@ -1,0 +1,11 @@
+/* Reset CSS */
+@import url(normalize.css);
+
+/* Style global du site */
+@import url(style.css);
+
+/* Style pour tablette */
+@import url(tablette.css) only screen and (max-width:800px );
+
+/* Style pour mobile */
+@import url(mobile.css) only screen and (max-width:320px );
