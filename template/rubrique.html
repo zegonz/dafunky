@@ -9,16 +9,23 @@
     <div id="wrapper">
         <div id="subwrapper">
             #INCLURE "template/entete.html"
-            #INCLURE"template/menuaccueil.html"
-            #INCLURE"template/menu.html"
-            <div id="contenuPageRubrique" class="col-central">  
-                <THELIA_IMGRUB type="IMAGE" rubrique="#RUBRIQUE_ID">
-                   <img src="#IMAGE"  alt="#TITRE" />   
-                </THELIA_IMGRUB>
-                <div id="bandeauTitre">
-                    <h1>#RUBRIQUE_NOM  #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
+            <div id="corps" class="clearfix">
+                #INCLURE"template/menuSecondaire.html"
+                <div id="contenuPageRubrique" class="col-central">  
+                    <T_imgrub>
+                        <div id="bandeauTitre">
+                            <THELIA_IMGRUB type="IMAGE" rubrique="#RUBRIQUE_ID">
+                               <img src="#IMAGE"  alt="#TITRE" />   
+                            </THELIA_IMGRUB>
+                            <h1>#RUBRIQUE_NOM  #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
+                        </div>
+                        #INCLURE"template/ariane.html"
+                    </T_imgrub>
+                        #INCLURE"template/ariane.html"
+                        <h1>#RUBRIQUE_NOM #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
+                    <//T_imgrub>            
+                    #INCLURE "template/listeProduit.html"
                 </div>
-                #INCLURE "template/listeProduit.html"
             </div>
         </div>
     </div>

@@ -37,11 +37,13 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 /* CLEARFIX */
 .clearfix:before,
-.clearfix:after {
+.clearfix:after,
+#contenu:before,
+#contenu:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
-
+#contenu:after, 
 .clearfix:after {
     clear: both;
 }
@@ -206,10 +208,9 @@ text-transform:uppercase;
 
 #global {  }
 #wrapper { position: relative; }
-#subwrapper {  }
-#corps { max-width: 980px; margin: 10px auto 0; }
+#corps { clear: both; max-width: 980px; margin: 10px auto 0; }
 
-#contenu { float:left; width:800px; padding: 0 10px; }
+#contenu { max-width: 980px; margin: 10px auto 20px; padding: 0 10px; min-height: 200px; }
 .col-left { float: left; width: 17%; }
 .col-central { float: right; width: 81.5%; }
 
@@ -235,11 +236,9 @@ text-transform:uppercase;
 #top span.titreTop { font-size:14px;    padding:0 0 5px 0; color:#0081CA; }
 #monCompte {
     float: right;
-    width: 245px;
+    width: 25%;
     margin: 10px 0 0;
-    border-left: 1px solid #323030;
     padding: 0 0 0 10px;
-    height: 59px;
 }
 
 #monCompte form {
@@ -459,7 +458,7 @@ menuaccueil
 
 #menu ul li a  {
     text-decoration:none;
-    font-size: 16px;
+    font-size: 15px;
     display: block;
     color:#fff;
     padding:5px 10px;
@@ -512,6 +511,61 @@ menuaccueil
 }
 #menu ul li a.selection { color:#fff; background: #111; }
 
+/* Menu secondaire */
+#menuCatalogue {  }
+#menuCatalogue ul li {
+    margin:0 0 10px 0;
+}
+
+#menuCatalogue ul li:last-child {
+    margin: 0;
+}
+
+#menuCatalogue ul li a  {
+    text-decoration:none;
+    display:block;
+    font-size: 14px;
+    font-weight: bold;
+    padding:2px 1px 2px 4px;
+    color: #111;
+}
+
+#menuCatalogue ul li ul {}
+#menuCatalogue ul li ul li {
+    margin:2px 0 0 0;   
+}
+
+#menuCatalogue ul li ul li a {
+    color:#000;
+    font-size: 11px;
+    font-weight: normal;
+    padding:2px 0 2px 4px;
+    background:transparent;
+    border:0;
+}
+#menuCatalogue > ul > li > a:focus,
+#menuCatalogue > ul > li > a:hover {
+    color: #fff;
+    text-decoration:none;
+    background-color:#0081CA;
+
+}
+#menuCatalogue ul ul li a:hover{
+    color:#0081CA;
+}
+
+#menuCatalogue ul li a.selection {
+    color:#fff;
+    background:url(../images/fleche_selec2.jpg) no-repeat center right #0081CA;
+
+}
+
+#menuCatalogue ul li ul li a.selection {
+    color:#0081CA;
+    background:transparent;
+
+}
+
 /* ===================================================================
  * CONTENU
  * =================================================================*/
@@ -552,14 +606,10 @@ margin:0 0 0 20px;
  * =================================================================*/
 
  #chemin {
-    float: right;
-    width: 81.5%;
     color: #515053;
     font-size: 11px;
     font-weight: bold;
-    margin: 0;
-    height:20px;
-    padding: 0px 0 0px 10px;
+    margin: 0 0 10px;
 }
 
 #chemin a:link, #chemin a:visited {
@@ -584,6 +634,34 @@ margin:0 0 0 20px;
 /* ===================================================================
 * LISTE PRODUIT
 * =================================================================*/
+
+#contenuPageRubrique h1{
+    font-size:18px;
+    margin:0 0 15px 0;
+    padding:0 0 5px 0;
+    border-bottom:1px solid #d5d5d5;
+}
+
+/* liste produit avec bandeau image */
+#bandeauTitre{
+    margin-bottom: 10px;
+    display:block;
+    position:relative;
+    width:100%;
+}
+#bandeauTitre h1{
+    background: rgba(13,127,192,0.8);
+    border:0;
+    bottom: 0;
+    color:#fff;
+    font-size:18px;
+    font-weight:normal;
+    margin: 0;
+    padding: 4px 0 5px 10px;
+    position: absolute;
+    text-transform:uppercase;
+    width: 100%;
+}
 
  /* ===================================================================
  * FICHE PRODUIT
@@ -1332,14 +1410,6 @@ margin:5px 0 0 0;
 
 /* Petit bloc produit (utilisé en page rubrique.html)
 -------------------------------------------------------- */
-#contenuPageRubrique h1{
-    font-size:18px;
-    margin:0 0 15px 0;
-    padding:0 0 5px 0;
-    border-bottom:1px solid #d5d5d5;
-}
-
-
 .etiquettePromo{
     position:absolute;
     top:10px;
@@ -1348,17 +1418,21 @@ margin:5px 0 0 0;
 
 .petitBlocProduit {
     float: left;
-    margin: 10px 0px 20px 0px;
-    width:200px;
-    height:243px;
+    margin: 0 0 20px 2.66%;
+    width:23%;
+    /*height:243px;*/
     position:relative;
     text-align:center;
+}
+.petitBlocProduit:nth-child(4n+1) {
+    clear: both;
+    margin: 0;
 }
 
 .BlocProduitLunette{
     float: left;
     margin: 0px 0px 5px 0px;
-    width:200px;
+    width:24;
     text-align:center;
 }
 
@@ -1400,24 +1474,16 @@ margin:5px 0 0 0;
     background-color:#a9abad;
 }
 
-.petitBlocProduit .contenu  {
-    float:left;
-    width:200px;
-    margin:1px 0 0 0;
-    padding:0px;
-}
+.petitBlocProduit .contenu  { margin-bottom: 5px; }
 
-.petitBlocProduit .contenu a.image, .petitBlocProduit .contenu a.image:visited  {
+.petitBlocProduit .contenu a.image {
     margin: 0;
     border-bottom: 2px solid transparent;
     padding:10px 0 0 0;
-    width:200px;
     display:block;
-    float:left;
-    overflow: hidden;   
 }
 
-.BlocProduitLunette .contenu a.image, .BlocProduitLunette .contenu a.image:visited  {
+.BlocProduitLunette .contenu a.image {
     margin: 0;
     border-bottom: 2px solid transparent;
     padding:0px 0 0 0;
@@ -1531,23 +1597,6 @@ font-weight:bold;
 
 /* Contenu d'une fiche produit (produit.html)
 -------------------------------------------------------- */
-#bandeauTitre{
-margin:-22px 0 0 0;
-display:block;
-float:left;
-position:relative;
-background:url(../images/bg_bandeau.png) repeat;
-z-index:999;
-width:839px;
-}
-#bandeauTitre h1{
-color:#fff;
-margin:0px 0 0 10px;
-font-size:18px;
-font-weight:normal;
-text-transform:uppercase;
-}
-
 .blocProduit {
     float: left;
     margin:5px 0 5px 0px;
@@ -2411,60 +2460,6 @@ color:#9A9B9D;
  
 /*  général
 -------------------------------------------------------- */
-#menuCatalogue {  }
-#menuCatalogue ul li {
-    margin:0 0 10px 0;
-}
-
-#menuCatalogue ul li:last-child {
-    margin: 0;
-}
-
-#menuCatalogue ul li a  {
-    text-decoration:none;
-    display:block;
-    font-size: 14px;
-    font-weight: bold;
-    padding:2px 1px 2px 4px;
-    color: #111;
-
-}
-
-#menuCatalogue ul li ul {}
-#menuCatalogue ul li ul li {
-    background:url(../images/puce-sousmenu2.gif) no-repeat 4px 6px;
-    margin:2px 0 0 0;   
-}
-
-#menuCatalogue ul li ul li a {
-    color:#000;
-    font-size: 11px;
-    font-weight: normal;
-    padding:2px 0 2px 16px;
-    background:transparent;
-    border:0;
-}
-#menuCatalogue ul li a:hover {
-    text-decoration:none;
-        background-color:#0081CA;
-
-}
-#menuCatalogue ul ul li a:hover{
-background:none;
-color:#0081CA;
-}
-
-#menuCatalogue ul li a.selection {
-    color:#fff;
-    background:url(../images/fleche_selec2.jpg) no-repeat center right #0081CA;
-
-}
-
-#menuCatalogue ul li ul li a.selection {
-    color:#0081CA;
-    background:transparent;
-
-}
 
 #modal_auto{
 display:none;   

@@ -3,11 +3,11 @@
         <div id="logo">
             <a href="#URLSOMMAIRE" title="retour en page d'accueil"><img src="template/images/logo.png" alt="logo accueil dafunky place" /></a>
        </div>
+       <T_PANIER>
         <div id="monPanier">
             <span class="titreTop">Mon panier</span>
             <ul id="contenuPanier">
                 <li>
-                    <T_PANIER>
                     <a href="#URLPANIER" class="panier">Votre panier contient #PANIER_NBART article(s)</a>
                     <THELIA_PANIER type="PANIER">
                     </THELIA_PANIER>		
@@ -17,12 +17,11 @@
                         </THELIA_panier>
     					<li><a href="#URLPANIER" class="totalCommande"><span class="titreTotal">TOTAL :</span><span class="total">#PANIER_TOTAL &euro;</span></a></li>			
     				</ul>
-                    </T_PANIER>
-                    Il n'y a pas de produit dans votre panier.
-                    <//T_PANIER>
                 </li>
             </ul>
         </div>
+        </T_PANIER>
+        <//T_PANIER>
         <div id="monCompte">
             <span class="titreTop">Mon compte</span>
             <THELIA SI NON CONNECTE>
@@ -43,3 +42,4 @@
     	</div>
     </div>
 </div>
+#INCLURE"template/menu.html"

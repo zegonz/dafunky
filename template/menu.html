@@ -1,31 +1,20 @@
-<div id="corps" class="clearfix">
-    <div id="menuCatalogue" class="col-left">	
-        <ul>
-            <THELIA_MENU_RUBRIQUES type="RUBRIQUE" parent="0" classement="manuel">
-            <li><a href="#URL" #FILTRE_egalite(#RUBRIQUE_ID||#ID||class="selection") #FILTRE_egalite(#ID||#RUBRIQUE_PARENT||class="selection")>#TITRE</a>
+<div id="menu" class="clearfix">	
+    <ul>
+        <THELIA_MENU_RUBRIQUES type="RUBRIQUE" parent="0" classement="manuel">
+        <li>
+        <a href="#URL" #FILTRE_egalite(#RUBRIQUE_ID||#ID||class="selection") #FILTRE_egalite(#ID||#RUBRIQUE_PARENT||class="selection") >#TITRE</a>
 
-	    <T_BLOC_SOUS_MENU>
-                <ul>
-                    <THELIA_BLOC_SOUS_MENU type="RUBRIQUE" parent="#ID">
-                    <li><a href="#URL" #FILTRE_egalite(#RUBRIQUE_ID||#ID||class="selection") >#TITRE</a></li>
-                    </THELIA_BLOC_SOUS_MENU>
-                </ul>
-	    </T_BLOC_SOUS_MENU>
-	    <//T_BLOC_SOUS_MENU>	
-            </li>
-            </THELIA_MENU_RUBRIQUES>
-            
-        </ul>
-    </div>
-   <div id="chemin">
-        	Vous &ecirc;tes ici : <a href="#URLSOMMAIRE"> Accueil boutique</a> / 
-	 <THELIA_chemrub type="CHEMIN" rubrique="#RUBRIQUE_ID">
-        <THELIA_rubdetchem type="RUBRIQUE" id="#ID">
-        <a href="#URL" class="LIEN_chemin">#TITRE</a> /
-        </THELIA_rubdetchem>
-	</THELIA_chemrub>
-	<THELIA_rubcour type="RUBRIQUE" id="#RUBRIQUE_ID">
-		<a href="#URL" class="LIEN_chemin">#TITRE</a> /
-	</THELIA_rubcour>
-	#PRODUIT_NOM
+        <T_BLOC_SOUS_MENU>
+            <ul>
+                <THELIA_BLOC_SOUS_MENU type="RUBRIQUE" parent="#ID">
+                <li><a href="#URL">#TITRE</a></li>
+                </THELIA_BLOC_SOUS_MENU>
+            </ul>
+        </T_BLOC_SOUS_MENU>
+        <//T_BLOC_SOUS_MENU>	
+        </li>
+        </THELIA_MENU_RUBRIQUES>
+        
+    </ul>
 </div>
+

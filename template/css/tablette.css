@@ -1,1 +1,18 @@
-body { background: red; }
+/* ===================================================================
+ * STRUCTURE
+ * =================================================================*/
+#wrapper { margin: 0 2%; }
+.col-left { display: none; }
+.col-central { float: none; width: 100%; }
+
+/* ===================================================================
+ * MENU
+ * =================================================================*/
+#menu { display: none; }
+
+/* ===================================================================
+ * LISTE PRODUIT
+ * =================================================================*/
+.petitBlocProduit { width: 31%; margin-left: 2.33%; }
+.petitBlocProduit:nth-child(4n+1) { margin-left: 2.33%; clear: none; }
+.petitBlocProduit:nth-child(3n+1) { clear: both; margin-left: 0; }
