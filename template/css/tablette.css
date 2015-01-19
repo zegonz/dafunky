@@ -1,7 +1,7 @@
 /* ===================================================================
  * STRUCTURE
  * =================================================================*/
-#wrapper { margin: 0 2%; }
+#wrapper { padding: 0 2%; }
 .col-left { display: none; }
 .col-central { float: none; width: 100%; }
 
@@ -9,6 +9,23 @@
  * MENU
  * =================================================================*/
 #menu { display: none; }
+
+/* ===================================================================
+ * HEADER
+ * =================================================================*/
+#monCompte { clear: both; float: none; width: 100%; }
+#monCompte form { display: none; }
+
+/* ===================================================================
+ * FOOTER
+ * =================================================================*/
+ #footer { padding: 20px 2%; }
+ #footer .col { width:50%;}
+ #footer .colonneD { margin-top: 20px; width: 100%; display: block; padding-left: 0; border: 0; }
+ #footer .colonneD {  }
+ #footer .colonneD img { margin-left: 0; text-align: center; }
+ #footer .bloc { float: left; width: 46%; }
+ #footer .bloc + .bloc { float: right;  }
 
 /* ===================================================================
  * LISTE PRODUIT

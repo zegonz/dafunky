@@ -225,7 +225,7 @@ text-transform:uppercase;
     z-index:1000;
  }
 
-#logo{ float:left; width:495px; height:108px; }
+#logo{  }
 #logo a{ margin: 46px 0 0 0; float:left; display:block; width: 160px; }
 
 #slogan{ margin:75px 0 0 0; }
@@ -666,6 +666,292 @@ margin:0 0 0 20px;
  /* ===================================================================
  * FICHE PRODUIT
  * =================================================================*/
+
+.blocProduit {  }
+.blocProduit h1{
+    font-size:18px;
+    margin:0 0 20px;
+}
+/* Visuel produit */    
+.blocProduit .blocDImages {
+    float: left;
+    margin: 0 0 20px 0;
+    width: 44.5%;
+}
+.blocProduit a.grandeImage {
+    display: block;
+    margin:0;
+    padding: 1px;
+    border: 2px solid transparent;
+}
+.blocProduit a.grandeImage:hover { border: 2px solid #0d7fc0; }
+.blocProduit ul.vignettes {
+    margin: 10px 0 0 0;
+    padding:0;
+    list-style:none;
+    text-align:center;
+    border:none;
+    padding:0 20px 0 0px;
+    width:100%;
+}
+.blocProduit ul.vignettes li {
+    margin:0;
+    padding:0;
+    border:none;
+}
+
+.blocProduit ul.vignettes li a {
+    border: 1px solid #bbbdbf;
+    margin:0 1px 1px 0;
+    height: 65px;
+    width:75px;
+    float:left;
+    display:inline;
+    background-color:#fff;
+    overflow: hidden;
+}
+.blocProduit ul.vignettes li a:hover { border: 1px solid #88888b; }
+#descRub{
+    float:left;
+    margin:5px 0 0 0px;
+}
+#descRub p{
+    margin:5px 0 0 5px;
+    width:700px;    
+}
+
+/* Description produit */
+.blocProduit .introProduit {
+    float: right;
+    margin: 10px 0 20px 0;
+    padding:0;
+    width:51.5%;
+}
+
+.ancienPrix{
+    float:left; 
+    margin:10px 0 10px 10px;
+}
+
+.blocProduit .introProduit h2{
+    font-size:15px; 
+}
+
+.blocProduit .introProduit .chapo {
+    font-size: 14px;
+    font-weight:bold;
+    padding: 0;
+    margin:0 0 10px 0;
+}
+
+.blocProduit .introProduit .prixProduit {
+    background: #111;
+    color:#eee;
+    float:left;
+    font-size: 23px;
+    font-weight:bold;
+    padding:0 12px;
+    text-align: center;
+}
+
+.blocProduit a.acheter, 
+.blocProduit button.acheter { 
+    display:-moz-inline-box; 
+    display:inline-block; 
+    margin:8px 0 0 4px; 
+    padding:0;
+    font-weight:bold;
+    white-space:nowrap; 
+    text-align:center; 
+    vertical-align:middle; 
+    cursor:pointer; 
+    border:0; 
+} 
+.blocProduit a.acheter span, 
+.blocProduit button.acheter span { 
+    position:relative; 
+    float:left; 
+    padding:0 0 0 10px; 
+    vertical-align:middle;
+    background-color:#0081ca;
+} 
+
+.blocProduit a.acheter span span, 
+.blocProduit button.acheter span span {
+    color:#fff;
+    height:40px; 
+    padding:0 10px 0 0; 
+    line-height:38px; 
+    background-color:#0081ca;
+} 
+ 
+.blocProduit a.acheter:hover span, 
+.blocProduit button.acheter:hover span { 
+    background-color:#00529a;
+    text-decoration:none;
+} 
+
+.blocProduit .description {
+    float:left;
+    font-size: 14px;
+    padding: 0;
+    margin:0 0 20px 0;
+    width: 400px;
+}
+
+.blocProduit .contenusAssocies {
+    float: right;
+    margin: 0 0 20px 0;
+    width:345px;
+}
+
+.blocProduit .telechargements {
+    float: left;
+    margin: 0 0 20px 0;
+    width:345px;
+}
+
+.blocProduit .contenusAssocies h3, .blocProduit .telechargements h3 {
+    color:#515053;
+    display:block;
+    padding: 5px 0 7px 10px;
+    margin:0;
+    height: 20px;
+    background-color: #bbbdbf;
+}
+
+.blocProduit .contenusAssocies ul, .blocProduit .telechargements ul {
+    list-style:none;
+    margin: 0;
+    padding:0;
+    width: 345px;
+    float:left;
+    background:#d8d9da;
+}
+
+.blocProduit .contenusAssocies ul li, .blocProduit .telechargements ul li {
+    margin: 0;
+    padding:0;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.blocProduit .contenusAssocies ul li a, .blocProduit .telechargements ul li a,
+.blocProduit .contenusAssocies ul li a:visited, .blocProduit .telechargements ul li a:visited {
+    border-top:solid 1px #FFF;
+    color:#fff;
+    display:block;
+    background-color:#0081ca;
+    padding:3px 0 3px 10px;
+}
+
+.blocProduit .contenusAssocies ul li a:hover, .blocProduit .telechargements ul li a:hover {
+    color:#fff;
+    text-decoration:none;
+    background-color:#00529a;
+}
+
+/* Spécifique pour la rubrique visiere electro */
+#descRubElek{
+    float:left;
+    width:500px;
+    margin:5px 0 0 0px;
+}
+#descRubElek p{
+    margin:5px 0 0 5px;
+}
+
+#illuElek{
+    float:left;
+    margin:35px 0 0 20px;   
+}
+
+#illuElek{
+    padding:1px;
+    border:1px solid #ccc;
+}
+.blocProduitElek{
+    float: left;
+    margin:20px 0 10px 36px;
+    padding:0;
+    width:220px;
+    position:relative;
+    border-bottom:1px solid #eee;
+
+}
+.blocProduitElek:hover{
+    opacity:0.8;
+    border-bottom:1px solid #ccc;
+}
+
+.titre2{
+    margin:10px 0 0 0;  
+}
+
+.blocProduitElek h2{
+    font-size:14px;
+}
+
+
+/* Personnalisation du zoom de la fiche produit (produit.html)
+-------------------------------------------------------- */
+
+#superbox-overlay {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    background:#e0e4cc;
+}
+
+#superbox-container .loading {
+    width:32px;
+    height:32px;
+    text-indent:-9999px;
+    background-image:url(_gfx/loader.gif);
+    background-position:center 0;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    width: 100%;
+}
+
+#superbox .close a {
+    float:right;
+    padding:0 5px;
+    line-height:20px;
+    color:#fff;
+    background:#AB1F1F;
+    cursor:pointer;
+}
+
+#superbox .nextprev a {
+    float:left;
+    margin-right:5px;
+    padding:0 5px;
+    line-height:20px;
+    background:#000;
+    cursor:pointer;
+    color:#fff;
+}
+#superbox .nextprev a:hover {
+    background:#AB1F1F;
+    text-decoration:none;
+
+}
+#superbox .nextprev .disabled {
+    background:#ccc;
+    cursor:default;
+}
+
+#superbox .close a:hover {
+    color:#fff;
+    background:#000;
+    text-decoration:none;
+}
+
 
 /* ===================================================================
  * TUNNEL
@@ -1167,8 +1453,7 @@ background-position:0 -146px;
 
 input.acheter{
     background:url(../images/ajout-panier.jpg) no-repeat top left;
-
-    margin:3px 0 0 4px;
+    margin:0 0 0 4px;
     float:left;
     width:171px;
     height:27px;
@@ -1595,322 +1880,6 @@ font-weight:bold;
 */
 
 
-/* Contenu d'une fiche produit (produit.html)
--------------------------------------------------------- */
-.blocProduit {
-    float: left;
-    margin:5px 0 5px 0px;
-    padding:0;
-
-}
-
-#descRub{
-    float:left;
-    margin:5px 0 0 0px;
-}
-#descRub p{
-    margin:5px 0 0 5px;
-width:700px;    
-}
-
-#descRubElek{
-    float:left;
-    width:500px;
-    margin:5px 0 0 0px;
-}
-#descRubElek p{
-    margin:5px 0 0 5px;
-}
-
-#illuElek{
-    float:left;
-    margin:35px 0 0 20px;   
-}
-
-#illuElek{
-    padding:1px;
-    border:1px solid #ccc;
-}
-
-
-.blocProduitElek{
-    float: left;
-    margin:20px 0 10px 36px;
-    padding:0;
-    width:220px;
-    position:relative;
-    border-bottom:1px solid #eee;
-
-}
-.blocProduitElek:hover{
-    opacity:0.8;
-    border-bottom:1px solid #ccc;
-}
-
-.titre2{
-margin:10px 0 0 0;  
-}
-
-.blocProduitElek h2{
-font-size:14px;
-}
-
-.blocProduit .blocDImages {
-    float: left;
-    margin:0 0 20px 0;
-    padding:10px 20px 0 20px ;
-    
-}
-
-.blocProduit a.grandeImage, .blocProduit a.grandeImage:visited {
-    border: 2px solid #bbbdbf;
-        -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px;
-    margin:0;
-    padding:1px;
-    float:left;
-    background-color:#fff;
-    text-align:center;
-}
-
-.blocProduit h1{
-    font-size:18px;
-    margin:0 0 0 20px;
-
-}
-
-.blocProduit a.grandeImage:hover {
-    border: 2px solid #88888b;
-    padding:1px;
-}
-
-.blocProduit ul.vignettes {
-    margin: 10px 0 0 0;
-    padding:0;
-    list-style:none;
-    text-align:center;
-    border:none;
-    padding:0 20px 0 0px;
-    float: left;
-    width:320px;
-}
-
-.blocProduit ul.vignettes li {
-    margin:0;
-    padding:0;
-    border:none;
-}
-
-.blocProduit ul.vignettes li a, .blocProduit ul.vignettes li a:visited {
-    border: 1px solid #bbbdbf;
-    margin:0 1px 1px 0;
-            -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px;
-
-    height: 65px;
-    width:75px;
-    float:left;
-    display:inline;
-    background-color:#fff;
-    overflow: hidden;
-}
-
-.blocProduit ul.vignettes li a:hover {
-    border: 1px solid #88888b;
-
-}
-
-.blocProduit .introProduit {
-    float: left;
-    margin:10px 0 20px 0;
-    padding:0;
-    width:350px;
-}
-
-.ancienPrix{
-    float:left; 
-    margin:10px 0 10px 10px;
-}
-
-.blocProduit .introProduit h2{
-    font-size:15px; 
-}
-
-.blocProduit .introProduit .chapo {
-    font-size: 14px;
-    font-weight:bold;
-    padding: 0;
-    margin:0 0 10px 0;
-}
-
-.blocProduit .introProduit .prixProduit {
-    float:left;
-    color:#eee;
-    font-weight:bold;
-    text-align: center;
-    font-size: 24px;
-    margin:0px 0 0 0px;
-    width:108px;
-    background:url(../images/prix.jpg) no-repeat;
-    padding:0px 0 0 0px;
-    display:block;
-    height:35px;
-}
-
-.blocProduit a.acheter, 
-.blocProduit button.acheter { 
-    display:-moz-inline-box; 
-    display:inline-block; 
-    margin:8px 0 0 4px; 
-    padding:0;
-    font-weight:bold;
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
-    border:0; 
-} 
-.blocProduit a.acheter span, 
-.blocProduit button.acheter span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 10px; 
-    vertical-align:middle;
-    background-color:#0081ca;
-} 
-
-.blocProduit a.acheter span span, 
-.blocProduit button.acheter span span {
-    color:#fff;
-    height:40px; 
-    padding:0 10px 0 0; 
-    line-height:38px; 
-    background-color:#0081ca;
-} 
- 
-.blocProduit a.acheter:hover span, 
-.blocProduit button.acheter:hover span { 
-    background-color:#00529a;
-    text-decoration:none;
-} 
-
-.blocProduit .description {
-    float:left;
-    font-size: 12px;
-    padding: 0;
-    margin:0 0 20px 0;
-    width: 400px;
-}
-
-.blocProduit .contenusAssocies {
-    float: right;
-    margin: 0 0 20px 0;
-    width:345px;
-}
-
-.blocProduit .telechargements {
-    float: left;
-    margin: 0 0 20px 0;
-    width:345px;
-}
-
-.blocProduit .contenusAssocies h3, .blocProduit .telechargements h3 {
-    color:#515053;
-    display:block;
-    padding: 5px 0 7px 10px;
-    margin:0;
-    height: 20px;
-    background-color: #bbbdbf;
-}
-
-.blocProduit .contenusAssocies ul, .blocProduit .telechargements ul {
-    list-style:none;
-    margin: 0;
-    padding:0;
-    width: 345px;
-    float:left;
-    background:#d8d9da;
-}
-
-.blocProduit .contenusAssocies ul li, .blocProduit .telechargements ul li {
-    margin: 0;
-    padding:0;
-    font-size:12px;
-    font-weight:bold;
-}
-
-.blocProduit .contenusAssocies ul li a, .blocProduit .telechargements ul li a,
-.blocProduit .contenusAssocies ul li a:visited, .blocProduit .telechargements ul li a:visited {
-    border-top:solid 1px #FFF;
-    color:#fff;
-    display:block;
-    background-color:#0081ca;
-    padding:3px 0 3px 10px;
-}
-
-.blocProduit .contenusAssocies ul li a:hover, .blocProduit .telechargements ul li a:hover {
-    color:#fff;
-    text-decoration:none;
-    background-color:#00529a;
-}
-
-
-/* Personnalisation du zoom de la fiche produit (produit.html)
--------------------------------------------------------- */
-
-#superbox-overlay {
-    width: 100%;
-    overflow: visible;
-    position: relative;
-    margin: 0 auto 0 auto;
-    padding: 0;
-    background:#e0e4cc;
-}
-
-#superbox-container .loading {
-    width:32px;
-    height:32px;
-    text-indent:-9999px;
-    background-image:url(_gfx/loader.gif);
-    background-position:center 0;
-    background-repeat:no-repeat;
-    overflow: hidden;
-    position: relative;
-    padding: 0;
-    width: 100%;
-}
-
-#superbox .close a {
-    float:right;
-    padding:0 5px;
-    line-height:20px;
-    color:#fff;
-    background:#AB1F1F;
-    cursor:pointer;
-}
-
-#superbox .nextprev a {
-    float:left;
-    margin-right:5px;
-    padding:0 5px;
-    line-height:20px;
-    background:#000;
-    cursor:pointer;
-    color:#fff;
-}
-#superbox .nextprev a:hover {
-    background:#AB1F1F;
-    text-decoration:none;
-
-}
-#superbox .nextprev .disabled {
-    background:#ccc;
-    cursor:default;
-}
-
-#superbox .close a:hover {
-    color:#fff;
-    background:#000;
-    text-decoration:none;
-}
 
 /* Nombre de pages
 -------------------------------------------------------- */
@@ -2153,7 +2122,7 @@ a.lirePlus:hover{
     font-size: 11px;
     max-width: 980px;
     border-top: 1px solid #111;
-    margin: 20px auto 0;
+    margin: 0 auto;
     padding: 20px 0 20px 0;
     text-align: left;
 }
@@ -2173,7 +2142,7 @@ a.lirePlus:hover{
     color: #111;
     background-image:none;
     padding:0;
-    margin:3px 0 5px 0;
+    margin:0 0 5px 0;
 }
 #footer h4 a { color: #111; }
     
@@ -2237,7 +2206,7 @@ a.titreDossierFooter{
     margin:5px 0 0 0;
     border:none; 
     overflow:hidden; 
-    width:86px;
+    width:96px;
     height:21px;
 }
 #copyright {
