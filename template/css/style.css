@@ -32,6 +32,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .titre-bleu { color: #0081CA; }
 
+.align-center { text-align: center; }
 .clear{
     clear:both;
 }
@@ -1213,6 +1214,123 @@ a.modifierOuAjouter, a.modifierOuAjouter:visited {
  * FOOTER
  * =================================================================*/
 
+#footer {
+    clear: both;
+    color: #000;
+    font-size: 11px;
+    max-width: 980px;
+    border-top: 1px solid #111;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    text-align: left;
+}
+#footer .col { display: table-cell; width: 33%; }
+#footer .colonneG { border-right: 1px dotted #444444; padding: 0 20px 0 0; }    
+#footer .colonneM { padding: 0 20px; }
+#footer .menu-contenu { margin-bottom: 15px; }
+#footer .colonneG p { margin:0 0 0 8px; padding:0; }
+#footer .colonneD { border-left:1px  dotted #444; padding:0 0px 0 20px; }
+#footer .colonneD p {  }
+#footer .colonneD a { border: 0; }
+#footer .colonneD img{
+    margin: 0px 0 20px;
+}
+    
+#footer h4{
+    font-size:13px;
+    color: #111;
+    background-image:none;
+    padding:0;
+    margin:0 0 5px 0;
+}
+#footer h4 a { color: #111; }
+#footer h5 {
+    color: #111;
+    background:url(../images/puce_footer.png) no-repeat 0 4px;
+    padding:0 0 0 8px;
+    margin:8px 0 0px 0;
+}
+#footer h5 a {
+    color: #555;
+    font-size:11px;
+}
+    
+#footer ul li {
+    color: #111;
+    background:url(../images/puce_footer.png) no-repeat 0 4px;
+    padding:0 0 0 8px;
+    margin:8px 0 0px 0;
+}
+#footer li a{
+    color: #555;
+    font-size:11px;
+}
+            
+#footer p a {
+    font-weight:normal;
+    color: #555;
+    text-decoration: none;
+    padding:0 5px 0 0;
+    border-right:solid 1px #111;
+}
+
+#footer h5 a {
+    font-weight:bold;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer .colonne p.validator {
+    float:left;
+    margin:5px 0 0 0;
+    }
+    
+#footer .colonne p.validator a, #footer .colonne p.validator a:visited {
+    border:none;
+    }
+a.titreDossierFooter{
+    font-size:13px;
+    color: #eee;
+    background-image:none;
+    padding:0;
+    margin:3px 0 5px 0;
+}
+
+#fbFooter{
+    width:250px;
+    margin:20px auto 0px auto;
+}
+
+#fbFooter span{
+    float:left;
+    display:block;
+    margin:8px 2px 0 0;
+    font-size:12px;
+    font-weight:bold;
+}
+#fbFooter iframe{
+    margin:5px 0 0 0;
+    border:none; 
+    overflow:hidden; 
+    width:96px;
+    height:21px;
+}
+#copyright {
+    margin:10px 0 0 0;
+    text-align:center;
+}
+#copyright span{
+    padding:4px 0 0 0;
+    border-top:1px dotted #444; 
+}
+
+#copyright a{
+color:#9A9B9D;
+}
+
+
 
 /* RUBRIQUE PRODUIT
 -------------------------------------------------------- */
@@ -2111,115 +2229,6 @@ a.lirePlus:hover{
     padding:3px 10px 2px 20px;
     color:#eee;
     float:left; 
-}
-
-
-/* Pied de page
--------------------------------------------------------- */
-#footer {
-    clear: both;
-    color: #000;
-    font-size: 11px;
-    max-width: 980px;
-    border-top: 1px solid #111;
-    margin: 0 auto;
-    padding: 20px 0 20px 0;
-    text-align: left;
-}
-#footer .col { display: table-cell; width: 33%; }
-#footer .colonneG { border-right: 1px dotted #444444; padding: 0 20px 0 0; }    
-#footer .colonneM { padding: 0 20px; }
-#footer .colonneG p { margin:0 0 0 8px; padding:0; }
-#footer .colonneD { border-left:1px  dotted #444; padding:0 0px 0 20px; }
-#footer .colonneD p {  }
-
-#footer .colonneD img{
-    margin: 0px 0 20px 80px;
-}
-    
-#footer h4{
-    font-size:13px;
-    color: #111;
-    background-image:none;
-    padding:0;
-    margin:0 0 5px 0;
-}
-#footer h4 a { color: #111; }
-    
-    
-#footer h5 {
-    color: #111;
-    background:url(../images/puce_footer.png) no-repeat 0 4px;
-    padding:0 0 0 8px;
-    margin:8px 0 0px 0;
-}
-#footer h5 a{
-    color: #555;
-    font-size:11px;
-}
-            
-#footer p a {
-    font-weight:normal;
-    color: #555;
-    text-decoration: none;
-    padding:0 5px 0 0;
-    border-right:solid 1px #111;
-}
-
-#footer h5 a {
-    font-weight:bold;
-}
-
-#footer a:hover {
-    text-decoration: underline;
-}
-
-#footer .colonne p.validator {
-    float:left;
-    margin:5px 0 0 0;
-    }
-    
-#footer .colonne p.validator a, #footer .colonne p.validator a:visited {
-    border:none;
-    }
-a.titreDossierFooter{
-    font-size:13px;
-    color: #eee;
-    background-image:none;
-    padding:0;
-    margin:3px 0 5px 0;
-}
-
-#fbFooter{
-    width:250px;
-    margin:20px auto 0px auto;
-}
-
-#fbFooter span{
-    float:left;
-    display:block;
-    margin:8px 2px 0 0;
-    font-size:12px;
-    font-weight:bold;
-}
-#fbFooter iframe{
-    margin:5px 0 0 0;
-    border:none; 
-    overflow:hidden; 
-    width:96px;
-    height:21px;
-}
-#copyright {
-    margin:10px 0 0 0;
-    text-align:center;
-}
-#copyright span{
-    padding:4px 0 0 0;
-    border-top:1px dotted #444; 
-}
-
-#copyright a{
-color:#9A9B9D;
 }
 
 /* formulaire

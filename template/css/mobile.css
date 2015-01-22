@@ -6,9 +6,11 @@
 /* ===================================================================
  * FOOTER
  * =================================================================*/
- #footer .colonneM,
- #footer .colonneG { display: none; }
- #footer .colonneD { display: block; width: 100%; padding: 0; margin: 0; }
+#footer .colonneD { display: block; width: 100%; padding: 0; margin: 0; }
+#footer .colonneG { display: none; }
+#footer .colonneM { display: block; padding: 0; width: 100%; margin-bottom: 20px; }
+#footer .colonneM .menu-contenu + .menu-contenu { display: none; }
+#footer .bloc img { text-align: center; }
 
 
 /* ===================================================================
