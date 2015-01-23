@@ -221,10 +221,7 @@ text-transform:uppercase;
  * HEADER
  * =================================================================*/
 
-#top { 
-    color: #FFFFFF;
-    z-index:1000;
- }
+#top { margin-bottom: 20px; }
 
 #logo{  }
 #logo a{ margin: 46px 0 0 0; float:left; display:block; width: 160px; }
@@ -683,9 +680,10 @@ margin:0 0 0 20px;
     display: block;
     margin:0;
     padding: 1px;
-    border: 2px solid transparent;
+    transition: all 200ms ease;
+    opacity: 1;
 }
-.blocProduit a.grandeImage:hover { border: 2px solid #0d7fc0; }
+.blocProduit a.grandeImage:hover { opacity: 0.8; }
 .blocProduit ul.vignettes {
     margin: 10px 0 0 0;
     padding:0;
@@ -725,7 +723,7 @@ margin:0 0 0 20px;
 .blocProduit .introProduit {
     float: right;
     margin: 10px 0 20px 0;
-    padding:0;
+    padding:0 20px 0 0;
     width:51.5%;
 }
 
@@ -753,6 +751,8 @@ margin:0 0 0 20px;
     font-weight:bold;
     padding:0 12px;
     text-align: center;
+    margin-right: 4px;
+    margin-bottom: 10px;
 }
 
 .blocProduit a.acheter, 
@@ -793,11 +793,8 @@ margin:0 0 0 20px;
 } 
 
 .blocProduit .description {
-    float:left;
     font-size: 14px;
-    padding: 0;
     margin:0 0 20px 0;
-    width: 400px;
 }
 
 .blocProduit .contenusAssocies {
@@ -851,6 +848,46 @@ margin:0 0 0 20px;
     text-decoration:none;
     background-color:#00529a;
 }
+
+
+input.acheter{
+    background: url(../images/icone-plus.png) no-repeat 8px 50% #0d7fc0;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    display:block;
+    float:left;
+    font-size:14px;
+    font-weight: bold;
+    height:27px;
+    letter-spacing: 1px;
+    padding: 0 15px 0 30px;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+}
+
+input.acheter:hover{  background-color: #111; }
+
+.epuise{
+    font-size:14px;
+    color:#0081CA;
+    font-weight:bold;
+    display:block;
+    float:left;
+    width:150px;
+    margin:8px '' 0 15px;
+}
+#partager{
+margin:5px 0 0 0;   
+}
+
+.recommander{
+    margin:10px 0 0 4px;
+    padding:0 0 0 8px;
+    display:block;
+     background: url("../images/puce_footer.png") no-repeat scroll 0 4px transparent;
+}
+
 
 /* Spécifique pour la rubrique visiere electro */
 #descRubElek{
@@ -1568,47 +1605,6 @@ background-position:0 -146px;
     line-height:23px; 
     border:none;
 } 
-
-input.acheter{
-    background:url(../images/ajout-panier.jpg) no-repeat top left;
-    margin:0 0 0 4px;
-    float:left;
-    width:171px;
-    height:27px;
-    display:block;
-    color:#eee;
-    font-size:14px;
-    text-decoration:none;
-    border:none;
-    cursor:pointer;
-    text-indent:-10000px;
-}
-
-input.acheter:hover{
-        outline-style : none;
-
-    background-position:bottom left;
-}
-
-.epuise{
-    font-size:14px;
-    color:#0081CA;
-    font-weight:bold;
-    display:block;
-    float:left;
-    width:150px;
-    margin:8px 0 0 15px;
-}
-#partager{
-margin:5px 0 0 0;   
-}
-
-.recommander{
-    margin:10px 0 0 4px;
-    padding:0 0 0 8px;
-    display:block;
-     background: url("../images/puce_footer.png") no-repeat scroll 0 4px transparent;
-}
 
 
 /* style de la declinaison

@@ -33,3 +33,5 @@
 .petitBlocProduit { width: 31%; margin-left: 2.33%; }
 .petitBlocProduit:nth-child(4n+1) { margin-left: 2.33%; clear: none; }
 .petitBlocProduit:nth-child(3n+1) { clear: both; margin-left: 0; }
+
+.blocProduit .blocDImages { width: 46%; }

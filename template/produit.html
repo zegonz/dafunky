@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="js/jquery.superbox-min.js"></script>
 	<script type="text/javascript">
 		$(function(){
+            if ($(window).screen() > 800) {
 			$.superbox.settings = {
 				overlayOpacity: 0.7,
 				closeTxt: "Fermer",
@@ -15,6 +16,7 @@
 				prevTxt: "Image précédente"
 			};
 			$.superbox();
+        }
 		});
 	</script>
 </head>
@@ -31,7 +33,7 @@
         				<THELIA_PROD type="PRODUIT" ref="#PRODUIT_REF">
         				<h1 itemprop="name">#TITRE</h1>
                         <div class="blocDImages">
-                            <THELIA_img type="IMAGE" num="1" produit="#ID" largeur="342">
+                            <THELIA_img type="IMAGE" num="1" produit="#ID" largeur="400">
                             <THELIA_ZOOM type="IMAGE"  num="1" id="#ID" largeur="800">
                             <a href="#IMAGE" rel="superbox[gallery][my_gallery]" class="grandeImage"  title="#PRODTITRE">
                             </THELIA_ZOOM>
@@ -82,7 +84,7 @@
                             
             <//T_DECLI>
             #PROMO[<span  class="prixProduit">#PRIX2 &euro;</span> <span class="ancienPrix">au lieu de #PRIX &euro;</span>][<span class="prixProduit" itemprop="price">#PRIX &euro;</span>]
-             #FILTRE_different(#STOCK||0||<input class="acheter" type="submit" value="" border="0" />)
+             #FILTRE_different(#STOCK||0||<input class="acheter" type="submit" value="Ajouter au panier" border="0" />)
              #FILTRE_egalite(#STOCK||0||<span class="epuise">Produit épuisé !</span>)
 
 
