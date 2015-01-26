@@ -1,3 +1,4 @@
+
 /* ===================================================================
  * STRUCTURE
  * =================================================================*/
@@ -10,7 +11,22 @@
  * =================================================================*/
 
 #menu { display: none; }
-.btn-menu { background: #111; width: 45px; height: 45px; display: block; }
+
+.btn-menu { 
+    background: #0d7fc0; 
+    display: block;
+    float: left;
+    height: 45px; 
+    padding: 10px;
+    width: 50px; 
+    margin-right: 20px;
+}
+
+.btn-menu span { 
+    border-top: 5px solid white; 
+    display: block; 
+    margin-bottom: 4px; 
+}
 
 /* Style pour affichage du menu latérale */
 #globalWrapper {
@@ -52,7 +68,9 @@
 /* ===================================================================
  * HEADER
  * =================================================================*/
-#monCompte { clear: both; float: none; width: 100%; }
+#top { padding-bottom: 5px; }
+#logo { float: left; margin: 0; }
+#monCompte { clear: both; float: right; width: 100%; }
 #monCompte form { display: none; }
 
 /* ===================================================================
