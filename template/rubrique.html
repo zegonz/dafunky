@@ -5,17 +5,16 @@
 #INCLURE "template/js.html"
 </head>
 <body>
-<div id="global">
-    <div id="wrapper">
-        <div id="subwrapper">
+    <div id="global">
+        <div id="wrapper">
             #INCLURE "template/entete.html"
             <div id="corps" class="clearfix">
                 #INCLURE"template/menuSecondaire.html"
-                <div id="contenuPageRubrique" class="col-central">  
+                <div id="contenuPageRubrique" class="col-central">
                     <T_imgrub>
                         <div id="bandeauTitre">
                             <THELIA_IMGRUB type="IMAGE" rubrique="#RUBRIQUE_ID">
-                               <img src="#IMAGE"  alt="#TITRE" />   
+                               <img src="#IMAGE"  alt="#TITRE" />
                             </THELIA_IMGRUB>
                             <h1>#RUBRIQUE_NOM  #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
                         </div>
@@ -23,13 +22,12 @@
                     </T_imgrub>
                         #INCLURE"template/ariane.html"
                         <h1>#RUBRIQUE_NOM #FILTRE_egalite(#PRODUIT_NOUVEAUTE||1||Nouveaut&eacute;s) #FILTRE_egalite(#PRODUIT_PROMO||1||Promotions)</h1>
-                    <//T_imgrub>            
+                    <//T_imgrub>
                     #INCLURE "template/listeProduit.html"
                 </div>
             </div>
         </div>
+        #INCLURE "template/pied.html"
     </div>
-</div>
-    #INCLURE "template/pied.html"
 </body>
 </html>
