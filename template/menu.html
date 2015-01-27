@@ -1,18 +1,17 @@
 <div id="menu" class="clearfix">
-    <ul>
+    <ul class="niveau1">
         <THELIA_MENU_RUBRIQUES type="RUBRIQUE" parent="0" classement="manuel">
-        <li>
-        <a href="#URL" #FILTRE_egalite(#RUBRIQUE_ID||#ID||class="selection") #FILTRE_egalite(#ID||#RUBRIQUE_PARENT||class="selection") >#TITRE</a>
-
-        <T_BLOC_SOUS_MENU>
-            <ul>
-                <THELIA_BLOC_SOUS_MENU type="RUBRIQUE" parent="#ID">
-                <li><a href="#URL">#TITRE</a></li>
-                </THELIA_BLOC_SOUS_MENU>
-            </ul>
-        </T_BLOC_SOUS_MENU>
-        <//T_BLOC_SOUS_MENU>
-        </li>
+            <li class="nav1 #FILTRE_egalite(#RUBRIQUE_ID||#ID||selected) #FILTRE_egalite(#ID||#RUBRIQUE_PARENT||selected)">
+                <a href="#URL">#TITRE</a>
+                <T_BLOC_SOUS_MENU>
+                    <ul class="niveau2">
+                        <THELIA_BLOC_SOUS_MENU type="RUBRIQUE" parent="#ID">
+                        <li class="nav2 #FILTRE_egalite(#RUBRIQUE_ID||#ID||selected)"><a href="#URL">#TITRE</a></li>
+                        </THELIA_BLOC_SOUS_MENU>
+                    </ul>
+                </T_BLOC_SOUS_MENU>
+                <//T_BLOC_SOUS_MENU>
+            </li>
         </THELIA_MENU_RUBRIQUES>
     </ul>
 </div>
