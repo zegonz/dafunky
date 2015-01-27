@@ -166,8 +166,6 @@ position:relative;
         position:relative;
 }
 
-
-
 li.margin{
     margin:0px 10px 0 0px;
 }
@@ -181,18 +179,18 @@ li.margin{
 
 
 .survol{
-position:absolute;
-z-index:9999;
-top:187px;
-background: url("../images/bg_bandeau.png") repeat;
+    position:absolute;
+    z-index:9999;
+    top:187px;
+    background: url("../images/bg_bandeau.png") repeat;
 }
 .survol h2{
-width:312px;
-padding:3px 0 0 5px;
-font-size:12px;
-color:#fff;
-height:25px;
-text-transform:uppercase;
+    width:312px;
+    padding:3px 0 0 5px;
+    font-size:12px;
+    color:#fff;
+    height:25px;
+    text-transform:uppercase;
 }
 
 /* ===================================================================
@@ -228,7 +226,8 @@ text-transform:uppercase;
 #logo{ margin-top: 15px; float:left; display:block; width: 165px; }
 #logo a {  }
 
-#top span.titreTop { font-size:14px;    padding:0 0 5px 0; color:#0081CA; }
+#top span.titreTop { font-size:14px;  padding:0 0 5px 0; color:#0081CA; }
+.bloc-compte-panier { float: right; }
 #monCompte {
     float: right;
     width: 25%;

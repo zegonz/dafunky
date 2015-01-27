@@ -41,8 +41,15 @@ $(document).ready(function(){
             event.preventDefault();
             $('#globalWrapper').toggleClass('menu-open');
         });
-        $('#global').click(function(event) {
 
+        //masquage du menu sur click out menu déplié
+        $(document).click(function(event) {
+            if (!$(event.target).closest('.menu-lateral').length && !$(event.target).closest('.btn-menu').length) {
+                console.log("ok");
+                // if ($('#globalWrapper').hasClass('menu-open')) {
+                    $('#globalWrapper').removeClass('menu-open');
+              //}
+            }
         });
 
     }

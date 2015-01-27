@@ -12,20 +12,22 @@
 
 #menu { display: none; }
 
-.btn-menu { 
-    background: #0d7fc0; 
+.btn-menu {
+    background: #0d7fc0;
     display: block;
     float: left;
-    height: 45px; 
-    padding: 10px;
-    width: 50px; 
+    height: 45px;
     margin-right: 20px;
+    padding: 10px;
+    position: relative;
+    width: 50px;
+    z-index: 3;
 }
 
-.btn-menu span { 
-    border-top: 5px solid white; 
-    display: block; 
-    margin-bottom: 4px; 
+.btn-menu span {
+    border-top: 5px solid white;
+    display: block;
+    margin-bottom: 4px;
 }
 
 /* Style pour affichage du menu latérale */
@@ -37,33 +39,50 @@
 #global {
     position: relative;
     z-index: 1;
-    transition: all 0.4s ease 0s;
+    left: 0;
+    transition: all 600ms ease 0s;
 }
-.menu-open #global { left: 80%; transition: all 0.4s ease 0s; }
-#global:after { opacity: 0; transition: all 0.6s ease 0s; }
-.menu-open #global:after {
+.menu-open #global { left: 80%; }
+
+#global:after {
     background-color: rgba(0, 0, 0, 0.7);
     content: " ";
     height: 100%;
+    opacity: 0;
     position: absolute;
     top: 0;
+    transition: opacity 400ms ease 0s;
     width: 100%;
-    opacity: 1;
+    z-index: 2;
 }
+.menu-open #global:after { opacity: 1; }
 
+/* Style du menu lateral */
 .menu-lateral {
-    background: #111;
+    background: #0d7fc0;
     position: absolute;
     width: 0;
     top: 0;
     left: 0;
     height: 100%;
     overflow: hidden;
-    transition: all 0.4s ease 0s;
+    transition: all 600ms ease 0s;
+    z-index: 2;
 }
-.menu-open .menu-lateral {
-    width: 80%;
+.menu-open .menu-lateral { width: 80%; }
+.menu-lateral > ul > li { float: none; border-bottom: 1px solid #fff; }
+.menu-lateral > ul > li > a {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    padding: 10px 5%;
+    text-transform: uppercase;
+    width: 100%;
 }
+.menu-lateral > ul > li > a:hover,
+.menu-lateral > ul > li > a:focus { background-color: #111; text-decoration: none;  }
+.menu-lateral ul ul { display: none; }
+
 
 /* ===================================================================
  * HEADER
