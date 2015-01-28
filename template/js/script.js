@@ -28,7 +28,7 @@ $(document).ready(function(){
     });
 
     //Menu mobile
-    if ($(window).width() <= 800) {
+    if (screen.width <= 800) {
         //on duplique le menu existant + ajout de class + déplacement dans la structure html
         var menuCopy = $('#menu').clone();
         $('#global').wrap('<div id="globalWrapper"></div>');

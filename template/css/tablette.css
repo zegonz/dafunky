@@ -31,18 +31,18 @@
     position: absolute;
     height: 5px;
     width: 30px;
-    transition: all 800ms ease 0s;
+    transition: all 800ms ease 0.2s;
 }
 .btn-menu .menu-top { top: 10px; }
-.btn-menu .menu-middle { top: 20px; }
+.btn-menu .menu-middle { top: 20px; transition: opacity 800ms ease; }
 .btn-menu .menu-bottom { bottom: 10px; }
 .menu-open .btn-menu span { backface-visibility: hidden; }
-.menu-open .menu-top { 
+.menu-open .menu-top {
     top: 20px;
     transform: rotate(45deg);
 }
 .menu-open .menu-middle { opacity: 0; }
-.menu-open .menu-bottom { transform: translateY(-10px) rotate(-45deg); }
+.menu-open .menu-bottom { transform: translateY(-10px) rotate(-225deg); }
 
 /* Style pour affichage du menu latérale */
 #globalWrapper {
