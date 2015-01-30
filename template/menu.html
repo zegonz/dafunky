@@ -1,7 +1,7 @@
 <div id="menu" class="clearfix">
     <ul class="niveau1">
         <THELIA_MENU_RUBRIQUES type="RUBRIQUE" parent="0" classement="manuel">
-            <li class="nav1 #FILTRE_egalite(#RUBRIQUE_ID||#ID||selected) #FILTRE_egalite(#ID||#RUBRIQUE_PARENT||selected)">
+            <li class="nav1#FILTRE_egalite(#RUBRIQUE_ID||#ID|| selected)#FILTRE_egalite(#ID||#RUBRIQUE_PARENT||selected)#FILTRE_different(#NBENFANT||0|| is-parent)">
                 <a href="#URL">#TITRE</a>
                 <T_BLOC_SOUS_MENU>
                     <ul class="niveau2">

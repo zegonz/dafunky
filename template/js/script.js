@@ -33,7 +33,11 @@ $(document).ready(function(){
         var menuCopy = $('#menu').clone();
         $('#global').wrap('<div id="globalWrapper"></div>');
         menuCopy.removeAttr('id').removeClass('clearfix').addClass('menu-lateral');
+        $('<h1>Menu catalogue</h1>').insertBefore('.menu-lateral .niveau1');
         menuCopy.insertBefore('#global');
+
+        $('.menu-lateral .niveau2').hide();
+            $('.menu-lateral .selected .niveau2').show();
 
         //affichage du menu
         $('.btn-menu').click(function(event) {

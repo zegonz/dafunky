@@ -84,6 +84,7 @@
     padding-top: 60px;
 }
 .menu-open .menu-lateral { width: 72%; }
+.menu-lateral .nav1:first-child { border-top: 1px solid #fff; }
 .menu-lateral .nav1 { float: none; border-bottom: 1px solid #fff; }
 .menu-lateral a {
     color: #fff;
@@ -95,10 +96,14 @@
 }
 .menu-lateral .nav1 > a:hover,
 .menu-lateral .nav1 a:focus { background-color: #111; text-decoration: none;  }
-.menu-lateral .niveau2 { display: none; }
+.menu-lateral .nav1 > a {
+    background:  url(../images/puce-jaune.png) no-repeat 95% 50%;
+}
 
 /* Niveau 2 du menu lateral */
-.menu-lateral .selected .niveau2 { display: block; }
+.menu-lateral .niveau2 {  padding-bottom: 15px; /*overflow: hidden; height: 0; background: #111; transition: all 600ms ease;*/  }
+.menu-lateral .nav1:hover .niveau2,
+.menu-lateral .selected .niveau2 { height: auto; }
 .menu-lateral .niveau2 a { font-size: 13px; }
 .menu-lateral .nav2 { margin: 0 2%; text-transform: none; }
 .menu-lateral .nav2 a { text-transform: none; padding: 5px 5%; }
