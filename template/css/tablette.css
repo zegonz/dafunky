@@ -86,6 +86,18 @@
 .menu-open .menu-lateral { width: 72%; }
 .menu-lateral .nav1:first-child { border-top: 1px solid #fff; }
 .menu-lateral .nav1 { float: none; border-bottom: 1px solid #fff; }
+.menu-lateral .is-parent { position: relative; }
+.menu-lateral .arrow { 
+    background: #005fa0;
+    color: #eee;
+    height: 38px; 
+    line-height: 38px; 
+    position: absolute; 
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 40px; 
+}
 .menu-lateral a {
     color: #fff;
     display: block;
@@ -97,7 +109,7 @@
 .menu-lateral .nav1 > a:hover,
 .menu-lateral .nav1 a:focus { background-color: #111; text-decoration: none;  }
 .menu-lateral .nav1 > a {
-    background:  url(../images/puce-jaune.png) no-repeat 95% 50%;
+    /*background:  url(../images/puce-jaune.png) no-repeat 95% 50%;*/
 }
 
 /* Niveau 2 du menu lateral */
