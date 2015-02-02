@@ -11,7 +11,7 @@
        <div class="bloc-compte-panier">
            <T_PANIER>
             <div id="monPanier">
-                <span class="titreTop">Mon panier</span>
+                <h3 class="titreTop">Mon panier</h3>
                 <ul id="contenuPanier">
                     <li>
                         <a href="#URLPANIER" class="panier">Votre panier contient #PANIER_NBART article(s)</a>
@@ -29,19 +29,21 @@
             </T_PANIER>
             <//T_PANIER>
             <div id="monCompte">
-                <span class="titreTop">Mon compte</span>
+                <h3 class="titreTop">Mon compte</h3>
                 <THELIA SI NON CONNECTE>
-                <form action="#URLCOURANTE" method="post" id="connex" >
-                <input type="hidden" name="action" value="connexion" />
-                <input name="email" type="text" value="e-mail" size="13" onclick="this.value='';" />
-                <input name="motdepasse" type="password" value="000000" size="13" onclick="this.value='';" />
-                <p><button type="submit" class="bouton"><span><span>OK</span></span></button></p>
-                <div class="menu"><a href="#URLFOND(mdpoublie)">Mot de passe perdu ?</a> | <a href="#URLCOMPTE">Mon compte</a></div>
+                <form action="#URLCOURANTE" method="post" id="connex" class="clearfix">
+                    <input type="hidden" name="action" value="connexion" />
+                    <input name="email" type="text" value="e-mail" size="13" onclick="this.value='';" />
+                    <input name="motdepasse" type="password" value="000000" size="13" onclick="this.value='';" />
+                    <p><button type="submit" class="bouton"><span><span>OK</span></span></button></p>
                 </form>
+                <div class="link">
+                    <a href="#URLFOND(mdpoublie)">Mot de passe perdu ?</a> | <a href="#URLCOMPTE">Mon compte</a>
+                </div>
                 </THELIA SI NON CONNECTE>
                 <THELIA SI CONNECTE>
                 Bonjour #CLIENT_PRENOM #CLIENT_NOM
-                <div class="menu">
+                <div class="link">
                 	<a href="#URLFOND(moncompte)">Voir mon compte</a> | <a href="#URLDECONNEXION">Me d&eacute;connecter</a>
                 </div>
                 </THELIA SI CONNECTE>

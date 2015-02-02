@@ -22,7 +22,6 @@ ul { list-style: none; margin: 0; padding: 0; }
     display: block;
     font-size: 18px;
     padding: 2px 0 2px 32px;
-    width: 788px;
 }
 .titre-special span {
     color: #FEED01;
@@ -219,25 +218,21 @@ li.margin{
  * =================================================================*/
 
 #top { padding: 10px 0 20px; }
-#top a { color: #c7c9ca; text-decoration: none; }
-#top a:hover { color: #fff; text-decoration: none; }
+#top a { color: #626164; text-decoration: none; }
+#top a:hover { color: #0d7fc0; text-decoration: none; }
 
 /* Logo */
-#logo{ margin-top: 15px; float:left; display:block; width: 165px; }
+#logo { margin-top: 15px; float:left; display:block; width: 165px; }
 #logo a {  }
 
-#top span.titreTop { font-size:14px;  padding:0 0 5px 0; color:#0081CA; }
+.bloc-compte-panier .titreTop { margin-bottom: 5px; font-size:14px; color:#0081CA; }
 .bloc-compte-panier { float: right; }
-#monCompte {
-    float: right;
-    width: 25%;
-    padding: 0 0 0 10px;
-}
 
+/* Mon compte */
+#monCompte { float: right; padding: 0 0 0 10px; }
 #monCompte form {
-    float: left;
     padding: 0;
-    margin: 7px 0 0;
+    margin: 0 0 5px;
 }
 
 #monCompte form p { 
@@ -291,23 +286,16 @@ li.margin{
     line-height:18px; /* Alignement vertical du texte et largeur du côté droit*/
 }
 
-#monCompte .menu {
+#monCompte .link {
     font-size:11px;
-    float: left;
-    width: 250px;
-    color: #c7c9ca;
+    clear: both;
+    color: #ccc;
     margin: 2px 0 0 0;
     padding: 0;
 }
 
-#monPanier{
-    float: left;
-    width: 220px;
-    margin: 10px 0 0;  
-    padding: 0 0 0 5px;
-    height: 59px;
-
-}
+/* Mon panier */
+#monPanier { float: left; }
 
 .qtestyle form{
     padding:0;
@@ -330,17 +318,14 @@ ul#contenuPanier , ul#contenuPanier li {
     width: 210px;
 }
 
-ul#contenuPanier li a, ul#contenuPanier li a:visited {
+ul#contenuPanier li a {
     font-size:12px;
     color: #fff;
     margin: 0;
     padding: 4px 3px;
     width: 210px;
     display:block;
-    background-image:url(_gfx/fondContenuPanier.gif);
-    background-repeat:no-repeat;
-    background-position:right center;
-    border:1px solid #2c2b2b;
+    border: 1px solid #88888b;
 }
 
 ul#contenuPanier li ul {
