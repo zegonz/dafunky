@@ -14,7 +14,6 @@ h1, h2, h3, h4 {
     color:#515053;
 }
 ul { list-style: none; margin: 0; padding: 0; }
-
 .titre-special  { 
     background: url("../images/dafunk-fleche.gif") no-repeat 6px center #111111;
     border-bottom: 2px solid #CCCCCC;
@@ -1239,6 +1238,7 @@ a.modifierOuAjouter, a.modifierOuAjouter:visited {
     margin: 0 auto;
     padding: 20px 0 20px 0;
     text-align: left;
+    margin-top: 20px;
 }
 #footer .col { display: table-cell; width: 33%; }
 #footer .colonneG { border-right: 1px dotted #444444; padding: 0 20px 0 0; }    
@@ -2246,16 +2246,16 @@ a.lirePlus:hover{
 }
 
 #contenu form p input, #contenu form p select, #contenu form p textarea {
-    float:left;
-    margin: 0;
-    width: 190px;
-    padding: 3px;
-    border:solid 1px #a9abad;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:12px;
+    background-color:#eee;
+    border-radius: 3px; 
+    border:solid 1px #ccc;
     color:#626164;
-    font-weight:bold;
-    background-color:#d8d9da;
+    float:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 6px;
+    width: 190px;
 }
 
 #contenu form p input.codeDeReduction {

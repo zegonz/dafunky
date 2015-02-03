@@ -7,21 +7,18 @@
 <body>
 	<div id="global" class="sansAriane">
 		<div id="wrapper">
-			<div id="subwrapper">
-				#INCLURE "template/entete.html"
-		         
-				<div id="contenu">
-					<h2>Mon compte : Mot de passe perdu ou oubli&eacute; </h2>
-					<h4>Inscrivez votre email pour recevoir votre mot de passe</h4>
-					<form action="#URLFOND(mdpoublieok)" method="post" name="formmdp" id="formmdp">
-					<input type="hidden" name="action" value="chmdp" />
-		            <p class="derniereLigne">
-		            <label class="petit">Votre e-mail</label>
-		            <input name="email" type="text"/>
-		            <button type="submit" class="boutonMemeLigneQuInput"><span><span>Valider</span></span></button>
-		            </p>
-		            </form>
-				</div>
+			#INCLURE "template/entete.html"
+			<div id="contenu">
+				<h2 class="titre-special">Mon compte : Mot de passe perdu ou oubli&eacute; </h2>
+				<h4>Inscrivez votre email pour recevoir votre mot de passe</h4>
+				<form action="#URLFOND(mdpoublieok)" method="post" name="formmdp" id="formmdp">
+				<input type="hidden" name="action" value="chmdp" />
+	            <p class="derniereLigne">
+	            <label class="petit">Votre e-mail</label>
+	            <input name="email" type="text"/>
+	            <button type="submit" class="boutonMemeLigneQuInput"><span><span>Valider</span></span></button>
+	            </p>
+	            </form>
 			</div>
 		</div>
     </div>
