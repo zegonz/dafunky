@@ -445,6 +445,7 @@ menuaccueil
     background: #111;
     color:#fff;
 }
+#menu .arrow { display: none; }
 #menu ul ul {
     background: #111;
     display:none;

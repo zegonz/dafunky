@@ -37,22 +37,25 @@ $(document).ready(function(){
         menuCopy.insertBefore('#global');
 
         $('.menu-lateral .niveau2').hide();
-            $('.menu-lateral .selected .niveau2').show();
+        $('.menu-lateral .selected .niveau2').show();
 
         //affichage du menu
         $('.btn-menu').click(function(event) {
-            /* Act on the event */
             event.preventDefault();
             $('#globalWrapper').toggleClass('menu-open');
         });
 
+        //Affichage du sous menu
+        $('.menu-lateral .arrow').click(function(event) {
+            $(this).parent().toggleClass('open');
+            $(this).next('.niveau2').slideToggle(400);
+        });
+
+
         //masquage du menu sur click out menu déplié
         $(document).click(function(event) {
             if (!$(event.target).closest('.menu-lateral').length && !$(event.target).closest('.btn-menu').length) {
-                console.log("ok");
-                // if ($('#globalWrapper').hasClass('menu-open')) {
-                    $('#globalWrapper').removeClass('menu-open');
-              //}
+                $('#globalWrapper').removeClass('menu-open');
             }
         });
 
