@@ -45,7 +45,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .clearfix:after {
     clear: both;
 }
-
+.pc-hidden { display: none; }
 
 a {
     color:#0081CA;
@@ -204,7 +204,7 @@ li.margin{
 
 #global {  }
 #wrapper { position: relative; }
-#corps { clear: both; max-width: 980px; margin: 10px auto 0; }
+#corps { clear: both; max-width: 980px; margin: 10px auto 20px; min-height: 200px; }
 
 #contenu { max-width: 980px; margin: 10px auto 20px; padding: 0 10px; min-height: 200px; }
 .col-left { float: left; width: 17%; }
@@ -242,7 +242,7 @@ li.margin{
 
 #monCompte form input{
     margin: 0 5px 0 0;
-    padding:2px 5px;
+    padding: 4px 5px;
     width:90px;
     border:solid 1px #88888b;
     font-family:Arial, Helvetica, sans-serif;
@@ -253,38 +253,24 @@ li.margin{
 }
 
 #monCompte form button.bouton { 
-    display:-moz-inline-box; 
-    display:inline-block; 
-    margin:0; 
-    padding:0; 
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
+    background-color:#111;
+    border:none;
     cursor:pointer; 
-    background:none;
+    color: #fff;
     font-size:13px;
     font-weight:bold;
-    border:none;
+    height:25px;
+    line-height:25px;
+    padding: 0 10px;
+    text-align:center; 
+    vertical-align:middle; 
+    white-space:nowrap; 
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
 }
-
-#monCompte form button.bouton span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 5px;        /* Largeur du côté gauche */ 
-    margin:0;
-    vertical-align:middle;
-    background-color:#797979;
-    
-}
-
-#monCompte form button.bouton span span {
-    padding:0 8px 0 0;
-    border:none;
-    color:#FFF;
-    height:18px;
-    line-height:18px; /* Alignement vertical du texte et largeur du côté droit*/
-}
-
+#monCompte form button.bouton:hover { background-color: #0d7fc0; }
 #monCompte .link {
     font-size:11px;
     clear: both;
@@ -293,8 +279,11 @@ li.margin{
     padding: 0;
 }
 
+/* Mon compte connecté */
+#monCompte .compte-nom { color: #0d7fc0; }
+
 /* Mon panier */
-#monPanier { float: left; }
+#monPanier { float: left; margin-right: 30px; }
 
 .qtestyle form{
     padding:0;
@@ -306,7 +295,6 @@ li.margin{
     list-style: none;
     z-index:1000;
     position: relative;
-    _position:absolute;
 }
 
 ul#contenuPanier , ul#contenuPanier li {
@@ -316,22 +304,23 @@ ul#contenuPanier , ul#contenuPanier li {
     background: transparent;
     width: 210px;
 }
-
 ul#contenuPanier li a {
     font-size:12px;
-    color: #fff;
+    color: #111;
     margin: 0;
     padding: 4px 3px;
     width: 210px;
     display:block;
     border: 1px solid #88888b;
 }
+ul#contenuPanier li:hover .panier { background-color:#0092CB;  color: #fff;  }
 
 ul#contenuPanier li ul {
     display: none;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: absolute;
 }
 
 ul#contenuPanier li ul li {
@@ -356,7 +345,7 @@ ul#contenuPanier li ul li a, ul#contenuPanier li ul li a:visited {
     border-top:none;
 }
 
- ul#contenuPanier li ul li a.totalCommande, ul#contenuPanier li ul lia.totalCommande:visited {
+ ul#contenuPanier li ul li a.totalCommande {
     font-size:12px;
     color: #fff;
     margin: 0;
@@ -377,7 +366,8 @@ ul#contenuPanier li a:hover, ul#contenuPanier li ul li a:hover {
 
 span.nomArticle, span.titreTotal {
     margin:0;
-    width:150px;
+    width:140px;
+    padding-right: 5px;
     float:left;
 }
 
@@ -393,9 +383,8 @@ span.total {
     width:40px;
 }
 
-.totalCommande span.total {
-width:60px;
-}
+.totalCommande span.total { width:60px; }
+.totalCommande .titreTotal { text-align: right; width: 140px; }
 
 #infoPanier {
     margin:10px 0 0 0;
@@ -486,6 +475,8 @@ menuaccueil
     color:#fff;
 }
 #menu ul li a.selection { color:#fff; background: #111; }
+
+.menu-lateral { display: none; }
 
 /* Menu secondaire */
 #menuCatalogue {  }
@@ -973,6 +964,7 @@ margin:5px 0 0 0;
 /* ===================================================================
  * TUNNEL
  * =================================================================*/
+.tunnel #corps { margin-top: 20px; }
 
 /* Etapes de commande
 -------------------------------------------------------- */
@@ -2247,7 +2239,6 @@ a.lirePlus:hover{
 }
 
 #contenu form p input, #contenu form p select, #contenu form p textarea {
-    background-color:#eee;
     border-radius: 3px; 
     border:solid 1px #ccc;
     color:#626164;

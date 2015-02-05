@@ -3,6 +3,9 @@
  * =================================================================*/
 #global { min-width: 320px; }
 
+#logo { left: 2%; padding-left: 72px; margin-top: 3px; text-align: left; }
+#logo a { width: 130px;  }
+
 /* ===================================================================
  * FOOTER
  * =================================================================*/
@@ -27,3 +30,20 @@
 .blocProduit .blocDImages { float: none; width: 100%; }
 .blocProduit .introProduit { float: none; width: 100%; }
 .blocProduit .description { width: auto; }
+
+/* ===================================================================
+ * TUNNEL
+ * =================================================================*/
+.page-connexion #contenu label { 
+	display: block; 
+	float: none; 
+	font-size: 14px; 
+	text-align: left;
+	width: 100%; 
+}
+.page-connexion #contenu .textConnexion { text-align: left; }
+.page-connexion #nouveau .bouton,
+.page-connexion #connexion .bouton { margin: 0; }
+#contenu form p input, 
+#contenu form p select,
+#contenu form p textarea { width: 100%; float: none; }

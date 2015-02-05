@@ -10,7 +10,7 @@
        </div>
        <div class="bloc-compte-panier">
            <T_PANIER>
-            <div id="monPanier">
+            <div id="monPanier" class="mobile-hidden">
                 <h3 class="titreTop">Mon panier</h3>
                 <ul id="contenuPanier">
                     <li>
@@ -26,11 +26,12 @@
                     </li>
                 </ul>
             </div>
+            <a class="pc-hidden mobile-panier" href="#URLPANIER">Mon panier</a>
             </T_PANIER>
             <//T_PANIER>
-            <div id="monCompte">
-                <h3 class="titreTop">Mon compte</h3>
+            <div id="monCompte" class="mobile-hidden">
                 <THELIA SI NON CONNECTE>
+                <h3 class="titreTop">Mon compte</h3>
                 <form action="#URLCOURANTE" method="post" id="connex" class="clearfix">
                     <input type="hidden" name="action" value="connexion" />
                     <input name="email" type="text" value="e-mail" size="13" onclick="this.value='';" />
@@ -42,12 +43,13 @@
                 </div>
                 </THELIA SI NON CONNECTE>
                 <THELIA SI CONNECTE>
-                Bonjour #CLIENT_PRENOM #CLIENT_NOM
-                <div class="link">
-                	<a href="#URLFOND(moncompte)">Voir mon compte</a> | <a href="#URLDECONNEXION">Me d&eacute;connecter</a>
-                </div>
+                    <span class="compte-nom">Bonjour #CLIENT_PRENOM #CLIENT_NOM</span>
+                    <div class="link">
+                    	<a href="#URLFOND(moncompte)">Voir mon compte</a> | <a href="#URLDECONNEXION">Me d&eacute;connecter</a>
+                    </div>
                 </THELIA SI CONNECTE>
-        	</div>
+            </div>
+            <a class="pc-hidden mobile-compte" href="#URLFOND(moncompte)">Mon compte</a>
         </div>
     </div>
 </div>
