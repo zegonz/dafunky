@@ -34,16 +34,23 @@
 /* ===================================================================
  * TUNNEL
  * =================================================================*/
-.page-connexion #contenu label { 
-	display: block; 
-	float: none; 
-	font-size: 14px; 
+.page-connexion #contenu label {
+	display: block;
+	float: none;
+	font-size: 14px;
 	text-align: left;
-	width: 100%; 
+	width: 100%;
 }
 .page-connexion #contenu .textConnexion { text-align: left; }
 .page-connexion #nouveau .bouton,
 .page-connexion #connexion .bouton { margin: 0; }
-#contenu form p input, 
+
+/* ===================================================================
+ * COMPTE
+ * =================================================================*/
+.page-connexion #connexion .bouton,
+.page-connexion #nouveau .bouton { margin: 0; width: 100%; }
+#contenu form p label { display: block !important; width: 100% !important; }
+#contenu form p input,
 #contenu form p select,
-#contenu form p textarea { width: 100%; float: none; }
+#contenu form p textarea { width: 100% !important; float: none !important; }

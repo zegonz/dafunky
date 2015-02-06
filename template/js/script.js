@@ -33,8 +33,8 @@ $(document).ready(function(){
         var menuCopy = $('#menu').clone();
         $('#global').wrap('<div id="globalWrapper"></div>');
         menuCopy.removeAttr('id').removeClass('clearfix').addClass('menu-lateral');
-        $('<h1>Menu catalogue</h1>').insertBefore('.menu-lateral .niveau1');
         menuCopy.insertBefore('#global');
+        $('<h1>Menu</h1>').insertBefore('.menu-lateral .niveau1');
 
         $('.menu-lateral .niveau2').hide();
         $('.menu-lateral .selected .niveau2').show();
@@ -47,7 +47,7 @@ $(document).ready(function(){
 
         //Affichage du sous menu
         $('.menu-lateral .arrow').click(function(event) {
-            $(this).parent().toggleClass('open');
+            $(this).parent().toggleClass('selected');
             $(this).next('.niveau2').slideToggle(400);
         });
 

@@ -1033,7 +1033,7 @@ margin:5px 0 0 0;
 .page-connexion #contenu label { 
     text-align: right; 
     margin-right: 5px; 
-    width: 220px; 
+    width: 27%; 
 }
 .page-connexion #contenu .textConnexion { 
     float: none; 
@@ -1042,16 +1042,11 @@ margin:5px 0 0 0;
     font-size: 11px;
     padding-top: 0;
 }
-.page-connexion #contenu .bouton span   { padding: 0 10px; }
-.page-connexion #contenu .bouton:hover span { 
-    background-color: #0081CA; 
-}
 .page-connexion .bloc       { margin-bottom: 20px; }
 .page-connexion .bloc h2    { margin-bottom: 15px; }
 .page-connexion #connexion .textConnexion a { color: #515053; }
-.page-connexion #connexion .bouton          { margin-left: 269px; }
-
-.page-connexion #nouveau .bouton { margin-left: 284px; }
+.page-connexion #connexion .bouton,
+.page-connexion #nouveau .bouton { margin-left: 27.5%; width: 30%; }
 
 /* Bloc "adresse de livraison" & "adresse de facturation" 
 -------------------------------------------------------- */
@@ -2224,7 +2219,7 @@ a.lirePlus:hover{
 
 #contenu form p label {
     float: left;
-    width: 290px;
+    width: 27%;
     padding:0 10px 0 0;
     margin: 0;
     line-height:24px;
@@ -2246,22 +2241,14 @@ a.lirePlus:hover{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 12px;
     margin: 0;
-    padding: 6px;
-    width: 190px;
+    padding: 8px; 6px;
+    width: 30%;
 }
 
 #contenu form p input.codeDeReduction {
     width: 50px;
     background-color:#fff;
     padding: 4px;
-}
-
-#contenu form p select {
-    width: 198px;
-}
-
-#contenu form p textarea {
-    width: 300px;
 }
 
 #contenu form p input.radio, #contenu form p input.checkBox {
@@ -2283,43 +2270,26 @@ a.lirePlus:hover{
     
 #contenu form button.bouton,
 #contenu form button.boutonMemeLigneQuInput { 
-    display:-moz-inline-box; 
-    display:inline-block; 
-    margin:0 0 0 300px; 
-    padding:0; 
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
+    background-color:#333333;
     border:none;
-    background:none;
+    color: #fff;
+    cursor:pointer; 
+    display:inline-block; 
     font-size:13px;
     font-weight:bold;
+    padding: 8px 20px;
+    text-align:center; 
+    vertical-align:middle; 
+    white-space: nowrap; 
+    text-transform: uppercase;
+    transition: background-color 300ms ease;
 }
+#contenu form button.boutonMemeLigneQuInput:hover,
+#contenu form button.bouton:hover { background: #0d7fc0; }
 
 #contenu form button.boutonMemeLigneQuInput { 
     margin:0 0 0 10px; 
 }
-    
-#contenu form button.bouton span,
-#contenu form button.boutonMemeLigneQuInput span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 8px;        /* Largeur du côté gauche */ 
-    margin:0;
-    vertical-align:middle;
-    background-color:#333333;
-}
-
-#contenu form button.bouton span span,
-#contenu form button.boutonMemeLigneQuInput span span {
-    padding:0 8px 0 0;/* Largeur du côté droit */ 
-    color:#FFF;
-    height:24px;
-    line-height:24px; /* Alignement vertical du texte */ 
-    border: none;
-}
-
 .obligatoire {
     font-size: 12px;
     color: #FF0000;
