@@ -213,6 +213,36 @@ li.margin{
 .inner-center { max-width: 980px; margin: 0 auto; }
 
 /* ===================================================================
+ * STYLES
+ * =================================================================*/
+
+/* Tableaux
+-------------------------------------------------------- */
+table tbody tr:nth-child(odd)  td { background-color: #eee; }
+table th {
+    font-size: 15px;
+    border-bottom:solid 1px #eee;
+}
+
+table td,
+table th {
+    font-weight: bold;
+    padding: 8px;
+}
+
+/* bouton */
+.btn-delete { 
+    background: url(../images/picto-delete.png) no-repeat; 
+    width: 15px;
+    height: 16px;
+    text-indent: -10000px;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 300ms ease-out;
+}
+.btn-delete:hover { opacity: 0.8; }
+
+/* ===================================================================
  * HEADER
  * =================================================================*/
 
@@ -979,34 +1009,17 @@ margin:5px 0 0 0;
     background-color:#fff;
 }
 
-#etapesDeCommande ul {
-    margin:0;
-    padding:0;
-    list-style:none;
-    float:left;
-    width:708px;
-    border-right:solid 1px #d8d9da;
-}
-
+#etapesDeCommande ul {}
 #etapesDeCommande ul li {
     color:#c7c9ca;
-    width:176px;
     margin:0;
     padding:0;
     list-style:none;
-    display:inline;
     float:left;
-    border-left:solid 1px #d8d9da;
-    border-bottom:solid 1px #d8d9da;
-    border-top:solid 1px #d8d9da;
 }
 
 #etapesDeCommande ul li.selection {
     color:#fff;
-    border-left:solid 1px #d8d9da;
-    border-bottom:solid 1px #d8d9da;
-    border-top:solid 1px #d8d9da;
-    background-color:#0081CA;
 }
 
 #etapesDeCommande ul li span {
@@ -1025,7 +1038,7 @@ margin:5px 0 0 0;
 
 /* Tunnel de commande
 -------------------------------------------------------- */
-.tunnel #contenu { width: 819px; }
+.tunnel #contenu {  }
 .tunnel h2       { margin-bottom: 18px; }
 
 /* Page de connexion compte client 
@@ -2297,38 +2310,6 @@ a.lirePlus:hover{
     margin:10px 0;
 }
 
-/* Tableaux
--------------------------------------------------------- */
-
-#contenu table, #contenu table tr {
-    padding:0;
-    margin:0;
-}
-
-#contenu table th {
-    font-weight: bold;
-    background-color: #d8d9da;
-    border-bottom:solid 1px #FFFFFF;
-}
-
-#contenu table td {
-    font-weight: bold;
-    background-color: transparent;
-    border:none;
-}
-
-#contenu table td.ligne {
-    font-weight: bold;
-    background-color: transparent;
-    border-bottom:solid 1px #d8d9da;
-}
-
-#contenu table th.total {
-    font-weight: bold;
-    color:#FFF;
-    background-color: #0081CA;
-    border-bottom:solid 1px #dedce6;
-}
 
 /* Liens internes au site
 -------------------------------------------------------- */
