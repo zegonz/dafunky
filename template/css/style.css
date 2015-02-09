@@ -212,6 +212,7 @@ li.margin { margin:0px 10px 0 0px; }
 
 /* Tableaux
 -------------------------------------------------------- */
+table { margin-bottom: 1.75em; }
 table tbody tr:nth-child(odd)  td { background-color: #eee; }
 table th {
     font-size: 15px;
@@ -221,7 +222,7 @@ table th {
 table td,
 table th {
     font-weight: bold;
-    padding: 8px;
+    padding: 10px;
 }
 
 /* bouton */
@@ -989,53 +990,76 @@ margin:5px 0 0 0;
  * TUNNEL
  * =================================================================*/
 .tunnel #corps { margin-top: 20px; }
+.tunnel h2       { margin-bottom: 18px; }
 
 /* Etapes de commande
 -------------------------------------------------------- */
-#etapesDeCommande { margin: 0 0 20px 0; }
+#etapesDeCommande { margin: 0 0 40px 0; }
 #etapesDeCommande ul { display: table; width: 100%; }
-#etapesDeCommande ul li { 
+#etapesDeCommande li { 
     border-bottom: 2px solid #0d7fc0; 
     color: #cfcfcf; 
     display: table-cell; 
-    padding-bottom: 15px; 
+    font-size: 14px;
+    padding-bottom: 10px; 
     position: relative; 
     text-align: center;
-    font-size: 14px;
+    width: 25%;
 }
-#etapesDeCommande ul li:after {  
+#etapesDeCommande li:after {  
     background: #fff;
-    border: 2px solid #0d7fc0;
-    color: #111;
-    content: "1";
     border-radius: 40px;
-    height: 22px;
-    width: 22px;
+    border: 2px solid #0d7fc0;
+    bottom: -6px;
+    content: "1";
     display: block;
-    position: absolute;
-    bottom: -15px;
-    left: 35%;
-    text-align: center;
+    height: 22px;
+    margin: 0 auto -19px;
     line-height: 22px;
-    color: #fff;
+    position: relative;
+    text-align: center;
+    width: 22px;
 }
-#etapesDeCommande ul li.selection { border-bottom: 2px solid #0d7fc0; color: #111; }
-#etapesDeCommande ul li.selection:after {
-    background: #0d7fc0;
-}
+#etapesDeCommande .etape2:after { content: "2"; }
+#etapesDeCommande .etape3:after { content: "3"; }
+#etapesDeCommande .etape4:after { content: "4"; }
+#etapesDeCommande ul li.selection { border-bottom: 2px solid #0d7fc0; color: #111; font-weight: bold; }
+#etapesDeCommande ul li.selection:after { background: #0d7fc0; color: #fff; }
 #etapesDeCommande ul li span {
     display: inline-block;
     vertical-align: middle;
 }
-#etapesDeCommande ul li .num { margin:0 3px 0 0; font-size:18px; padding:0 5px; }
-#etapesDeCommande ul li .libelle {  }
 
-#etapesDeCommande ul li span.chiffreSelection {}
-
-/* Tunnel de commande
+/* Panier
 -------------------------------------------------------- */
-.tunnel #contenu {  }
-.tunnel h2       { margin-bottom: 18px; }
+.panier-top th { border-bottom: 1px solid #cccccc; }
+.panier-main { border-bottom: 1px solid #cccccc; }
+.panier-bottom th { border: 0; border-top: 1px solid #ccc; }
+
+.queFaire { clear: both; }
+.queFaire p { font-size:14px; }
+.queFaire h3{ margin-top: 15px; font-size:16px; text-align:left; }
+.queFaire a.bouton, 
+.queFaire button.bouton { 
+    background-color:#0081ca;
+    border:0; 
+    color: #fff;
+    cursor:pointer; 
+    display:inline-block; 
+    font-size:14px;
+    font-weight:bold;
+    padding: 5px 10px;
+    text-align:center; 
+    vertical-align:middle; 
+    white-space:nowrap; 
+    text-decoration: none;
+    transition: background 300ms ease-out;
+} 
+.queFaire a.left { float: left; background: #555; }
+.queFaire a.right { float: right; }
+.queFaire a.bouton:focus,
+.queFaire a.bouton:hover { background: #111; }
+
 
 /* Page de connexion compte client 
 -------------------------------------------------------- */
@@ -1060,26 +1084,27 @@ margin:5px 0 0 0;
 /* Bloc "adresse de livraison" & "adresse de facturation" 
 -------------------------------------------------------- */
 #contenu #formCommande { margin-bottom: 15px; }
-
+    
 .adresseDeLivraison {
     float: right;
     margin: 0 0 20px 0;
-    width:345px;
+    width: 45%;
 }
 
 .adresseDeLivraisonRecap {
     float: left;
     margin: 0 0 20px 0;
-    width:710px;
 }
 
 .adresseDeFacturation {
     float: left;
     margin: 0 0 20px 0;
-    width:345px;
+    width: 45%;
 }
 
-.adresseDeLivraison h3, .adresseDeFacturation h3, .adresseDeLivraisonRecap h3 {
+.adresseDeLivraison h3, 
+.adresseDeFacturation h3, 
+.adresseDeLivraisonRecap h3 {
     color:#515053;
     display:block;
     padding: 5px 0 7px 10px;
@@ -1090,43 +1115,27 @@ margin:5px 0 0 0;
 
 .adresseDeLivraison h4 {
     color:#515053;
-    width:335px;
     margin:5px 0 0 0;
     padding: 5px 0 7px 10px;
     background-color: #bbbdbf;
-    float:left;
 }
 
 .adresseDeLivraison .contenu, .adresseDeFacturation .contenu {
-    float:left;
-    width: 325px;
-    margin:1px 0 0 0;
-    padding: 10px;
+    padding: 10px 2%;
     background-color: #d8d9da;
+
 }
 
 .adresseDeLivraisonRecap .contenu {
-    float:left;
-    width: 690px;
-    margin:1px 0 0 0;
-    padding: 10px;
     background-color: #d8d9da;
 }
 
 .adresseDeLivraison ul {
-    list-style:none;
-    margin: 0;
-    padding:0;
-    width: 345px;
-    float:left;
+
 }
 
 .adresseDeLivraisonRecap ul {
-    list-style:none;
-    margin: 0;
-    padding:0;
-    width: 710px;
-    float:left;
+
 }
 
 .adresseDeLivraison ul li, .adresseDeLivraisonRecap ul li {
@@ -1136,8 +1145,10 @@ margin:5px 0 0 0;
     font-weight:bold;
 }
 
-.adresseDeLivraison ul li a, .adresseDeLivraisonRecap ul li a,
-.adresseDeLivraison ul li a:visited, .adresseDeLivraisonRecap ul li a:visited {
+.adresseDeLivraison ul li a, 
+.adresseDeLivraisonRecap ul li a,
+.adresseDeLivraison ul li a:visited, 
+.adresseDeLivraisonRecap ul li a:visited {
     color:#fff;
     display:block;
     background-color:#8fbce3;
@@ -1145,7 +1156,8 @@ margin:5px 0 0 0;
     padding:3px 0 3px 10px;
 }
 
-a.modifierOuAjouter, a.modifierOuAjouter:visited {
+a.modifierOuAjouter, 
+a.modifierOuAjouter:visited {
     font-size:12px;
     font-weight:bold;
     border-top:solid 1px #FFF;
@@ -2309,46 +2321,6 @@ a.lirePlus:hover{
 
 /* Liens internes au site
 -------------------------------------------------------- */
-
-.queFaire {
-    margin:0px 0 0 0;
-    padding:0;
-    width:100%;
-    text-align:right;
-}
-.queFaire p{ font-size:14px; }
-.queFaire h3{ margin-top: 15px; font-size:16px; text-align:left; }
-.queFaire a.bouton, 
-.queFaire button.bouton { 
-    display:inline-block; 
-    margin:10px 0 0 0; 
-    padding:0;
-    font-size:14px;
-    font-weight:bold;
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
-    border:0; 
-    background:none; 
-} 
-.queFaire a.bouton.left { float: left; }
-.queFaire a.bouton.left span { background: #111111; }
-.queFaire a.bouton span, 
-.queFaire button.bouton span { 
-    position:relative; 
-    display: inline-block;
-    padding:0 10px; 
-    background-color:#0081ca;
-    height:24px; 
-    color:#fff;
-    line-height:22px; 
-} 
-
-.queFaire a.bouton:hover span, .queFaire a.bouton:hover span span, 
-.queFaire button.bouton:hover span, .queFaire button.bouton:hover span span { 
-    background-color:#00529a;
-} 
  
 /*  général
 -------------------------------------------------------- */

@@ -25,17 +25,16 @@
 		<div id="corps">
 			<div id="etapesDeCommande">
 				<ul>
-					<li class="selection"><span class="libelle">Panier</span></li>
-					<li><span class="libelle">Facturation et livraison</span></li>
-					<li><span class="libelle">Je v&eacute;rifie ma commande</span></li>
-					<li><span class="libelle">Paiement s&eacute;curis&eacute;</span></li>
+					<li class="selection etape1"><span class="libelle">Panier</span></li>
+					<li class="etape2"><span class="libelle">Facturation et livraison</span></li>
+					<li class="etape3"><span class="libelle">Je v&eacute;rifie ma commande</span></li>
+					<li class="etape4"><span class="libelle">Paiement s&eacute;curis&eacute;</span></li>
 				</ul>
 			</div>
-            <div class="clear"></div>
-			<h2 class="titre-special">Contenu de mon panier</h2>
+			<h2 class="clear titre-special">Contenu de mon panier</h2>
 			<T_CONTENU_PANIER>
 			<table width="100%" border="0" cellpadding="5" cellspacing="0" class="table-responsive">
-                <tr>
+                <tr class="panier-top">
                     <th colspan="2" align="center">Nom du produit</th>
                     <th align="center">Prix unitaire</th>
                   <th align="center">Quantit&eacute;</th>
@@ -44,7 +43,7 @@
                   <th align="center">Vider</th>
                 </tr>
 				<THELIA_CONTENU_PANIER type="PANIER">
-				<tr>
+				<tr class="panier-main">
 					<td class="ligne">
                    	  <THELIA_IMAGE type="IMAGE" num="1" produit="#ID" largeur="50">
 						<img src="#IMAGE" alt="#PRODTITRE " title="#PRODTITRE"/>
@@ -84,20 +83,20 @@
 				</tr>
 
                 </THELIA_CONTENU_PANIER>
-                <tr>
+                <tr class="panier-bottom">
                 	<th colspan="5">&nbsp;</th>
 					<th align="right">TOTAL DU PANIER :</th>
 					<th align="center" class="total">#PANIER_TOTAL &euro;</th>
 				</tr>
 			</table>
-       		<div class="queFaire">
+       		<div class="queFaire clearfix">
             	<a href="#URLPREC" class="bouton left"><span> &lt; Retour page précédente</span></a>
-  				<a href="#URLFOND(adresse)" class="bouton"><span> &gt; Finaliser ma commande</span></a>
+  				<a href="#URLFOND(adresse)" class="bouton right"><span> &gt; Finaliser ma commande</span></a>
 			</div>
 			</T_CONTENU_PANIER>
 			<h4>Votre panier est vide</h4>
             <div class="queFaire">
-            	<a href="#URLPREC" class="bouton"><span>Retour page précédente</span></a>
+            	<a href="#URLPREC" class="bouton left"><span>Retour page précédente</span></a>
 				<a class="bouton" href="#URLSOMMAIRE"><span> &lt; Retour &agrave; la boutique</span></a>
 			</div>
 			<//T_CONTENU_PANIER>

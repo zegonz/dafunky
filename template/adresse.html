@@ -7,19 +7,15 @@
 </head>
 <body>      
 <div id="global" class="sansAriane tunnel">
-<div id="wrapper">
-	<div id="subwrapper">
+    <div id="wrapper">
 		#INCLURE "template/entete.html"
-		 
-         
-		 
-        <div id="contenu">
+        <div id="corps">
             <div id="etapesDeCommande">
                 <ul>
-                    <li><span>1</span>Panier</li>
-                    <li class="selection"><span class="chiffreSelection">2</span>Facturation et livraison</li>
-                    <li><span>3</span>Je v&eacute;rifie ma commande</li>
-                    <li><span>4</span>Paiement s&eacute;curis&eacute;</li>
+                    <li class="etape1"><span class="libelle">Panier</span></li>
+                    <li class="selection etape2"><span class="libelle">Facturation et livraison</span></li>
+                    <li class="etape3"><span class="libelle">Je v&eacute;rifie ma commande</span></li>
+                    <li class="etape4"><span class="libelle">Paiement s&eacute;curis&eacute;</span></li>
                 </ul>
             </div>
             <h2 class="clear titre-special">Mes coordonn&eacute;es</h2>
@@ -71,11 +67,11 @@
                 	</THELIA_transport>
                 </ul>
             </div>
+            <div class="queFaire">
+                <a href="#URLPREC" class="bouton left"><span>< Retour page précédente</span></a>
+            </div>
         </div>		  	
-
 	</div>
-
-</div>
     #INCLURE "template/pied.html"
 </div>
 </body>
