@@ -133,12 +133,12 @@ position:relative;
 }
 
 #caption span{
-        font-size:14px;
-        font-weight:bold;
-        text-transform:uppercase;
-        padding:8px 0 0 5px;
-        display:block;
-        color:white;
+    color:white;
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px 0 0 5px;
+    text-transform:uppercase;
 }
 
 
@@ -164,18 +164,12 @@ position:relative;
         position:relative;
 }
 
-li.margin{
-    margin:0px 10px 0 0px;
-}
-
-
-#vignetteRubriqueAccueil ul li a{   
+li.margin { margin:0px 10px 0 0px; }
+#vignetteRubriqueAccueil ul li a {
     display:block;
     width:312px;
     height:187px;
 }
-
-
 .survol{
     position:absolute;
     z-index:9999;
@@ -998,43 +992,45 @@ margin:5px 0 0 0;
 
 /* Etapes de commande
 -------------------------------------------------------- */
-#etapesDeCommande {
-    float: left;
-    width:710px;
-    color: #515053;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 0 0 17px 0;
-    padding:0;
-    background-color:#fff;
+#etapesDeCommande { margin: 0 0 20px 0; }
+#etapesDeCommande ul { display: table; width: 100%; }
+#etapesDeCommande ul li { 
+    border-bottom: 2px solid #0d7fc0; 
+    color: #cfcfcf; 
+    display: table-cell; 
+    padding-bottom: 15px; 
+    position: relative; 
+    text-align: center;
+    font-size: 14px;
 }
-
-#etapesDeCommande ul {}
-#etapesDeCommande ul li {
-    color:#c7c9ca;
-    margin:0;
-    padding:0;
-    list-style:none;
-    float:left;
+#etapesDeCommande ul li:after {  
+    background: #fff;
+    border: 2px solid #0d7fc0;
+    color: #111;
+    content: "1";
+    border-radius: 40px;
+    height: 22px;
+    width: 22px;
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 35%;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
 }
-
-#etapesDeCommande ul li.selection {
-    color:#fff;
+#etapesDeCommande ul li.selection { border-bottom: 2px solid #0d7fc0; color: #111; }
+#etapesDeCommande ul li.selection:after {
+    background: #0d7fc0;
 }
-
 #etapesDeCommande ul li span {
-    color:#fff;
-    font-size:18px;
-    margin:0 3px 0 0;
-    padding:0 5px;
-    background-color:#d8d9da;
+    display: inline-block;
+    vertical-align: middle;
 }
+#etapesDeCommande ul li .num { margin:0 3px 0 0; font-size:18px; padding:0 5px; }
+#etapesDeCommande ul li .libelle {  }
 
-#etapesDeCommande ul li span.chiffreSelection {
-    color:#d8d9da;
-    background-color:#25384B;
-    border-right:solid 0px #d8d9da;
-}
+#etapesDeCommande ul li span.chiffreSelection {}
 
 /* Tunnel de commande
 -------------------------------------------------------- */
