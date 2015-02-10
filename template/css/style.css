@@ -34,6 +34,8 @@ ul { list-style: none; margin: 0; padding: 0; }
     clear:both;
 }
 /* CLEARFIX */
+#corps:before,
+#corps:after,
 .clearfix:before,
 .clearfix:after,
 #contenu:before,
@@ -41,6 +43,7 @@ ul { list-style: none; margin: 0; padding: 0; }
     content: " "; /* 1 */
     display: table; /* 2 */
 }
+#corps:after,
 #contenu:after, 
 .clearfix:after {
     clear: both;
@@ -1086,44 +1089,46 @@ margin:5px 0 0 0;
 #contenu #formCommande { margin-bottom: 15px; }
     
 .adresseDeLivraison {
-    float: right;
-    margin: 0 0 20px 0;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    float: left;
+    margin: 0 0 40px 0;
     width: 45%;
 }
 
 .adresseDeLivraisonRecap {
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
     float: left;
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
 }
 
 .adresseDeFacturation {
-    float: left;
-    margin: 0 0 20px 0;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    float: right;
+    margin: 0 0 40px 0;
     width: 45%;
 }
 
 .adresseDeLivraison h3, 
 .adresseDeFacturation h3, 
 .adresseDeLivraisonRecap h3 {
-    color:#515053;
+    color: #0081ca;
     display:block;
-    padding: 5px 0 7px 10px;
     margin:0;
-    height: 20px;
-    background-color: #bbbdbf;
+    padding: 5px 0 7px 10px;
 }
 
 .adresseDeLivraison h4 {
     color:#515053;
     margin:5px 0 0 0;
-    padding: 5px 0 7px 10px;
-    background-color: #bbbdbf;
+    padding: 5px 2%;
 }
 
-.adresseDeLivraison .contenu, .adresseDeFacturation .contenu {
-    padding: 10px 2%;
-    background-color: #d8d9da;
-
+.adresseDeLivraison .contenu, 
+.adresseDeFacturation .contenu {
+    padding: 0 2% 10px;
 }
 
 .adresseDeLivraisonRecap .contenu {
@@ -1173,61 +1178,34 @@ a.modifierOuAjouter:visited {
     background-color:#00529a;
 }
 
-
-
 /* Bloc "Mode de livraison" 
 -------------------------------------------------------- */
 
-.choixDeLaLivraison, .choixDuReglement {
-    float: left;
-    width:710px;
-    margin: 0;
-    padding:0;
-}
-
-.choixDeLaLivraison ul, .choixDuReglement ul {
-    margin: 0;
-    padding:0;
-    list-style:none;
-    width: 710px;
-}
-
-.choixDeLaLivraison ul li, .choixDuReglement ul li {
-    margin: 0;
-    padding:0;
+.choixDeLaLivraison, .choixDuReglement { margin-bottom: 30px; }
+.choixDeLaLivraison ul li, 
+.choixDuReglement ul li {
     font-size:14px;
     font-weight:bold;
 }
 
-.choixDeLaLivraison span.modeDeLivraison, .choixDuReglement span.modeDeReglement,
-.choixDeLaLivraison span.choisir, .choixDuReglement span.choisir {
-    color:#515053;
-    line-height:37px;
-    width:355px;
-    margin:0;
-    padding:0;
-    background-color:#bbbdbf;
-    float:left;
-    text-indent:10px;
-    height:40px;
+.choixDeLaLivraison span, 
+.choixDuReglement span {
+    color: #111;
 }
 
-.choixDeLaLivraison span.choisir, .choixDuReglement span.choisir {
+.choixDeLaLivraison span.choisir, 
+.choixDuReglement span.choisir {
     background-color:transparent;
-    color:#FFFFFF;
 }
 
-.choixDeLaLivraison ul li a, .choixDeLaLivraison ul li a:visited, .choixDuReglement ul li a, .choixDuReglement ul li a:visited {
-    height:40px;
-    color:#fff;
+.choixDeLaLivraison ul li a, 
+.choixDuReglement ul li a {
+    color:#111;
     display:block;
-    background-color:#0081ca;
-    border-top:solid 1Px #FFFFFF;
 }
 
 .choixDeLaLivraison ul li a:hover, .choixDuReglement ul li a:hover {
     text-decoration:none;
-    background-color:#00529a;
 }
 
 /* ===================================================================
