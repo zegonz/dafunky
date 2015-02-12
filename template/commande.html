@@ -7,7 +7,7 @@
     </head>
 <body>
 <div id="global" class="sansAriane tunnel">
-<div id="wrapper">
+    <div id="wrapper">
 	   #INCLURE "template/entete.html"
 		<div id="corps">
 			<div id="etapesDeCommande">
@@ -20,50 +20,50 @@
 			</div>            
 			<h2 class="titre-special clear">R&eacute;capitulatif de ma commande </h2>
             <form action="#URLFOND(commande)" id="formCommande">
-            <input type="hidden" name="action" value="codepromo" />
-            <table width="100%" border="0" cellspacing="0" cellpadding="5">
-            	<tr>
-            		<th colspan="2">Nom de l'article</th>
-            		<th align="center">Prix unitaire </th>
-           		  <th align="center">Quantit&eacute;</th>
-           		  <th align="center">Total</th>
-           	  </tr>
-            	<THELIA_panier type="PANIER">
-            	<tr>
-                    <td class="ligne">
-                        <THELIA_IMAGE type="IMAGE" num="1" produit="#ID"  largeur="80">
-                        <img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"/>
-                        </THELIA_IMAGE>
-                    </td>
-                    <td class="ligne">#TITRE - #REF</td>
-                    <td align="center" class="ligne">#PRIXU &euro;</td>
-                  <td align="center" class="ligne">#QUANTITE</td>
-                  <td align="center" class="ligne">#TOTAL &euro;</td>
-            	</tr>
-            </THELIA_panier>
-            <tr>
-            	<th colspan="4">Frais de livraison </th>
-            	<th align="center">#PANIER_PORT &euro;</th>
-            </tr>
-            <tr>
-            	<td colspan="4">Remise </td>
-            	<td align="center">#PANIER_REMISE &euro;</td>
-            </tr>
-            <tr>
-				<th colspan="5">
-				<p class="derniereLigne"><label class="codeDeReduction">Saisissez un code de r&eacute;duction</label>
-				<input name="code" type="text" class="codeDeReduction"/>
-				<button type="submit" class="boutonMemeLigneQuInput"><span><span>OK</span></span></button>
-				</p>
-				</th>
-            </tr>            
-            <tr>
-            	<th colspan="4" class="right">TOTAL</th>
-            	<th align="center" class="total">#PANIER_TOTPORT &euro;</th>
-            </tr>
-            </table>
+                <input type="hidden" name="action" value="codepromo" />
+                <table class="table-responsive" width="100%" border="0" cellspacing="0" cellpadding="5">
+                	<tr class="panier-top">
+                		<th colspan="2" class="align-left">Nom de l'article</th>
+                		<th align="center">Prix unitaire </th>
+               		  <th align="center">Quantit&eacute;</th>
+               		  <th align="center">Total</th>
+               	    </tr>
+                	<THELIA_panier type="PANIER">
+                    	<tr class="panier-main">
+                            <td class="ligne">
+                                <THELIA_IMAGE type="IMAGE" num="1" produit="#ID"  largeur="50">
+                                <img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"/>
+                                </THELIA_IMAGE>
+                            </td>
+                            <td class="ligne">#TITRE - #REF</td>
+                            <td align="center" class="ligne">#PRIXU &euro;</td>
+                          <td align="center" class="ligne">#QUANTITE</td>
+                          <td align="center" class="ligne">#TOTAL &euro;</td>
+                    	</tr>
+                    </THELIA_panier>
+                    <tr>
+                    	<th class="align-right" colspan="4">Frais de livraison </th>
+                    	<th align="center">#PANIER_PORT &euro;</th>
+                    </tr>
+                    <tr>
+                    	<td colspan="4" class="align-right">Remise </td>
+                    	<td align="center">#PANIER_REMISE &euro;</td>
+                    </tr>
+                    <tr>
+        				<th colspan="5" class="align-right">
+        				<p class="derniereLigne code-promo-field"><label class="codeDeReduction">Saisissez un code de r&eacute;duction</label>
+        				<input name="code" type="text" class="codeDeReduction"/>
+        				<button type="submit" class="boutonMemeLigneQuInput"><span><span>OK</span></span></button>
+        				</p>
+        				</th>
+                    </tr>            
+                    <tr class="panier-bottom">
+                    	<th colspan="4" class="right">TOTAL</th>
+                    	<th align="center" class="total">#PANIER_TOTPORT &euro;</th>
+                    </tr>
+                </table>
             </form>
-            <div class="adresseDeLivraisonRecap">				
+            <div class="adresseDeLivraisonRecap pull-left">				
 				<h3>Mon adresse de livraison</h3>
 				<div class="contenu">
             		<THELIA_adrcours type="ADRESSE" adresse="#ADRESSE_ACTIVE">
@@ -77,19 +77,21 @@
 				</div>
 				<a href="#URLPREC" class="modifierOuAjouter">Modifier cette adresse</a>
 			</div>
+            <div class="mode-livraison-recap pull-right">
+                <h3>Mode de livraison</h3>
+                <img src="template/images/colissimo-tunnel.png" alt="" /><span class="modeDeLivraison"><span class="livraison-info">Livraison en Colissimo 48H</span>
+            </div>
 			<div class="choixDuReglement">
-            <h2 class="clear titre-special">Choisissez un mode de paiement : </h2>
+                <h2 class="clear titre-special">Choisissez un mode de paiement : </h2>
             	<ul>
 					<THELIA_PAIEMENT type="PAIEMENT">
-					<li><a href="#URLPAYER"><span class="modeDeReglement">#TITRE</span><span class="choisir">régler par Carte bancaire ou compte Paypal</span></a></li>
+					<li><a href="#URLPAYER" class="clearfix"><img src="template/images/paypal-paiement-tunnel.jpg" alt="" /><span class="modeDeReglement">Paiement via #TITRE</span><span class="choisir">régler par Carte bancaire ou compte Paypal</span></a></li>
 				</THELIA_PAIEMENT>
                 </ul>
 			</div>
 		</div>		  	
 	</div>
-</div>
-		#INCLURE "template/pied.html"
-		 
+	#INCLURE "template/pied.html"
 </div>
 </body>
 </html>

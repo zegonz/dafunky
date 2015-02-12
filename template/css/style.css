@@ -15,12 +15,12 @@ h1, h2, h3, h4 {
 }
 ul { list-style: none; margin: 0; padding: 0; }
 .titre-special  { 
-    background: url("../images/dafunk-fleche.gif") no-repeat 6px center #111111;
+    background: url("../images/dafunk-fleche.gif") no-repeat 8px 6px #111111;
     border-bottom: 2px solid #CCCCCC;
     color: #EEEEEE;
     display: block;
     font-size: 18px;
-    padding: 2px 0 2px 32px;
+    padding: 2px 0 2px 35px;
 }
 .titre-special span {
     color: #FEED01;
@@ -29,7 +29,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .titre-bleu { color: #0081CA; }
 
+.align-left { text-align: left; }
 .align-center { text-align: center; }
+.align-right { text-align: right; }
+.pull-left { float: left; }
+.pull-right { float: right; }
 .clear{
     clear:both;
 }
@@ -188,6 +192,9 @@ li.margin { margin:0px 10px 0 0px; }
     text-transform:uppercase;
 }
 
+/* bouton */
+.bouton { border-radius: 2px; }
+
 /* ===================================================================
  * STRUCTURE
  * =================================================================*/
@@ -228,7 +235,8 @@ table th {
     padding: 10px;
 }
 
-/* bouton */
+/* Boutons
+-------------------------------------------------------- */
 .btn-delete { 
     background: url(../images/picto-delete.png) no-repeat; 
     width: 15px;
@@ -239,6 +247,114 @@ table th {
     transition: opacity 300ms ease-out;
 }
 .btn-delete:hover { opacity: 0.8; }
+
+/* Formulaires
+-------------------------------------------------------- */
+.page-formulaire h3 { clear: both; margin: 15px 5% 0; }
+#contenu form {
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+#contenu form p {
+    margin: 0;
+    padding: 4px 0;
+    /* Empêcher le dépassement des flottants */
+    overflow: hidden;
+    font-size: 12px;
+    clear:both;
+    float:left;
+    width:100%;
+}
+
+#contenu form p.derniereLigne {
+    border:none;
+}
+
+#contenu form p label {
+    float: left;
+    line-height:24px;
+    margin-right: 5px;
+    padding:0 10px 0 0;
+    text-align: right;
+    width: 27%;
+}
+
+#contenu form p label.codeDeReduction {
+    width: 180px;
+}
+
+#contenu form p label.petit {
+    width: 80px;
+}
+
+#contenu form p input, #contenu form p select, #contenu form p textarea {
+    border-radius: 3px; 
+    border:solid 1px #ccc;
+    color:#626164;
+    float:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px; 6px;
+    width: 30%;
+}
+
+#contenu form p input.codeDeReduction {
+    width: 50px;
+    background-color:#fff;
+    padding: 4px;
+}
+
+#contenu form p input.radio, #contenu form p input.checkBox {
+    float:left;
+    margin: 5px 0;
+    width: 20px;
+    padding: 0;
+    background-color:transparent;
+    border: none;
+}
+#contenu form p .labelRadio, #contenu form p .labelCheckBox {
+    float:left;
+    margin: 5px 10px 0 0;
+    padding: 0;
+    background-color:transparent;
+    border: none;
+    font-weight:bold;
+}
+    
+#contenu form button.bouton,
+#contenu form button.boutonMemeLigneQuInput { 
+    background-color:#333333;
+    border:none;
+    color: #fff;
+    cursor:pointer; 
+    display:inline-block; 
+    font-size:13px;
+    font-weight:bold;
+    padding: 8px 20px;
+    text-align:center; 
+    vertical-align:middle; 
+    white-space: nowrap; 
+    text-transform: uppercase;
+    transition: background-color 300ms ease;
+    margin-left: 27.5%;
+    width: 30%;
+}
+#contenu form button.boutonMemeLigneQuInput:hover,
+#contenu form button.bouton:hover { background: #0d7fc0; }
+
+#contenu form button.boutonMemeLigneQuInput { 
+    margin:0 0 0 10px; 
+}
+.obligatoire {
+    font-size: 12px;
+    color: #FF0000;
+    clear:both;
+    margin:10px 0 10px 27.5%;
+    display: block;
+}
+
 
 /* ===================================================================
  * HEADER
@@ -1073,10 +1189,9 @@ margin:5px 0 0 0;
 }
 .page-connexion #contenu .textConnexion { 
     float: none; 
-    text-align: right; 
-    width: 388px; 
-    font-size: 11px;
+    font-size: 12px;
     padding-top: 0;
+    margin: 0 0 0 27.5%;
 }
 .page-connexion .bloc       { margin-bottom: 20px; }
 .page-connexion .bloc h2    { margin-bottom: 15px; }
@@ -1095,14 +1210,6 @@ margin:5px 0 0 0;
     margin: 0 0 40px 0;
     width: 45%;
 }
-
-.adresseDeLivraisonRecap {
-    background: #f7f7f7;
-    border: 1px solid #e5e5e5;
-    float: left;
-    margin: 0 0 40px 0;
-}
-
 .adresseDeFacturation {
     background: #f7f7f7;
     border: 1px solid #e5e5e5;
@@ -1110,40 +1217,26 @@ margin:5px 0 0 0;
     margin: 0 0 40px 0;
     width: 45%;
 }
-
 .adresseDeLivraison h3, 
 .adresseDeFacturation h3, 
 .adresseDeLivraisonRecap h3 {
     color: #0081ca;
     display:block;
     margin:0;
-    padding: 5px 0 7px 10px;
+    padding: 5px 0 7px 2%;
 }
-
 .adresseDeLivraison h4 {
     color:#515053;
     margin:5px 0 0 0;
     padding: 5px 2%;
 }
-
+.adresseDeLivraisonRecap .contenu,
 .adresseDeLivraison .contenu, 
 .adresseDeFacturation .contenu {
     padding: 0 2% 10px;
 }
-
-.adresseDeLivraisonRecap .contenu {
-    background-color: #d8d9da;
-}
-
-.adresseDeLivraison ul {
-
-}
-
-.adresseDeLivraisonRecap ul {
-
-}
-
-.adresseDeLivraison ul li, .adresseDeLivraisonRecap ul li {
+.adresseDeLivraison ul li, 
+.adresseDeLivraisonRecap ul li {
     margin: 0;
     padding:0;
     font-size:12px;
@@ -1151,9 +1244,7 @@ margin:5px 0 0 0;
 }
 
 .adresseDeLivraison ul li a, 
-.adresseDeLivraisonRecap ul li a,
-.adresseDeLivraison ul li a:visited, 
-.adresseDeLivraisonRecap ul li a:visited {
+.adresseDeLivraisonRecap ul li a {
     color:#fff;
     display:block;
     background-color:#8fbce3;
@@ -1161,8 +1252,7 @@ margin:5px 0 0 0;
     padding:3px 0 3px 10px;
 }
 
-a.modifierOuAjouter, 
-a.modifierOuAjouter:visited {
+a.modifierOuAjouter {
     font-size:12px;
     font-weight:bold;
     border-top:solid 1px #FFF;
@@ -1173,44 +1263,107 @@ a.modifierOuAjouter:visited {
     padding:3px 0 3px 10px;
 }
 
-.adresseDeLivraison ul li a:hover, .adresseDeLivraisonRecap ul li a:hover, a.modifierOuAjouter:hover {
+.adresseDeLivraison ul li a:hover, 
+.adresseDeLivraisonRecap ul li a:hover, 
+a.modifierOuAjouter:hover {
     text-decoration:none;
     background-color:#00529a;
 }
 
 /* Bloc "Mode de livraison" 
 -------------------------------------------------------- */
-
 .choixDeLaLivraison, .choixDuReglement { margin-bottom: 30px; }
 .choixDeLaLivraison ul li, 
 .choixDuReglement ul li {
     font-size:14px;
     font-weight:bold;
 }
-
-.choixDeLaLivraison span, 
-.choixDuReglement span {
-    color: #111;
-}
-
-.choixDeLaLivraison span.choisir, 
-.choixDuReglement span.choisir {
-    background-color:transparent;
-}
-
 .choixDeLaLivraison ul li a, 
 .choixDuReglement ul li a {
+    background: #f0f0f0;
     color:#111;
     display:block;
+    padding: 15px 2%;
+    transition: background 300ms ease-out;
+    text-decoration: none;
+}
+.choixDeLaLivraison .modeDeLivraison {  
+    color: #d77c2a;
+    font-size: 20px;
+    margin: 0 0 0 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.choixDuReglement .choisir,
+.choixDeLaLivraison .choisir {  
+    background: url(../images/picto-fleche-blanche.png) no-repeat #0081ca 8px 8px;
+    border-radius: 2px;
+    color: #fff;
+    float: right;
+    margin: 17px 0 0 0;
+    padding: 10px 15px 10px 35px;
+}
+.choixDeLaLivraison a:hover .choisir, 
+.choixDuReglement a:hover .choisir {
+    background-color: #111;
 }
 
-.choixDeLaLivraison ul li a:hover, .choixDuReglement ul li a:hover {
-    text-decoration:none;
+/* page récap + choix paiement
+-------------------------------------------------------- */
+.code-promo-field label {  
+    margin-right: 10px;
+}
+.code-promo-field input { 
+    border-radius: 3px; 
+    border: 1px solid #ccc; 
+    padding: 4px;
+}
+.code-promo-field button {  
+    background: #555;
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    height: 27px;
+    padding: 0 10px;
+}
+.adresseDeLivraisonRecap {
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    float: left;
+    margin: 0 0 40px 0;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    float: left;
+    margin: 0 0 40px 0;
+    width: 45%;
+}
+.mode-livraison-recap {
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    float: right;
+    width: 45%;
+    padding: 5px 2%;
+    margin-bottom: 40px;
+}
+.mode-livraison-recap h3 { color: #0081ca; margin-bottom: 10px; }
+.mode-livraison-recap img {  }
+.mode-livraison-recap .livraison-info {  
+    display: inline-block;
+    width: 50%;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.choixDuReglement .modeDeReglement {
+    color: #da7d29;
+    font-size: 18px;
+    margin-left: 20px;
 }
 
 /* ===================================================================
  * COMPTE
  * =================================================================*/
+ #modifier1 { margin-bottom: 20px; }
 
  /* ===================================================================
  * FOOTER
@@ -2193,108 +2346,6 @@ a.lirePlus:hover{
     float:left; 
 }
 
-/* formulaire
--------------------- */
-
-#contenu form {
-    padding:0;
-    margin:0 0 0px 0;
-}
-
-#contenu form p {
-    margin: 0;
-    padding: 4px 0;
-    /* Empêcher le dépassement des flottants */
-    overflow: hidden;
-    font-size: 12px;
-    clear:both;
-    float:left;
-    width:100%;
-}
-
-#contenu form p.derniereLigne {
-    border:none;
-}
-
-#contenu form p label {
-    float: left;
-    width: 27%;
-    padding:0 10px 0 0;
-    margin: 0;
-    line-height:24px;
-}
-
-#contenu form p label.codeDeReduction {
-    width: 180px;
-}
-
-#contenu form p label.petit {
-    width: 80px;
-}
-
-#contenu form p input, #contenu form p select, #contenu form p textarea {
-    border-radius: 3px; 
-    border:solid 1px #ccc;
-    color:#626164;
-    float:left;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    margin: 0;
-    padding: 8px; 6px;
-    width: 30%;
-}
-
-#contenu form p input.codeDeReduction {
-    width: 50px;
-    background-color:#fff;
-    padding: 4px;
-}
-
-#contenu form p input.radio, #contenu form p input.checkBox {
-    float:left;
-    margin: 5px 0;
-    width: 20px;
-    padding: 0;
-    background-color:transparent;
-    border: none;
-}
-#contenu form p .labelRadio, #contenu form p .labelCheckBox {
-    float:left;
-    margin: 5px 10px 0 0;
-    padding: 0;
-    background-color:transparent;
-    border: none;
-    font-weight:bold;
-}
-    
-#contenu form button.bouton,
-#contenu form button.boutonMemeLigneQuInput { 
-    background-color:#333333;
-    border:none;
-    color: #fff;
-    cursor:pointer; 
-    display:inline-block; 
-    font-size:13px;
-    font-weight:bold;
-    padding: 8px 20px;
-    text-align:center; 
-    vertical-align:middle; 
-    white-space: nowrap; 
-    text-transform: uppercase;
-    transition: background-color 300ms ease;
-}
-#contenu form button.boutonMemeLigneQuInput:hover,
-#contenu form button.bouton:hover { background: #0d7fc0; }
-
-#contenu form button.boutonMemeLigneQuInput { 
-    margin:0 0 0 10px; 
-}
-.obligatoire {
-    font-size: 12px;
-    color: #FF0000;
-    clear:both;
-    margin:10px 0;
-}
 
 
 /* Liens internes au site

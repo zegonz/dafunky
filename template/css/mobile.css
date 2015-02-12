@@ -8,6 +8,8 @@
 
 /* Tableau responsive */
 .table-responsive { white-space: nowrap; display: block; overflow-x:scroll; }
+.pull-left,
+.pull-right { float: none !important; clear: both; width: 100% !important; }
 
 /* ===================================================================
  * FOOTER
@@ -57,3 +59,11 @@
 #contenu form p input,
 #contenu form p select,
 #contenu form p textarea { width: 100% !important; float: none !important; }
+
+/* ===================================================================
+ * TUNNEL
+ * =================================================================*/
+.adresseDeFacturation,
+.adresseDeLivraison { float: none; width: 100%; clear:both; }
+.choixDeLaLivraison .choisir { display: block; float: none; }
+.mode-livraison-recap .livraison-info { width: 37%; }

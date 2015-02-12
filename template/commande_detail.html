@@ -12,17 +12,14 @@
 <div id="wrapper">
 	<div id="subwrapper">
 	#INCLURE "template/entete.html"
-		#INCLURE"template/menu.html"
-         
-		
-		<div id="contenu">
+		<div id="corps">
 			<THELIA_cmd type="COMMANDE" ref="#COMMANDE_REF" client="#CLIENT_ID">
 			<h2 class="titre-special">D&eacute;tail de la commande N&deg;#REF </h2>
 			<THELIA_verifpay type="COMMANDE" ref="#COMMANDE_REF" statut="paye">					
 			<h3>N&deg; de facture : #FACTURE / Date : #DATE</h3>
 			</THELIA_verifpay>
-			<table width="100%" border="0" cellspacing="0" cellpadding="5">
-				<tr>
+			<table class="table-responsive" width="100%" border="0" cellspacing="0" cellpadding="5">
+				<tr class="panier-top">
 					<th>Produit et r&eacute;f&eacute;rence</th>
     				<th align="center">Prix unitaire </th>
    				  <th align="center">Quantit&eacute;</th>
