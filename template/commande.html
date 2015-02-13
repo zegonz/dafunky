@@ -17,7 +17,7 @@
                     <li class="selection etape3"><span class="libelle">Je v&eacute;rifie ma commande</span></li>
                     <li class="etape4"><span class="libelle">Paiement s&eacute;curis&eacute;</span></li>
 				</ul>
-			</div>            
+			</div>
 			<h2 class="titre-special clear">R&eacute;capitulatif de ma commande </h2>
             <form action="#URLFOND(commande)" id="formCommande">
                 <input type="hidden" name="action" value="codepromo" />
@@ -56,14 +56,14 @@
         				<button type="submit" class="boutonMemeLigneQuInput"><span><span>OK</span></span></button>
         				</p>
         				</th>
-                    </tr>            
+                    </tr>
                     <tr class="panier-bottom">
-                    	<th colspan="4" class="right">TOTAL</th>
+                    	<th colspan="4" class="align-right">TOTAL</th>
                     	<th align="center" class="total">#PANIER_TOTPORT &euro;</th>
                     </tr>
                 </table>
             </form>
-            <div class="adresseDeLivraisonRecap pull-left">				
+            <div class="adresseDeLivraisonRecap pull-left">
 				<h3>Mon adresse de livraison</h3>
 				<div class="contenu">
             		<THELIA_adrcours type="ADRESSE" adresse="#ADRESSE_ACTIVE">
@@ -71,7 +71,7 @@
             		#ADRESSE1 #ADRESSE2 #ADRESSE3<br />
             		#CPOSTAL #VILLE<br/>
             		<THELIA_pays type="PAYS" id="#PAYS">
-            		#TITRE	
+            		#TITRE
             		</THELIA_pays>
             		</THELIA_adrcours>
 				</div>
@@ -81,15 +81,18 @@
                 <h3>Mode de livraison</h3>
                 <img src="template/images/colissimo-tunnel.png" alt="" /><span class="modeDeLivraison"><span class="livraison-info">Livraison en Colissimo 48H</span>
             </div>
+            <div class="queFaire clearfix">
+                <a href="#URLPREC" class="btn-retour left">Retour page précédente</a>
+            </div>
 			<div class="choixDuReglement">
                 <h2 class="clear titre-special">Choisissez un mode de paiement : </h2>
             	<ul>
 					<THELIA_PAIEMENT type="PAIEMENT">
-					<li><a href="#URLPAYER" class="clearfix"><img src="template/images/paypal-paiement-tunnel.jpg" alt="" /><span class="modeDeReglement">Paiement via #TITRE</span><span class="choisir">régler par Carte bancaire ou compte Paypal</span></a></li>
+					<li><a href="#URLPAYER" class="clearfix"><img src="template/images/paypal-paiement-tunnel.jpg" alt="" /><span class="modeDeReglement">Paiement via #TITRE</span><span class="btn-valider">régler par Carte bancaire ou compte Paypal</span></a></li>
 				</THELIA_PAIEMENT>
                 </ul>
 			</div>
-		</div>		  	
+		</div>
 	</div>
 	#INCLURE "template/pied.html"
 </div>

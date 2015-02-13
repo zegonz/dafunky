@@ -70,113 +70,8 @@ a {
 .blue{
     color:#0081CA;
 }
-.right{ text-align:right; }
-
-/*
-accueil
-*/
-#contenuAccueil{
-    background:transparent;
-    margin:0px auto;
-    width:957px;
-}
-
-#slider{
-    float:left;
-    position:relative;
-    height:350px;
-    width:956px;
-    margin:5px 0 0 0px;
-    overflow:hidden;
-}
-
-#slideshow{
-position:relative;  
-}
-
-#slideshow img{
-        height:350px;
-
-}
-
-#slideshow a{
-    height:350px;
-}
 
 
-#nav{
-    position:absolute;
-    z-index:9999; 
-    bottom:0px; 
-    right:0px;
-    margin:0 10px 0 0; 
-}
-#nav a{
-    display:block;
-    margin:0 0 5px 5px;
-    float:left;
-    height:15px;
-    width:15px;
-    background:url(../images/bg-nag.png) repeat;
-    text-indent:-10000px;
-}
-#nav a:hover{
-    background:url(../images/bg-navActiv.png) repeat;
-
-}
-#nav a.activeSlide{
-    background:url(../images/bg-navActiv.png) repeat;
-    
-}
-
-#caption{
-    position:absolute;
-    z-index:999; 
-    left:0;
-    top:380px;
-    height:30px;
-    width:957px;
-    background: url("../images/bg_bandeau.png") repeat;
-}
-
-#caption span{
-    color:white;
-    display:block;
-    font-size:14px;
-    font-weight:bold;
-    padding:8px 0 0 5px;
-    text-transform:uppercase;
-}
-
-
-#vignetteRubriqueAccueil{
-    float:left;
-    margin:0px 0 20px 0;
-}
-
-#vignetteRubriqueAccueil ul{
-    margin:0;
-    padding:0;
-}
-
-#vignetteRubriqueAccueil ul li{
-    padding:0;
-    display:inline-block;
-    background:#CCC;
-    float:left;
-    overflow:hidden;
-    margin-top:10px;
-            width:312px;
-    height:187px;
-        position:relative;
-}
-
-li.margin { margin:0px 10px 0 0px; }
-#vignetteRubriqueAccueil ul li a {
-    display:block;
-    width:312px;
-    height:187px;
-}
 .survol{
     position:absolute;
     z-index:9999;
@@ -194,6 +89,25 @@ li.margin { margin:0px 10px 0 0px; }
 
 /* bouton */
 .bouton { border-radius: 2px; }
+[class*="btn-"] {  
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px 10px 35px;
+    text-decoration: none;
+    transition: background 300ms ease-out;
+}
+[class*="btn-"]:focus,
+[class*="btn-"]:hover { background-color: #111; text-decoration: none; }
+.btn-valider {  
+    background: url(../images/picto-fleche-blanche.png) no-repeat #0081ca 8px 7px;
+}
+.btn-retour {  
+    background: url(../images/picto-fleche-blanche-reverse.png) no-repeat #555555 8px 7px;
+    border-radius: 2px;
+}
 
 /* ===================================================================
  * STRUCTURE
@@ -743,6 +657,67 @@ margin:0 0 0 20px;
  * ACCUEIL
  * =================================================================*/
 
+#contenuAccueil{
+    background:transparent;
+    margin:0px auto;
+    width:957px;
+}
+
+#slider{
+    float:left;
+    position:relative;
+    height:350px;
+    width:956px;
+    margin:5px 0 0 0px;
+    overflow:hidden;
+}
+#slideshow { position:relative; }
+#slideshow img{ height:350px; }
+#slideshow a{ height:350px; }
+#nav{
+    position:absolute;
+    z-index:9999; 
+    bottom:0px; 
+    right:0px;
+    margin:0 10px 0 0; 
+}
+#nav a{
+    display:block;
+    margin:0 0 5px 5px;
+    float:left;
+    height:15px;
+    width:15px;
+    background:url(../images/bg-nag.png) repeat;
+    text-indent:-10000px;
+}
+#nav a:hover{ background:url(../images/bg-navActiv.png) repeat; }
+#nav a.activeSlide{ background:url(../images/bg-navActiv.png) repeat; }
+#caption{
+    position:absolute;
+    z-index:999; 
+    left:0;
+    top:380px;
+    height:30px;
+    width:957px;
+    background: url("../images/bg_bandeau.png") repeat;
+}
+#caption span{
+    color:white;
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px 0 0 5px;
+    text-transform:uppercase;
+}
+#vignetteRubriqueAccueil{
+    float:left;
+    margin:0px 0 20px 0;
+}
+#vignetteRubriqueAccueil ul {  }
+#vignetteRubriqueAccueil ul li { float: left; margin: 0 0 10px 10px; }
+#vignetteRubriqueAccueil ul li:nth-child(3n+1) { clear: left; margin-left: 0; }
+#vignetteRubriqueAccueil ul li a { display:block; }
+
 /* ===================================================================
 * LISTE PRODUIT
 * =================================================================*/
@@ -1155,29 +1130,11 @@ margin:5px 0 0 0;
 .panier-main { border-bottom: 1px solid #cccccc; }
 .panier-bottom th { border: 0; border-top: 1px solid #ccc; }
 
-.queFaire { clear: both; }
+.queFaire { clear: both; margin-bottom: 40px; }
 .queFaire p { font-size:14px; }
 .queFaire h3{ margin-top: 15px; font-size:16px; text-align:left; }
-.queFaire a.bouton, 
-.queFaire button.bouton { 
-    background-color:#0081ca;
-    border:0; 
-    color: #fff;
-    cursor:pointer; 
-    display:inline-block; 
-    font-size:14px;
-    font-weight:bold;
-    padding: 5px 10px;
-    text-align:center; 
-    vertical-align:middle; 
-    white-space:nowrap; 
-    text-decoration: none;
-    transition: background 300ms ease-out;
-} 
-.queFaire a.left { float: left; background: #555; }
+.queFaire a.left { float: left; }
 .queFaire a.right { float: right; }
-.queFaire a.bouton:focus,
-.queFaire a.bouton:hover { background: #111; }
 
 
 /* Page de connexion compte client 
@@ -1278,6 +1235,8 @@ a.modifierOuAjouter:hover {
     font-size:14px;
     font-weight:bold;
 }
+.choixDeLaLivraison .btn-valider,
+.choixDuReglement .btn-valider { float: right; margin-top: 17px; }
 .choixDeLaLivraison ul li a, 
 .choixDuReglement ul li a {
     background: #f0f0f0;
@@ -1293,19 +1252,6 @@ a.modifierOuAjouter:hover {
     margin: 0 0 0 20px;
     display: inline-block;
     vertical-align: middle;
-}
-.choixDuReglement .choisir,
-.choixDeLaLivraison .choisir {  
-    background: url(../images/picto-fleche-blanche.png) no-repeat #0081ca 8px 8px;
-    border-radius: 2px;
-    color: #fff;
-    float: right;
-    margin: 17px 0 0 0;
-    padding: 10px 15px 10px 35px;
-}
-.choixDeLaLivraison a:hover .choisir, 
-.choixDuReglement a:hover .choisir {
-    background-color: #111;
 }
 
 /* page récap + choix paiement

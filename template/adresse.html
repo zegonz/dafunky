@@ -5,7 +5,7 @@
 	#INCLURE "template/meta.html"
     #INCLURE "template/js.html"
 </head>
-<body>      
+<body>
 <div id="global" class="sansAriane tunnel">
     <div id="wrapper">
 		#INCLURE "template/entete.html"
@@ -19,7 +19,7 @@
                 </ul>
             </div>
             <h2 class="clear titre-special">Mes coordonn&eacute;es</h2>
-            <div class="adresseDeFacturation">				
+            <div class="adresseDeFacturation">
                 <h3>Mon adresse de facturation</h3>
                 <div class="contenu">
                     #CLIENT_RAISON #CLIENT_PRENOM #CLIENT_NOM<br />
@@ -29,7 +29,7 @@
                 </div>
                 <a href="#URLCOMPTEMODIFIER" class="modifierOuAjouter">Modifier cette adresse</a>
             </div>
-            <div class="adresseDeLivraison">				
+            <div class="adresseDeLivraison">
                 <h3>Mon adresse de livraison </h3>
                 <THELIA_adrcours type="ADRESSE" adresse="#ADRESSE_ACTIVE">
                 <div class="contenu">
@@ -41,11 +41,11 @@
                 <THELIA_adrmodcours type="ADRESSE" adresse="#ADRESSE_ACTIVE" defaut="0">
                     <a href="#URLFOND(livraison_modifier,adresse=#ID)" class="modifierOuAjouter">Modifier cette adresse</a>
                 </THELIA_adrmodcours>
-                </THELIA_adrcours>	
+                </THELIA_adrcours>
                 <h4>S&eacute;lectionnez une autre adresse de livraison :</h4>
                 <ul>
                     <li><a href="#URLFOND(adresse,action=modadresse&amp;adresse=0)">> Mon adresse de facturation par d&eacute;faut</a></li>
-                    
+
                     <THELIA_adr type="ADRESSE" client="#CLIENT_ID">
                         <li>
                             <a href="#URLFOND(adresse,action=modadresse&amp;adresse=#ID)">> #LIBELLE</a>
@@ -57,19 +57,18 @@
             <!--       <h3>Information :</h3>
             <p>ATTENTION : L'&eacute;quipe de DAfunkyplace.com est en <strong class="blue">vacances du 9 au 17 novembre. </strong><br/> Les commandes pass&eacute;es dans cette p&eacute;riode seront exp&eacute;di&eacute;e <strong class="blue">le 19 novembre !</strong>
             </p> -->
-        <h2 class="clear titre-special">Choisissez un mode de livraison : </h2>
-        <div class="choixDeLaLivraison">
-            <ul>
-                <THELIA_transport type="TRANSPORT">
-                <li><a href="#URLCMD" class="clearfix"><img src="template/images/colissimo-tunnel.png" alt="" /><span class="modeDeLivraison"> #PORT &euro;</span><span class="choisir">Je choisis ce mode de livraison</span></a></li>
-                </THELIA_transport>
-            </ul>
+            <div class="queFaire clearfix">
+                <a href="#URLPREC" class="btn-retour left">Retour page précédente</a>
+            </div>
+            <h2 class="clear titre-special">Choisissez un mode de livraison : </h2>
+            <div class="choixDeLaLivraison">
+                <ul>
+                    <THELIA_transport type="TRANSPORT">
+                    <li><a href="#URLCMD" class="clearfix"><img src="template/images/colissimo-tunnel.png" alt="" /><span class="modeDeLivraison"> #PORT &euro;</span><span class="btn-valider">Je choisis ce mode de livraison</span></a></li>
+                    </THELIA_transport>
+                </ul>
+            </div>
         </div>
-        <div class="queFaire">
-            <a href="#URLPREC" class="bouton left"><span>< Retour page précédente</span></a>
-        </div>
-        </div>
-
 	</div>
     #INCLURE "template/pied.html"
 </div>
