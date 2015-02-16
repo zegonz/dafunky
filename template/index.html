@@ -2,37 +2,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 #INCLURE "template/meta.html"
-<link rel="stylesheet" href="template/css/owl.carousel.css">
 #INCLURE "template/js.html"
 <script src='template/js/libs/owl.carousel.min.js' type='text/javascript'></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
-            items : 1,
+            singleItem : true,
             pagination: true
+
         });
     });
 </script>
 </head>
 <body>
- <div id="global">
+ <div id="global" class="accueil">
     <div id="wrapper">
-        <div id="subwrapper">
-            #INCLURE "template/entete.html"
-            <div id="contenuAccueil">
-                	<div class="owl-carousel">
- 	                   <THELIA_DOSSIER type="DOSSIER" id="3">
-                    		<THELIA_SLIDER type="CONTENU" id="13">
-                            	<THELIA_IMAGE type="IMAGE" contenu="#ID">
-                                	<img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
-                    			</THELIA_IMAGE>
-                    	</THELIA_SLIDER>
-                   </THELIA_DOSSIER>
-                    </div>
+        #INCLURE "template/entete.html"
+        <div id="corps">
+                <div class="owl-carousel">
+                       <THELIA_DOSSIER type="DOSSIER" id="3">
+                        <THELIA_SLIDER type="CONTENU" id="13">
+                            <THELIA_IMAGE type="IMAGE" contenu="#ID">
+                                <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
+                            </THELIA_IMAGE>
+                    </THELIA_SLIDER>
+               </THELIA_DOSSIER>
+                </div>
+                <ul class="vignette-accueil">
+                    <THELIA_DOSSIER type="DOSSIER" id="3">
+                        <THELIA_SLIDER type="CONTENU" id="17">
+                            <THELIA_IMAGE type="IMAGE" contenu="#ID">
+                                <li>
+                                    <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
+                                    <span></span>
+                                </li>
+                            </THELIA_IMAGE>
+                        </THELIA_SLIDER>
 
-                <div id="vignetteRubriqueAccueil">
-                    <ul>
-                        <li class="margin"><a href="#VARIABLE(urlsite)/casquettes_14_.html"><img src="template/images/vignette-casquette.jpg" width="312" height="187" alt="Base-ball cap" /></a>
+                    </THELIA_DOSSIER>
+
+
+                        <!-- <li class="margin"><a href="#VARIABLE(urlsite)/casquettes_14_.html"><img src="template/images/vignette-casquette.jpg" width="312" height="187" alt="Base-ball cap" /></a>
                         <div class="survol"><h2>Base-ball cap</h2></div></li>
 
                         <li class="margin"><a href="#VARIABLE(urlsite)/elektro-visor_1_.html"><img src="template/images/vignette-elektro-visor.jpg" width="312" height="187" alt="Elektro visor" /></a>
@@ -46,14 +56,10 @@
 
                         <li class="margin"><a href="#VARIABLE(urlsite)/ghetto-blaster_5_.html"><img src="template/images/vignette-ghettoblaster.jpg" alt="LASONIC I931 BT" width="312" height="187" /></a>
                         <div class="survol"><h2>LASONIC I931 BT</h2></div></li>
-
                         <li><a href="#VARIABLE(urlsite)/art-toys_2_.html"><img src="template/images/vignette-popobe.jpg" width="312" height="187" alt="Popobe bear" /></a>
-                        <div class="survol"><h2>Popobe bear</h2></div></li>
-                   </ul>
-                </div>
-             </div>
-
-        </div>
+                        <div class="survol"><h2>Popobe bear</h2></div></li> -->
+               </ul>
+         </div>
     </div>
     #INCLURE "template/pied.html"
 </body>

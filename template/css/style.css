@@ -1,4 +1,4 @@
-/* Eléments HTML en général
+/* ElÃ©ments HTML en gÃ©nÃ©ral
 -------------------------------------------------------- */
 /*@import url(style_editeur.css);*/
 
@@ -34,9 +34,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .align-right { text-align: right; }
 .pull-left { float: left; }
 .pull-right { float: right; }
-.clear{
-    clear:both;
-}
+.clear{ clear:both; }
+
 /* CLEARFIX */
 #corps:before,
 #corps:after,
@@ -53,20 +52,9 @@ ul { list-style: none; margin: 0; padding: 0; }
     clear: both;
 }
 .pc-hidden { display: none; }
-
-a {
-    color:#0081CA;
-    text-decoration: none;
-    outline:none;
-}
- a:hover  {
-    text-decoration: underline;
-}
-
 .hide {
     display:none;
 }
-
 .blue{
     color:#0081CA;
 }
@@ -122,33 +110,37 @@ a {
 
 #global {  }
 #wrapper { position: relative; }
-#corps { clear: both; max-width: 980px; margin: 10px auto 20px; min-height: 200px; }
-
+#corps { clear: both; max-width: 980px; margin: 20px auto; min-height: 200px; }
 #contenu { max-width: 980px; margin: 10px auto 20px; padding: 0 10px; min-height: 200px; }
 .col-left { float: left; width: 17%; }
 .col-central { float: right; width: 81.5%; }
-
 .inner-center { max-width: 980px; margin: 0 auto; }
 
 /* ===================================================================
  * STYLES
  * =================================================================*/
 
+/* Liens
+-------------------------------------------------------- */
+a {
+    color:#0081CA;
+    text-decoration: none;
+    outline:none;
+}
+ a:hover  {
+    text-decoration: underline;
+}
+
 /* Tableaux
 -------------------------------------------------------- */
 table { margin-bottom: 1.75em; }
 table tbody tr:nth-child(odd)  td { background-color: #eee; }
-table th {
-    font-size: 15px;
-    border-bottom:solid 1px #eee;
-}
-
+table th { font-size: 15px; border-bottom:solid 1px #eee; }
 table td,
 table th {
     font-weight: bold;
     padding: 10px;
 }
-
 /* Boutons
 -------------------------------------------------------- */
 .btn-delete { 
@@ -173,7 +165,7 @@ table th {
 #contenu form p {
     margin: 0;
     padding: 4px 0;
-    /* Empêcher le dépassement des flottants */
+    /* EmpÃªcher le dÃ©passement des flottants */
     overflow: hidden;
     font-size: 12px;
     clear:both;
@@ -337,7 +329,7 @@ table th {
     padding: 0;
 }
 
-/* Mon compte connecté */
+/* Mon compte connectÃ© */
 #monCompte .compte-nom { color: #0d7fc0; }
 
 /* Mon panier */
@@ -649,49 +641,17 @@ margin:0 0 0 20px;
 }
 
 /* Style sans le fil ariane */
-.sansAriane #contenu    { margin-top: 23px; }
-.sansAriane h2          { margin-bottom: 10px; }
-.sansAriane h4          { margin-bottom: 5px; }
+.sansAriane #contenu { margin-top: 23px; }
+.sansAriane h2       { margin-bottom: 10px; }
+.sansAriane h4       { margin-bottom: 5px; }
 
 /* ===================================================================
  * ACCUEIL
  * =================================================================*/
 
-#contenuAccueil{
-    background:transparent;
-    margin:0px auto;
-    width:957px;
-}
+.accueil #corps { max-width: 960px; }
+.owl-carousel { margin-bottom: 15px; }
 
-#slider{
-    float:left;
-    position:relative;
-    height:350px;
-    width:956px;
-    margin:5px 0 0 0px;
-    overflow:hidden;
-}
-#slideshow { position:relative; }
-#slideshow img{ height:350px; }
-#slideshow a{ height:350px; }
-#nav{
-    position:absolute;
-    z-index:9999; 
-    bottom:0px; 
-    right:0px;
-    margin:0 10px 0 0; 
-}
-#nav a{
-    display:block;
-    margin:0 0 5px 5px;
-    float:left;
-    height:15px;
-    width:15px;
-    background:url(../images/bg-nag.png) repeat;
-    text-indent:-10000px;
-}
-#nav a:hover{ background:url(../images/bg-navActiv.png) repeat; }
-#nav a.activeSlide{ background:url(../images/bg-navActiv.png) repeat; }
 #caption{
     position:absolute;
     z-index:999; 
@@ -709,14 +669,12 @@ margin:0 0 0 20px;
     padding:8px 0 0 5px;
     text-transform:uppercase;
 }
-#vignetteRubriqueAccueil{
-    float:left;
+.vignette-accueil {
     margin:0px 0 20px 0;
 }
-#vignetteRubriqueAccueil ul {  }
-#vignetteRubriqueAccueil ul li { float: left; margin: 0 0 10px 10px; }
-#vignetteRubriqueAccueil ul li:nth-child(3n+1) { clear: left; margin-left: 0; }
-#vignetteRubriqueAccueil ul li a { display:block; }
+.vignette-accueil li { float: left; margin: 0 0 10px 10px; }
+.vignette-accueil li:nth-child(3n+1) { clear: left; margin-left: 0; }
+.vignette-accueil a { display:block; }
 
 /* ===================================================================
 * LISTE PRODUIT
@@ -978,7 +936,7 @@ margin:5px 0 0 0;
 }
 
 
-/* Spécifique pour la rubrique visiere electro */
+/* SpÃ©cifique pour la rubrique visiere electro */
 #descRubElek{
     float:left;
     width:500px;
@@ -1254,7 +1212,7 @@ a.modifierOuAjouter:hover {
     vertical-align: middle;
 }
 
-/* page récap + choix paiement
+/* page rÃ©cap + choix paiement
 -------------------------------------------------------- */
 .code-promo-field label {  
     margin-right: 10px;
@@ -1482,7 +1440,7 @@ background-position:0 -146px;
 
 
 
-/* Bloc Mozaïque (utilisé en page d'accueil et en page produit)
+/* Bloc MozaÃ¯que (utilisÃ© en page d'accueil et en page produit)
 -------------------------------------------------------- */
 
 .blocMozaique {
@@ -1546,7 +1504,7 @@ background-position:0 -146px;
     padding:0;
 }
 
-/* Bloc nouveauté (utilisé en page index_page.html + rubrique.html)
+/* Bloc nouveautÃ© (utilisÃ© en page index_page.html + rubrique.html)
 -------------------------------------------------------- */
 
 .blocNouveaute {
@@ -1717,7 +1675,7 @@ background-position:0 -146px;
     background-color:#a9abad;
 }
 
-/* Bloc promotion (utilisé en page index_page.html + rubrique.html)
+/* Bloc promotion (utilisÃ© en page index_page.html + rubrique.html)
 -------------------------------------------------------- */
 
 .blocPromo {
@@ -1872,7 +1830,7 @@ background-position:0 -146px;
     background-color:#a9abad;
 }
 
-/* Petit bloc produit (utilisé en page rubrique.html)
+/* Petit bloc produit (utilisÃ© en page rubrique.html)
 -------------------------------------------------------- */
 .etiquettePromo{
     position:absolute;
@@ -2057,8 +2015,6 @@ font-weight:bold;
     float:left;
 }
 */
-
-
 
 /* Nombre de pages
 -------------------------------------------------------- */
@@ -2297,7 +2253,7 @@ a.lirePlus:hover{
 /* Liens internes au site
 -------------------------------------------------------- */
  
-/*  général
+/*  gÃ©nÃ©ral
 -------------------------------------------------------- */
 
 #modal_auto{
@@ -2361,7 +2317,7 @@ display:none;
 #moteurDeRecherche form button.bouton span { 
     position:relative; 
     float:left; 
-    padding:0 0 0 8px;        /* Largeur du côté gauche */ 
+    padding:0 0 0 8px;        /* Largeur du cÃ´tÃ© gauche */ 
     margin:0;
     vertical-align:middle;
     background-color:#00529a;
@@ -2373,7 +2329,7 @@ display:none;
     border:none;
     color:#FFF;
     height:18px;
-    line-height:18px; /* Alignement vertical du texte et largeur du côté droit*/
+    line-height:18px; /* Alignement vertical du texte et largeur du cÃ´tÃ© droit*/
 }
     
 /* Moyens de paiement
@@ -2508,4 +2464,91 @@ iframe.FbLike{
     overflow:hidden; 
     width:86px;
     height:21px;
+}
+
+/* ===================================================================
+ * PLUGINS JS
+ * =================================================================*/
+
+/*
+ *  Core Owl Carousel CSS File
+ *  v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+/* display none until init */
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item{
+    float: left;
+}
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+.owl-controls .owl-page {
+    margin:0 0 5px 5px;
+    display: inline-block;
+    height:15px;
+    width:15px;
+    background: rgba(255,255,255, 0.5);
+    text-indent:-10000px;
+    cursor: pointer;
+}
+.owl-controls .owl-page.active,
+.owl-controls .owl-page:hover { background: #0d7fc0; }
+
+/* mouse grab icon */
+.grabbing {
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
 }
