@@ -30,15 +30,35 @@
                 </div>
                 <ul class="vignette-accueil">
                     <THELIA_DOSSIER type="DOSSIER" id="3">
-                        <THELIA_SLIDER type="CONTENU" id="17">
-                            <THELIA_IMAGE type="IMAGE" contenu="#ID">
+                        <THELIA_VIGNETTE type="CONTENU" id="17">
+                            <THELIA_IMAGE type="IMAGE" num="2" contenu="#ID">
                                 <li>
-                                    <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
+                                    <img src="#IMAGE" alt="#TITRE" title="#TITRE">
                                     <span></span>
                                 </li>
                             </THELIA_IMAGE>
-                        </THELIA_SLIDER>
+                        </THELIA_VIGNETTE>
+                    </THELIA_DOSSIER>
 
+                    <THELIA_PRODENAVANT type="PRODUIT" rubrique="12" aleatoire="1" num="1" nocache="1">
+                        <li>
+                            <h2>#TITRE</h2>
+                            <THELIA_IMAGE type="IMAGE" num="1" produit="#ID" hauteur="200" largeur="260">
+                                <img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"/>
+                            </THELIA_IMAGE>
+                            <span class="prixProduit">#PRIX &euro; </span>
+                        </li>
+                     </THELIA_PRODENAVANT>
+
+                      <THELIA_DOSSIER type="DOSSIER" id="3">
+                        <THELIA_VIGNETTE type="CONTENU" id="17">
+                            <THELIA_IMAGE type="IMAGE" deb="3" num="2" contenu="#ID">
+                                <li>
+                                    <img src="#IMAGE" alt="#TITRE" title="#TITRE">
+                                    <span></span>
+                                </li>
+                            </THELIA_IMAGE>
+                        </THELIA_VIGNETTE>
                     </THELIA_DOSSIER>
 
 
