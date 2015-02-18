@@ -2,10 +2,10 @@
 -------------------------------------------------------- */
 /*@import url(style_editeur.css);*/
 
-* { 
+* {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-   box-sizing: border-box;         /* Opera/IE 8+ */ 
+   box-sizing: border-box;         /* Opera/IE 8+ */
 }
 img { max-width: 100%; vertical-align: middle; height: auto; }
 h1, h2, h3, h4 {
@@ -14,7 +14,7 @@ h1, h2, h3, h4 {
     color:#515053;
 }
 ul { list-style: none; margin: 0; padding: 0; }
-.titre-special  { 
+.titre-special  {
     background: url("../images/dafunk-fleche.gif") no-repeat 8px 6px #111111;
     border-bottom: 2px solid #CCCCCC;
     color: #EEEEEE;
@@ -47,7 +47,7 @@ ul { list-style: none; margin: 0; padding: 0; }
     display: table; /* 2 */
 }
 #corps:after,
-#contenu:after, 
+#contenu:after,
 .clearfix:after {
     clear: both;
 }
@@ -77,7 +77,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* bouton */
 .bouton { border-radius: 2px; }
-[class*="btn-"] {  
+[class*="btn-"] {
     border-radius: 2px;
     color: #fff;
     display: inline-block;
@@ -89,10 +89,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 [class*="btn-"]:focus,
 [class*="btn-"]:hover { background-color: #111; text-decoration: none; }
-.btn-valider {  
+.btn-valider {
     background: url(../images/picto-fleche-blanche.png) no-repeat #0081ca 8px 7px;
 }
-.btn-retour {  
+.btn-retour {
     background: url(../images/picto-fleche-blanche-reverse.png) no-repeat #555555 8px 7px;
     border-radius: 2px;
 }
@@ -143,8 +143,8 @@ table th {
 }
 /* Boutons
 -------------------------------------------------------- */
-.btn-delete { 
-    background: url(../images/picto-delete.png) no-repeat; 
+.btn-delete {
+    background: url(../images/picto-delete.png) no-repeat;
     width: 15px;
     height: 16px;
     text-indent: -10000px;
@@ -195,7 +195,7 @@ table th {
 }
 
 #contenu form p input, #contenu form p select, #contenu form p textarea {
-    border-radius: 3px; 
+    border-radius: 3px;
     border:solid 1px #ccc;
     color:#626164;
     float:left;
@@ -228,20 +228,20 @@ table th {
     border: none;
     font-weight:bold;
 }
-    
+
 #contenu form button.bouton,
-#contenu form button.boutonMemeLigneQuInput { 
+#contenu form button.boutonMemeLigneQuInput {
     background-color:#333333;
     border:none;
     color: #fff;
-    cursor:pointer; 
-    display:inline-block; 
+    cursor:pointer;
+    display:inline-block;
     font-size:13px;
     font-weight:bold;
     padding: 8px 20px;
-    text-align:center; 
-    vertical-align:middle; 
-    white-space: nowrap; 
+    text-align:center;
+    vertical-align:middle;
+    white-space: nowrap;
     text-transform: uppercase;
     transition: background-color 300ms ease;
     margin-left: 27.5%;
@@ -250,8 +250,8 @@ table th {
 #contenu form button.boutonMemeLigneQuInput:hover,
 #contenu form button.bouton:hover { background: #0d7fc0; }
 
-#contenu form button.boutonMemeLigneQuInput { 
-    margin:0 0 0 10px; 
+#contenu form button.boutonMemeLigneQuInput {
+    margin:0 0 0 10px;
 }
 .obligatoire {
     font-size: 12px;
@@ -271,7 +271,7 @@ table th {
 #top a:hover { color: #0d7fc0; text-decoration: none; }
 
 /* Logo */
-#logo { margin-top: 15px; float:left; display:block; width: 165px; }
+#logo { margin-top: 15px; float:left; display:block; width: 165px; display: none; /* @VIRER */ }
 #logo a {  }
 
 .bloc-compte-panier .titreTop { margin-bottom: 5px; font-size:14px; color:#0081CA; }
@@ -284,7 +284,7 @@ table th {
     margin: 0 0 5px;
 }
 
-#monCompte form p { 
+#monCompte form p {
     padding:0;
     margin:0;
     float:left;
@@ -302,19 +302,19 @@ table th {
     float:left;
 }
 
-#monCompte form button.bouton { 
+#monCompte form button.bouton {
     background-color:#111;
     border:none;
-    cursor:pointer; 
+    cursor:pointer;
     color: #fff;
     font-size:13px;
     font-weight:bold;
     height:25px;
     line-height:25px;
     padding: 0 10px;
-    text-align:center; 
-    vertical-align:middle; 
-    white-space:nowrap; 
+    text-align:center;
+    vertical-align:middle;
+    white-space:nowrap;
     -webkit-transition: background-color 500ms ease-out;
     -moz-transition: background-color 500ms ease-out;
     -o-transition: background-color 500ms ease-out;
@@ -389,7 +389,7 @@ ul#contenuPanier li ul li a, ul#contenuPanier li ul li a:visited {
     border:1px solid #2c2b2b;
     font-size:10px;
     color: #ddd;
-    text-decoration: none;  
+    text-decoration: none;
     margin: 0;
     padding: 4px 3px;
     border-top:none;
@@ -411,7 +411,7 @@ ul#contenuPanier li a:hover, ul#contenuPanier li ul li a:hover {
     display: block;
     background-color:#0081CA;
     color: white;
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 span.nomArticle, span.titreTotal {
@@ -549,7 +549,7 @@ menuaccueil
 
 #menuCatalogue ul li ul {}
 #menuCatalogue ul li ul li {
-    margin:2px 0 0 0;   
+    margin:2px 0 0 0;
 }
 
 #menuCatalogue ul li ul li a {
@@ -601,7 +601,7 @@ menuaccueil
 }
 
 #dossier{
-margin:0 0 0 20px;  
+margin:0 0 0 20px;
 }
 #dossier h1{
     font-size:18px;
@@ -654,7 +654,7 @@ margin:0 0 0 20px;
 
 #caption{
     position:absolute;
-    z-index:999; 
+    z-index:999;
     left:0;
     top:380px;
     height:30px;
@@ -717,7 +717,7 @@ margin:0 0 0 20px;
     font-size:18px;
     margin:0 0 20px;
 }
-/* Visuel produit */    
+/* Visuel produit */
 .blocProduit .blocDImages {
     float: left;
     margin: 0 0 20px 0;
@@ -763,7 +763,7 @@ margin:0 0 0 20px;
 }
 #descRub p{
     margin:5px 0 0 5px;
-    width:700px;    
+    width:700px;
 }
 
 /* Description produit */
@@ -775,12 +775,12 @@ margin:0 0 0 20px;
 }
 
 .ancienPrix{
-    float:left; 
+    float:left;
     margin:10px 0 10px 10px;
 }
 
 .blocProduit .introProduit h2{
-    font-size:15px; 
+    font-size:15px;
 }
 
 .blocProduit .introProduit .chapo {
@@ -802,42 +802,42 @@ margin:0 0 0 20px;
     margin-bottom: 10px;
 }
 
-.blocProduit a.acheter, 
-.blocProduit button.acheter { 
-    display:-moz-inline-box; 
-    display:inline-block; 
-    margin:8px 0 0 4px; 
+.blocProduit a.acheter,
+.blocProduit button.acheter {
+    display:-moz-inline-box;
+    display:inline-block;
+    margin:8px 0 0 4px;
     padding:0;
     font-weight:bold;
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
-    border:0; 
-} 
-.blocProduit a.acheter span, 
-.blocProduit button.acheter span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 10px; 
+    white-space:nowrap;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    border:0;
+}
+.blocProduit a.acheter span,
+.blocProduit button.acheter span {
+    position:relative;
+    float:left;
+    padding:0 0 0 10px;
     vertical-align:middle;
     background-color:#0081ca;
-} 
+}
 
-.blocProduit a.acheter span span, 
+.blocProduit a.acheter span span,
 .blocProduit button.acheter span span {
     color:#fff;
-    height:40px; 
-    padding:0 10px 0 0; 
-    line-height:38px; 
+    height:40px;
+    padding:0 10px 0 0;
+    line-height:38px;
     background-color:#0081ca;
-} 
- 
-.blocProduit a.acheter:hover span, 
-.blocProduit button.acheter:hover span { 
+}
+
+.blocProduit a.acheter:hover span,
+.blocProduit button.acheter:hover span {
     background-color:#00529a;
     text-decoration:none;
-} 
+}
 
 .blocProduit .description {
     font-size: 14px;
@@ -925,7 +925,7 @@ input.acheter:hover{  background-color: #111; }
     margin:8px '' 0 15px;
 }
 #partager{
-margin:5px 0 0 0;   
+margin:5px 0 0 0;
 }
 
 .recommander{
@@ -948,7 +948,7 @@ margin:5px 0 0 0;
 
 #illuElek{
     float:left;
-    margin:35px 0 0 20px;   
+    margin:35px 0 0 20px;
 }
 
 #illuElek{
@@ -970,7 +970,7 @@ margin:5px 0 0 0;
 }
 
 .titre2{
-    margin:10px 0 0 0;  
+    margin:10px 0 0 0;
 }
 
 .blocProduitElek h2{
@@ -1048,17 +1048,17 @@ margin:5px 0 0 0;
 -------------------------------------------------------- */
 #etapesDeCommande { margin: 0 0 40px 0; }
 #etapesDeCommande ul { display: table; width: 100%; }
-#etapesDeCommande li { 
-    border-bottom: 2px solid #0d7fc0; 
-    color: #cfcfcf; 
-    display: table-cell; 
+#etapesDeCommande li {
+    border-bottom: 2px solid #0d7fc0;
+    color: #cfcfcf;
+    display: table-cell;
     font-size: 14px;
-    padding-bottom: 10px; 
-    position: relative; 
+    padding-bottom: 10px;
+    position: relative;
     text-align: center;
     width: 25%;
 }
-#etapesDeCommande li:after {  
+#etapesDeCommande li:after {
     background: #fff;
     border-radius: 40px;
     border: 2px solid #0d7fc0;
@@ -1095,15 +1095,15 @@ margin:5px 0 0 0;
 .queFaire a.right { float: right; }
 
 
-/* Page de connexion compte client 
+/* Page de connexion compte client
 -------------------------------------------------------- */
-.page-connexion #contenu label { 
-    text-align: right; 
-    margin-right: 5px; 
-    width: 27%; 
+.page-connexion #contenu label {
+    text-align: right;
+    margin-right: 5px;
+    width: 27%;
 }
-.page-connexion #contenu .textConnexion { 
-    float: none; 
+.page-connexion #contenu .textConnexion {
+    float: none;
     font-size: 12px;
     padding-top: 0;
     margin: 0 0 0 27.5%;
@@ -1114,10 +1114,10 @@ margin:5px 0 0 0;
 .page-connexion #connexion .bouton,
 .page-connexion #nouveau .bouton { margin-left: 27.5%; width: 30%; }
 
-/* Bloc "adresse de livraison" & "adresse de facturation" 
+/* Bloc "adresse de livraison" & "adresse de facturation"
 -------------------------------------------------------- */
 #contenu #formCommande { margin-bottom: 15px; }
-    
+
 .adresseDeLivraison {
     background: #f7f7f7;
     border: 1px solid #e5e5e5;
@@ -1132,8 +1132,8 @@ margin:5px 0 0 0;
     margin: 0 0 40px 0;
     width: 45%;
 }
-.adresseDeLivraison h3, 
-.adresseDeFacturation h3, 
+.adresseDeLivraison h3,
+.adresseDeFacturation h3,
 .adresseDeLivraisonRecap h3 {
     color: #0081ca;
     display:block;
@@ -1146,11 +1146,11 @@ margin:5px 0 0 0;
     padding: 5px 2%;
 }
 .adresseDeLivraisonRecap .contenu,
-.adresseDeLivraison .contenu, 
+.adresseDeLivraison .contenu,
 .adresseDeFacturation .contenu {
     padding: 0 2% 10px;
 }
-.adresseDeLivraison ul li, 
+.adresseDeLivraison ul li,
 .adresseDeLivraisonRecap ul li {
     margin: 0;
     padding:0;
@@ -1158,7 +1158,7 @@ margin:5px 0 0 0;
     font-weight:bold;
 }
 
-.adresseDeLivraison ul li a, 
+.adresseDeLivraison ul li a,
 .adresseDeLivraisonRecap ul li a {
     color:#fff;
     display:block;
@@ -1178,24 +1178,24 @@ a.modifierOuAjouter {
     padding:3px 0 3px 10px;
 }
 
-.adresseDeLivraison ul li a:hover, 
-.adresseDeLivraisonRecap ul li a:hover, 
+.adresseDeLivraison ul li a:hover,
+.adresseDeLivraisonRecap ul li a:hover,
 a.modifierOuAjouter:hover {
     text-decoration:none;
     background-color:#00529a;
 }
 
-/* Bloc "Mode de livraison" 
+/* Bloc "Mode de livraison"
 -------------------------------------------------------- */
 .choixDeLaLivraison, .choixDuReglement { margin-bottom: 30px; }
-.choixDeLaLivraison ul li, 
+.choixDeLaLivraison ul li,
 .choixDuReglement ul li {
     font-size:14px;
     font-weight:bold;
 }
 .choixDeLaLivraison .btn-valider,
 .choixDuReglement .btn-valider { float: right; margin-top: 17px; }
-.choixDeLaLivraison ul li a, 
+.choixDeLaLivraison ul li a,
 .choixDuReglement ul li a {
     background: #f0f0f0;
     color:#111;
@@ -1204,7 +1204,7 @@ a.modifierOuAjouter:hover {
     transition: background 300ms ease-out;
     text-decoration: none;
 }
-.choixDeLaLivraison .modeDeLivraison {  
+.choixDeLaLivraison .modeDeLivraison {
     color: #d77c2a;
     font-size: 20px;
     margin: 0 0 0 20px;
@@ -1214,15 +1214,15 @@ a.modifierOuAjouter:hover {
 
 /* page récap + choix paiement
 -------------------------------------------------------- */
-.code-promo-field label {  
+.code-promo-field label {
     margin-right: 10px;
 }
-.code-promo-field input { 
-    border-radius: 3px; 
-    border: 1px solid #ccc; 
+.code-promo-field input {
+    border-radius: 3px;
+    border: 1px solid #ccc;
     padding: 4px;
 }
-.code-promo-field button {  
+.code-promo-field button {
     background: #555;
     border-radius: 3px;
     border: 0;
@@ -1251,7 +1251,7 @@ a.modifierOuAjouter:hover {
 }
 .mode-livraison-recap h3 { color: #0081ca; margin-bottom: 10px; }
 .mode-livraison-recap img {  }
-.mode-livraison-recap .livraison-info {  
+.mode-livraison-recap .livraison-info {
     display: inline-block;
     width: 50%;
     margin-left: 10px;
@@ -1285,7 +1285,7 @@ a.modifierOuAjouter:hover {
     margin-top: 20px;
 }
 #footer .col { display: table-cell; width: 33%; }
-#footer .colonneG { border-right: 1px dotted #444444; padding: 0 20px 0 0; }    
+#footer .colonneG { border-right: 1px dotted #444444; padding: 0 20px 0 0; }
 #footer .colonneM { padding: 0 20px; }
 #footer .menu-contenu { margin-bottom: 15px; }
 #footer .colonneG p { margin:0 0 0 8px; padding:0; }
@@ -1295,7 +1295,7 @@ a.modifierOuAjouter:hover {
 #footer .colonneD img{
     margin: 0px 0 20px;
 }
-    
+
 #footer h4{
     font-size:13px;
     color: #111;
@@ -1314,7 +1314,7 @@ a.modifierOuAjouter:hover {
     color: #555;
     font-size:11px;
 }
-    
+
 #footer ul li {
     color: #111;
     background:url(../images/puce_footer.png) no-repeat 0 4px;
@@ -1325,7 +1325,7 @@ a.modifierOuAjouter:hover {
     color: #555;
     font-size:11px;
 }
-            
+
 #footer p a {
     font-weight:normal;
     color: #555;
@@ -1346,7 +1346,7 @@ a.modifierOuAjouter:hover {
     float:left;
     margin:5px 0 0 0;
     }
-    
+
 #footer .colonne p.validator a, #footer .colonne p.validator a:visited {
     border:none;
     }
@@ -1372,8 +1372,8 @@ a.titreDossierFooter{
 }
 #fbFooter iframe{
     margin:5px 0 0 0;
-    border:none; 
-    overflow:hidden; 
+    border:none;
+    overflow:hidden;
     width:96px;
     height:21px;
 }
@@ -1383,7 +1383,7 @@ a.titreDossierFooter{
 }
 #copyright span{
     padding:4px 0 0 0;
-    border-top:1px dotted #444; 
+    border-top:1px dotted #444;
 }
 
 #copyright a{
@@ -1558,7 +1558,7 @@ background-position:0 -146px;
     text-align:center;
     display:block;
     background-color:#fff;
-    overflow: hidden;   
+    overflow: hidden;
 }
 
 .blocNouveaute .contenu a.image:hover {
@@ -1597,37 +1597,37 @@ background-position:0 -146px;
     padding: 0;
 }
 
-.blocNouveaute a.acheter, 
-.blocNouveaute button.acheter { 
-    display:-moz-inline-box; 
-    margin:5px 0 0 0; 
+.blocNouveaute a.acheter,
+.blocNouveaute button.acheter {
+    display:-moz-inline-box;
+    margin:5px 0 0 0;
     padding:0;
     font-size:13px;
     font-weight:bold;
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
-    border:0; 
-} 
-.blocNouveaute a.acheter span, 
-.blocNouveaute button.acheter span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 5px; 
+    white-space:nowrap;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    border:0;
+}
+.blocNouveaute a.acheter span,
+.blocNouveaute button.acheter span {
+    position:relative;
+    float:left;
+    padding:0 0 0 5px;
     vertical-align:middle;
     background-color:#0081ca;
     border:solid 1px #FFFFFF;
-} 
+}
 
-.blocNouveaute a.acheter span span, 
+.blocNouveaute a.acheter span span,
 .blocNouveaute button.acheter span span {
     color:#fff;
-    height:24px; 
-    padding:0 5px 0 0; 
-    line-height:23px; 
+    height:24px;
+    padding:0 5px 0 0;
+    line-height:23px;
     border:none;
-} 
+}
 
 
 /* style de la declinaison
@@ -1647,11 +1647,11 @@ background-position:0 -146px;
     font-size:14px;
     font-weight:bold;
 }
- 
 
- 
- 
-.blocNouveaute a.acheter:hover span, 
+
+
+
+.blocNouveaute a.acheter:hover span,
 .blocNouveaute button.acheter:hover span {
     background-color:#00529a;
     text-decoration:none;
@@ -1771,46 +1771,46 @@ background-position:0 -146px;
     padding: 0;
 }
 
-.blocPromo a.acheter, 
-.blocPromo button.acheter { 
-    display:-moz-inline-box; 
-    display:inline-block; 
-    margin:5px 0 0 0; 
+.blocPromo a.acheter,
+.blocPromo button.acheter {
+    display:-moz-inline-box;
+    display:inline-block;
+    margin:5px 0 0 0;
     padding:0;
     font-size:13px;
     font-weight:bold;
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
-    border:0; 
-    background:none; 
-} 
-.blocPromo a.acheter span, 
-.blocPromo button.acheter span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 5px; 
+    white-space:nowrap;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    border:0;
+    background:none;
+}
+.blocPromo a.acheter span,
+.blocPromo button.acheter span {
+    position:relative;
+    float:left;
+    padding:0 0 0 5px;
     vertical-align:middle;
     background-color:#0081ca;
     border:solid 1px #FFFFFF;
-} 
+}
 
-.blocPromo a.acheter span span, 
+.blocPromo a.acheter span span,
 .blocPromo button.acheter span span {
     color:#fff;
-    height:24px; 
-    padding:0 5px 0 0; 
-    line-height:23px; 
+    height:24px;
+    padding:0 5px 0 0;
+    line-height:23px;
     background-color:#0081ca;
     border:none;
-} 
- 
-.blocPromo a.acheter:hover span , 
+}
+
+.blocPromo a.acheter:hover span ,
 .blocPromo button.acheter:hover span {
     background-color:#00529a;
     text-decoration:none;
-} 
+}
 
 .blocPromo a.toutesLesPromos, .blocPromo a.toutesLesPromos:visited {
     display:block;
@@ -1835,7 +1835,7 @@ background-position:0 -146px;
 .etiquettePromo{
     position:absolute;
     top:10px;
-}   
+}
 
 
 .petitBlocProduit {
@@ -1859,7 +1859,7 @@ background-position:0 -146px;
 }
 
 .petitBlocProduit img{
-    
+
 }
 
 .separation {
@@ -1912,7 +1912,7 @@ background-position:0 -146px;
     width:200px;
     display:block;
     float:left;
-    overflow: hidden;   
+    overflow: hidden;
 }
 
 .petitBlocProduit .contenu a.image:hover {
@@ -1954,46 +1954,46 @@ background-position:0 -146px;
     padding: 0;
 }
 
-.petitBlocProduit a.acheter, 
-.petitBlocProduit button.acheter { 
-    display:-moz-inline-box; 
-    display:inline-block; 
-    margin:5px 0 0 0; 
+.petitBlocProduit a.acheter,
+.petitBlocProduit button.acheter {
+    display:-moz-inline-box;
+    display:inline-block;
+    margin:5px 0 0 0;
     padding:0;
     font-size:13px;
     font-weight:bold;
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
-    border:0; 
-    background:none; 
-} 
-.petitBlocProduit a.acheter span, 
-.petitBlocProduit button.acheter span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 5px; 
+    white-space:nowrap;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    border:0;
+    background:none;
+}
+.petitBlocProduit a.acheter span,
+.petitBlocProduit button.acheter span {
+    position:relative;
+    float:left;
+    padding:0 0 0 5px;
     vertical-align:middle;
     background-color:#0081ca;
     border:solid 1px #FFFFFF;
-} 
+}
 
-.petitBlocProduit a.acheter span span, 
+.petitBlocProduit a.acheter span span,
 .petitBlocProduit button.acheter span span {
     color:#fff;
-    height:24px; 
-    padding:0 5px 0 0; 
-    line-height:23px; 
+    height:24px;
+    padding:0 5px 0 0;
+    line-height:23px;
     background-color:#0081ca;
     border:none;
-} 
- 
-.petitBlocProduit a.acheter:hover span , 
+}
+
+.petitBlocProduit a.acheter:hover span ,
 .petitBlocProduit button.acheter:hover span {
     background-color:#00529a;
     text-decoration:none;
-} 
+}
 
 .infoProdRubrique{
     text-align:center;
@@ -2042,36 +2042,38 @@ font-weight:bold;
 
 /* Partie blog sommaire
 -------------------------------------------------------- */
-#blog{
-    margin:22px 0px 0px 30px;
-}
-
 #blog h1{
     font-size:20px;
     background:url(../images/dafunk-fleche.gif) 4px center no-repeat #111;
     color:#eee;
-    display:block;
-    width:800px;
     padding:2px 0 2px 28px;
     border-bottom:2px solid #ccc;
-    
 }
 .da{
     color:#feed01;
     font-style:italic;
     font-weight:bold;
 }
+.news{
+    margin: 0 2%;
+    padding: 10px 0 20px 0;
+    border-bottom:1px dashed #ccc;
+    position:relative;
+}
 
+.news:last-child{
+    border-bottom:0px solid #ccc;
+}
 .news h2{
     font-size:18px;
-    
+
 }
 
 .news small{
     font-size:11px;
     color:#999;
     font-style:italic;
-    
+
 }
 .illu{
     float:left;
@@ -2081,7 +2083,6 @@ font-weight:bold;
 }
 
 .illu a{
-
     display:block;
     margin:0px 10px 0 0;
     overflow:hidden;
@@ -2089,51 +2090,29 @@ font-weight:bold;
     width:240px;
     -webkit-box-shadow: 0px 4px 6px 1px #cccccc;
     -moz-box-shadow: 0px 4px 6px 1px #cccccc;
-    box-shadow: 0px 4px 6px 1px #cccccc; 
+    box-shadow: 0px 4px 6px 1px #cccccc;
 }
-    
+
 .illu img{
     display:block;
 }
-
-.news{
-    margin:10px 10px 0px 0px;
-    padding:10px 0 15px 0;
-    height:190px;
-    border-bottom:1px dashed #ccc;
-    position:relative;
-
-}
-
-.news:last-child{
-    border-bottom:0px solid #ccc;
-}
-
 
 .sommaireDescription{
     margin:5px 0 0 5px;
     float:left;
     width:480px;
 }
-
-
-
-.sommaireDescription p{
+.sommaireDescription p {
     font-size:14px;
-    margin:0;
+    margin: 0 0 15px;
     display:block;
-    height:120px;
-    padding:0 0 0px 0;
 }
 
 a.lirePlus{
     background:url(../images/bg-lire-plus.gif) right top no-repeat #0081CA;
     padding:2px 20px 2px 10px;
     color:#eee;
-    position:absolute;
     z-index:999;
-    top:160px;
-    right:10px;
 }
 
 a.lirePlus:hover{
@@ -2173,7 +2152,7 @@ a.lirePlus:hover{
     width:500px;
     -webkit-box-shadow: 0px 4px 6px 1px #cccccc;
     -moz-box-shadow: 0px 4px 6px 1px #cccccc;
-    box-shadow: 0px 4px 6px 1px #cccccc; 
+    box-shadow: 0px 4px 6px 1px #cccccc;
 }
 
 #articleIllu a{
@@ -2236,7 +2215,7 @@ a.lirePlus:hover{
 }
 
 .addthis_toolbox.addthis_default_style span {
-    margin:2px 0 0 0;   
+    margin:2px 0 0 0;
 }
 
 #retourBlog a{
@@ -2245,19 +2224,19 @@ a.lirePlus:hover{
     display:block;
     padding:3px 10px 2px 20px;
     color:#eee;
-    float:left; 
+    float:left;
 }
 
 
 
 /* Liens internes au site
 -------------------------------------------------------- */
- 
+
 /*  général
 -------------------------------------------------------- */
 
 #modal_auto{
-display:none;   
+display:none;
 }
 
 
@@ -2300,24 +2279,24 @@ display:none;
     float:left;
 }
 
-#moteurDeRecherche form button.bouton { 
-    display:inline-block; 
-    margin:0; 
-    padding:0; 
-    white-space:nowrap; 
-    text-align:center; 
-    vertical-align:middle; 
-    cursor:pointer; 
-    border:none; 
+#moteurDeRecherche form button.bouton {
+    display:inline-block;
+    margin:0;
+    padding:0;
+    white-space:nowrap;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    border:none;
     background:none;
     font-size:13px;
     font-weight:bold;
 }
 
-#moteurDeRecherche form button.bouton span { 
-    position:relative; 
-    float:left; 
-    padding:0 0 0 8px;        /* Largeur du côté gauche */ 
+#moteurDeRecherche form button.bouton span {
+    position:relative;
+    float:left;
+    padding:0 0 0 8px;        /* Largeur du côté gauche */
     margin:0;
     vertical-align:middle;
     background-color:#00529a;
@@ -2331,7 +2310,7 @@ display:none;
     height:18px;
     line-height:18px; /* Alignement vertical du texte et largeur du côté droit*/
 }
-    
+
 /* Moyens de paiement
 -------------------------------------------------------- */
 
@@ -2345,7 +2324,7 @@ display:none;
 .moyensDePaiement h4 {
     margin:32px 0 0 0;
     float:left;
- 
+
 }
 
 .moyensDePaiement ul, .moyensDePaiement ul li {
@@ -2357,14 +2336,11 @@ display:none;
 
 /* Formulaire
 -------------------------------------------------------- */
-#contact{
-    margin:20px 0 0 10px;
-
-}
+#contact{ margin:20px 0 0 10px; }
 #formulaire{
     float:left;
+    padding: 0;
     width:450px;
-    padding:0 0px 0 0px;    
 }
 #contact h1{
     font-size:18px;
@@ -2397,12 +2373,12 @@ display:none;
 }
 #contact .fieldset input:focus{
         border:2px solid #0081CA;
-        
+
 }
 
 #contact textarea{
     border:2px solid #E1E1E1;
-    border-radius: 4px; 
+    border-radius: 4px;
     height:120px;
     width:180px;
 
@@ -2422,7 +2398,7 @@ display:none;
 .colonneSubmit input{
     width:180px;
     border:none;
-    border-radius: 4px; 
+    border-radius: 4px;
     color:#fff;
     background:#0081CA;
 }
@@ -2460,8 +2436,8 @@ background:#20A2E7;
 }
 iframe.FbLike{
     margin:7px 0 0 2px;
-    border:none; 
-    overflow:hidden; 
+    border:none;
+    overflow:hidden;
     width:86px;
     height:21px;
 }
