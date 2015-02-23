@@ -2,67 +2,65 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-	#INCLURE "template/meta.html"
-	#INCLURE "template/js.html"
+		#INCLURE "template/meta.html"
+		#INCLURE "template/js.html"
+	</head>
+	<body>
 
-</head>
-<body>
-	
-<div id="global">
-<div id="wrapper">
-	<div id="subwrapper">
-	#INCLURE "template/entete.html"
-		<div id="corps">
-			<THELIA_cmd type="COMMANDE" ref="#COMMANDE_REF" client="#CLIENT_ID">
-			<h2 class="titre-special">D&eacute;tail de la commande N&deg;#REF </h2>
-			<THELIA_verifpay type="COMMANDE" ref="#COMMANDE_REF" statut="paye">					
-			<h3>N&deg; de facture : #FACTURE / Date : #DATE</h3>
-			</THELIA_verifpay>
-			<table class="table-responsive" width="100%" border="0" cellspacing="0" cellpadding="5">
-				<tr class="panier-top">
-					<th>Produit et r&eacute;f&eacute;rence</th>
-    				<th align="center">Prix unitaire </th>
-   				  <th align="center">Quantit&eacute;</th>
-				  <th align="center">Total</th>
-			  </tr>
-				<THELIA_venteprod type="VENTEPROD" commande="#ID">
-				<tr>
-					<td class="ligne">#TITRE - #REF </td>
-    				<td align="center" class="ligne">#PRIXU</td>
-   				  <td align="center" class="ligne">#QUANTITE</td>
-				  <td align="center" class="ligne">#TOTALPROD</td>
-				</tr>
-				</THELIA_venteprod>
-				<tr>
-					<th colspan="3">Total:</th>
-    				<th align="center">#TOTALCMD</th>
-		  	  </tr>
-				<tr>
-					<td colspan="3" class="ligne">Remise : </td>
-    				<td align="center" class="ligne">#REMISE</td>
-			  </tr>
-				<tr>
-					<td colspan="3">Frais de livraison  : </td>
-    				<td align="center">#PORT</td>
-			  </tr>
-                <tr>
-					<th colspan="3">Total : </th>
-					<th align="center" class="total">#TOTCMDPORT</th>
-			  </tr>
-			</table>
-			<h3>Statut : #STATUT</h3>
-            <THELIA_verifpay type="COMMANDE" ref="#COMMANDE_REF" statut="paye">			 
-            <a href="client/pdf/facture.php?ref=#REF">Visualiser la facture au format PDF </a>
-            </THELIA_verifpay>				            
-            <div class="queFaire">
-				<a class="bouton" href="#URLPREC"><span><span>Page pr&eacute;c&eacute;dente</span></span></a>
+		<div id="global">
+			<div id="wrapper">
+				<div id="subwrapper">
+					#INCLURE "template/entete.html"
+					<div id="corps">
+						<THELIA_cmd type="COMMANDE" ref="#COMMANDE_REF" client="#CLIENT_ID">
+							<h2 class="titre-special">D&eacute;tail de la commande N&deg;#REF </h2>
+							<THELIA_verifpay type="COMMANDE" ref="#COMMANDE_REF" statut="paye">
+								<h3>N&deg; de facture : #FACTURE / Date : #DATE</h3>
+							</THELIA_verifpay>
+							<table class="table-responsive" width="100%" border="0" cellspacing="0" cellpadding="5">
+								<tr class="panier-top">
+									<th>Produit et r&eacute;f&eacute;rence</th>
+									<th align="center">Prix unitaire </th>
+									<th align="center">Quantit&eacute;</th>
+									<th align="center">Total</th>
+								</tr>
+								<THELIA_venteprod type="VENTEPROD" commande="#ID">
+									<tr>
+										<td class="ligne">#TITRE - #REF </td>
+										<td align="center" class="ligne">#PRIXU</td>
+										<td align="center" class="ligne">#QUANTITE</td>
+										<td align="center" class="ligne">#TOTALPROD</td>
+									</tr>
+								</THELIA_venteprod>
+								<tr>
+									<th colspan="3">Total:</th>
+									<th align="center">#TOTALCMD</th>
+								</tr>
+								<tr>
+									<td colspan="3" class="ligne">Remise : </td>
+									<td align="center" class="ligne">#REMISE</td>
+								</tr>
+								<tr>
+									<td colspan="3">Frais de livraison  : </td>
+									<td align="center">#PORT</td>
+								</tr>
+								<tr>
+									<th colspan="3">Total : </th>
+									<th align="center" class="total">#TOTCMDPORT</th>
+								</tr>
+							</table>
+							<h3>Statut : #STATUT</h3>
+							<THELIA_verifpay type="COMMANDE" ref="#COMMANDE_REF" statut="paye">
+								<a href="client/pdf/facture.php?ref=#REF">Visualiser la facture au format PDF </a>
+							</THELIA_verifpay>
+							<div class="queFaire">
+								<a class="btn-retour" href="#URLPREC"><span><span>Page pr&eacute;c&eacute;dente</span></span></a>
+							</div>
+						</THELIA_cmd>
+					</div>
+				</div>
 			</div>
-            </THELIA_cmd>
-	</div>
-</div>
-	</div>
-		#INCLURE "template/pied.html"
-		 
-</div>
-</body>
+			#INCLURE "template/pied.html"
+		</div>
+	</body>
 </html>

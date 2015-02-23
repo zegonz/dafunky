@@ -55,7 +55,7 @@
  * =================================================================*/
 .page-connexion #connexion .bouton,
 .page-connexion #nouveau .bouton { margin: 0; width: 100%; }
-#contenu form p label { display: block !important; width: 100% !important; }
+#contenu form p label { display: block !important; width: 100% !important; text-align: left; }
 #contenu form p input,
 #contenu form p select,
 #contenu form p textarea { width: 100% !important; float: none !important; }
@@ -67,3 +67,17 @@
 .adresseDeLivraison { float: none; width: 100%; clear:both; }
 .choixDeLaLivraison .choisir { display: block; float: none; }
 .mode-livraison-recap .livraison-info { width: 37%; }
+
+/* ===================================================================
+ * PAGE SPECIALE
+ * =================================================================*/
+.illu { width: 100%; text-align: center; margin-bottom: 15px; }
+.illu a { height:auto; max-width: 100%; }
+.sommaireDescription { width: 100%; }
+#socialLink { clear: both; float: none; margin-bottom: 15px; }
+
+/* Formulaire */
+#formulaire { float: none; clear: both; width: auto; }
+#formulaire .colonneSubmit .bouton { width: 100%; margin-left: 0; }
+#formulaire .obligatoire { margin: 0; }
+#coordonnee { clear: both; float: none; width: 100%; }

@@ -198,3 +198,10 @@ table th { white-space: nowrap; }
 .page-connexion  #contenu form p textarea { width: 45%; }
 .page-connexion #connexion .bouton,
 .page-connexion #nouveau .bouton { margin-left: 30.5%; width: 45%; }
+
+/* ===================================================================
+ * PAGE SPECIALE
+ * =================================================================*/
+
+.illu a{ height:auto; }
+#articleContenu { padding: 0; }
