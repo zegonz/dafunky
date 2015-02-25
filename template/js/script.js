@@ -14,18 +14,19 @@ $(document).ready(function(){
             0); // si vous souhaitez retarder la disparition, c'est ici
     });
 
-    //Menu principal
-    $('#menuAccueil li ul').hide();
-    $('#menuAccueil ul li').hover(function(){
-        // open current menu if it's closed
-        $(this).find('a:first').addClass('parentHover');
-        $('ul', this).slideDown(200);
-
-    },
-    function(){
-         $('ul', this).slideUp(300);
-         $(this).find('a:first').removeClass('parentHover');
-    });
+    //Menu principal PC
+    if (screen.width > 800) {
+        $('#menu li ul').hide();
+        $('#menu ul li').hover(function(){
+            // open current menu if it's closed
+            $(this).find('a:first').addClass('hover');
+            $('ul', this).slideDown(200);
+        },
+        function(){
+             $('ul', this).slideUp(300);
+             $(this).find('a:first').removeClass('hover');
+        });
+    }
 
     //Menu mobile
     if (screen.width <= 800) {
