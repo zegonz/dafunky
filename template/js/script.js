@@ -59,7 +59,6 @@ $(document).ready(function(){
                 $('#globalWrapper').removeClass('menu-open');
             }
         });
-
     }
 
  });

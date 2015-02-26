@@ -856,6 +856,7 @@ margin:0 0 0 20px;
     height: 345px;
     line-height: 345px;
     vertical-align: middle;
+    border-radius: 2px;
 }
 .blocProduit a.grandeImage:hover { opacity: 0.8; }
 .blocProduit a.grandeImage img { width: 100%; }
@@ -875,16 +876,18 @@ margin:0 0 0 20px;
 }
 
 .blocProduit ul.vignettes li a {
-    border: 1px solid #bbbdbf;
-    margin:0 1px 1px 0;
-    height: 65px;
-    width:75px;
-    float:left;
-    display:inline;
     background-color:#fff;
+    border-radius: 2px;
+    border: 1px solid #bbbdbf;
+    display:inline;
+    float:left;
+    height: 65px;
+    margin:0 1px 1px 0;
     overflow: hidden;
+    width:75px;
 }
 .blocProduit ul.vignettes li a:hover { border: 1px solid #88888b; }
+.blocProduit ul.vignettes li img { border-radius: 2px; }
 #descRub{
     float:left;
     margin:5px 0 0 0px;
@@ -904,7 +907,10 @@ margin:0 0 0 20px;
 
 .ancienPrix{
     float:left;
+    color: #0d7fc0;
+    text-decoration: line-through;
     margin:10px 0 10px 10px;
+    font-size: 14px;
 }
 
 .blocProduit .introProduit h2{
@@ -979,12 +985,6 @@ margin:0 0 0 20px;
     width:345px;
 }
 
-.blocProduit .telechargements {
-    float: left;
-    margin: 0 0 20px 0;
-    width:345px;
-}
-
 .blocProduit .contenusAssocies h3, .blocProduit .telechargements h3 {
     color:#515053;
     display:block;
@@ -1043,7 +1043,7 @@ input.acheter{
 }
 
 input.acheter:hover{  background-color: #111; }
-
+.avec-promo input.acheter { clear: both; }
 .epuise{
     font-size:14px;
     color:#0081CA;
