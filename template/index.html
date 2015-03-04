@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 #INCLURE "template/meta.html"
@@ -8,8 +8,8 @@
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
             singleItem : true,
-            pagination: true
-
+            pagination: true,
+            autoPlay: true,
         });
     });
 </script>
@@ -20,48 +20,72 @@
         #INCLURE "template/entete.html"
         <div id="corps">
                 <div class="owl-carousel">
-                       <THELIA_DOSSIER type="DOSSIER" id="3">
-                        <THELIA_SLIDER type="CONTENU" id="13">
-                            <THELIA_IMAGE type="IMAGE" contenu="#ID">
-                                <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog"/>
+                   <THELIA_DOSSIER type="DOSSIER" id="3">
+                       <THELIA_SLIDER type="CONTENU" id="13">
+                            <THELIA_IMAGE type="IMAGE" contenu="#ID" largeur="960">
+                                <img src="#IMAGE" alt="#TITRE" title="#TITRE" class="imgSommaireBlog">
                             </THELIA_IMAGE>
-                    </THELIA_SLIDER>
-               </THELIA_DOSSIER>
-                </div>
-                <ul class="vignette-accueil">
-                    <THELIA_DOSSIER type="DOSSIER" id="3">
-                        <THELIA_VIGNETTE type="CONTENU" id="17">
-                            <THELIA_IMAGE type="IMAGE" num="2" contenu="#ID">
-                                <li>
-                                    <img src="#IMAGE" alt="#TITRE" title="#TITRE">
-                                    <span></span>
-                                </li>
-                            </THELIA_IMAGE>
-                        </THELIA_VIGNETTE>
+                        </THELIA_SLIDER>
                     </THELIA_DOSSIER>
+                </div>
+                <div class="vignette-accueil">
+                    
+                    <div class="col-one bloc-vignette">
+                        <THELIA_CONTENU type="CONTENU" dossier="4" deb="0" num="2">
+                            #SET{idProduit, #RUBRIQUE_ID}
+                            <div class="item">
+                                <THELIA_cont type="CONTENUASSOC" contenu="#ID">
+                                    <THELIA_PRODUIT type="RUBRIQUE" id="#OBJET">
+                                        #SET{urlProduit,#URL}
+                                    </THELIA_PRODUIT> 
+                                </THELIA_cont>
+                                <a href="#GET{urlProduit}">
+                                    <T_IMAGE>
+                                        <THELIA_IMAGE type="IMAGE" num="1" contenu="#ID" largeur="313">
+                                            <img src="#IMAGE" alt="#CONTTITRE" title="#CONTTITRE" />
+                                        </THELIA_IMAGE>
+                                    </T_IMAGE>
+                                        
+                                    <//T_IMAGE>
+                                    <h2>#TITRE</h2>
+                                </a>
+                            </div>
+                        </THELIA_CONTENU>
+                    </div>
 
                     <THELIA_PRODENAVANT type="PRODUIT" rubrique="12" aleatoire="1" num="1" nocache="1">
-                        <li>
-                            <h2>#TITRE</h2>
-                            <THELIA_IMAGE type="IMAGE" num="1" produit="#ID" hauteur="200" largeur="260">
-                                <img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"/>
-                            </THELIA_IMAGE>
-                            <span class="prixProduit">#PRIX &euro; </span>
-                        </li>
+                        <div class="col-two bloc-produit">
+                            <a href="#URL">
+                                <h2>#TITRE</h2>
+                                <THELIA_IMAGE type="IMAGE" num="1" produit="#ID" largeur="280">
+                                    <img src="#IMAGE" alt="#PRODTITRE" title="#PRODTITRE"/>
+                                </THELIA_IMAGE>
+                                <!-- <span class="prixProduit">#PRIX &euro; </span> -->
+                            </a>
+                        </div>
                      </THELIA_PRODENAVANT>
 
-                      <THELIA_DOSSIER type="DOSSIER" id="3">
-                        <THELIA_VIGNETTE type="CONTENU" id="17">
-                            <THELIA_IMAGE type="IMAGE" deb="3" num="2" contenu="#ID">
-                                <li>
-                                    <img src="#IMAGE" alt="#TITRE" title="#TITRE">
-                                    <span></span>
-                                </li>
-                            </THELIA_IMAGE>
-                        </THELIA_VIGNETTE>
-                    </THELIA_DOSSIER>
-
-
+                     <div class="col-three bloc-vignette">
+                        <THELIA_CONTENU type="CONTENU" dossier="4" deb="2" num="2">
+                            #SET{idProduit, #RUBRIQUE_ID}
+                            <div class="item">
+                                <THELIA_cont type="CONTENUASSOC" contenu="#ID">
+                                    <THELIA_PRODUIT type="RUBRIQUE" id="#OBJET">
+                                        #SET{urlProduit,#URL}
+                                    </THELIA_PRODUIT> 
+                                </THELIA_cont>
+                                <a href="#GET{urlProduit}">
+                                    <T_IMAGE>
+                                        <THELIA_IMAGE type="IMAGE" num="1" contenu="#ID" largeur="313">
+                                            <img src="#IMAGE" alt="#CONTTITRE" title="#CONTTITRE" />
+                                        </THELIA_IMAGE>
+                                    </T_IMAGE>
+                                    <//T_IMAGE>
+                                    <h2>#TITRE</h2>
+                                </a>
+                            </div>
+                        </THELIA_CONTENU>
+                    </div>
                         <!-- <li class="margin"><a href="#VARIABLE(urlsite)/casquettes_14_.html"><img src="template/images/vignette-casquette.jpg" width="312" height="187" alt="Base-ball cap" /></a>
                         <div class="survol"><h2>Base-ball cap</h2></div></li>
 
@@ -78,7 +102,9 @@
                         <div class="survol"><h2>LASONIC I931 BT</h2></div></li>
                         <li><a href="#VARIABLE(urlsite)/art-toys_2_.html"><img src="template/images/vignette-popobe.jpg" width="312" height="187" alt="Popobe bear" /></a>
                         <div class="survol"><h2>Popobe bear</h2></div></li> -->
-               </ul>
+               </div>
+    
+
          </div>
     </div>
     #INCLURE "template/pied.html"
