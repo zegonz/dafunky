@@ -17,7 +17,7 @@ $(document).ready(function(){
     //Menu principal PC
     if (screen.width > 800) {
         $('#menu li ul').hide();
-        $('#menu ul li').hover(function(){
+        $('#menu ul .nav1').hover(function(){
             // open current menu if it's closed
             $(this).find('a:first').addClass('hover');
             $('ul', this).slideDown(200);

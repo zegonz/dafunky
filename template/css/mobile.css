@@ -39,6 +39,8 @@
 /* ===================================================================
  * TUNNEL
  * =================================================================*/
+.queFaire a.btn-retour { display: block; float: none; margin-bottom: 15px; }
+.queFaire a.btn-valider { display: block; float: none; }
 .page-connexion #contenu label {
 	display: block;
 	float: none;

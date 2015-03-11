@@ -1,6 +1,6 @@
 #PARAM_FOND_reset=1
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
 	#INCLURE "template/meta.html"
 	#INCLURE "template/js.html"
@@ -9,20 +9,16 @@
 	
 <div id="global" class="sansAriane">
 <div id="wrapper">
-	<div id="subwrapper">
 	#INCLURE "template/entete.html"
-		#INCLURE"template/menu.html"
-         
-		 
-		<div id="contenu">
+		<div id="contenu" class="page-merci">
 			<h1 class="titre-bleu">Merci !</h1>
 			<p><strong>Notre boutique vous remercie pour votre achat.</strong></p>
+          	<p><strong>Vous pouvez nous suivre sur facebook :</strong><iframe class="" src="http://www.facebook.com/plugins/like.php?app_id=244702505541790&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fdafunkyplace%2F240522072626144&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true"></iframe></p>
           	<p><strong>Bonne navigation et 	&agrave; bientot.</strong></p>
 			<div class="queFaire">
-				<a class="bouton" href="#URLSOMMAIRE"><span>Retour en page d'accueil</span></a>
+				<a class="bouton btn-retour" href="#URLSOMMAIRE"><span>Retour en page d'accueil</span></a>
 			</div>
 		</div>
-	</div>
     </div>
 	#INCLURE "template/pied.html"
 </div>

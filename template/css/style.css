@@ -152,8 +152,9 @@ table th {
     display: inline-block;
     opacity: 1;
     transition: opacity 300ms ease-out;
+    padding: 0;
 }
-.btn-delete:hover { opacity: 0.8; }
+.btn-delete:hover { background-color: transparent; opacity: 0.8; }
 
 /* Formulaires
 -------------------------------------------------------- */
@@ -479,9 +480,9 @@ menuaccueil
     padding:5px 10px;
     text-align:center;
 }
-#menu ul li.selected > a,
-#menu ul li a.hover,
-#menu ul li a:hover {
+#menu > ul > li.selected > a,
+#menu > ul > li > a:hover,
+#menu ul li a.hover {
     text-decoration:none;
     background: #111;
     color:#fff;
@@ -514,19 +515,13 @@ menuaccueil
 }
 
 #menu ul li ul li a {
-    background:url(../images/puce_menutophover2.png) no-repeat 0px 10px;
+    background:url(../images/puce_menutophover2.png) no-repeat 0px 12px;
     border: none;
     color:#fff;
     text-align:left;
     text-transform:none;
 }
-
-#menu ul li ul li a:hover {
-    background:url(../images/puce_menutophover2.png) no-repeat 0px 10px;
-    text-transform:none;
-    color:#fff;
-}
-#menu ul li a.selection { color:#fff; background: #111; }
+#menu ul li ul li a:hover { color: #0d7fc0; }
 
 .menu-lateral { display: none; }
 
@@ -695,7 +690,8 @@ a.titreDossierFooter{
     height:21px;
 }
 #copyright {
-    margin:10px 0 0 0;
+    clear: both;
+    margin:30px 0 0 0;
     text-align:center;
 }
 #copyright span{
@@ -808,17 +804,32 @@ margin:0 0 0 20px;
 .vignette-accueil .item { position: relative; }
 .vignette-accueil .item:first-child { margin-bottom: 15px; }
 .vignette-accueil h2 {
-    background-color: rgba(13,127,192,0.8);
+    background-color: #0d7fc0;
+    background: url(../images/fleche-jaune.png) 98% 50% no-repeat rgba(13,127,192,0.8);
+    background-size: 14px auto;
     bottom: 0;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: normal;
     line-height: 1.2;
-    padding: 2px 10px;
+    padding: 3px 25px 3px 10px;
     position: absolute;
     width: 100%;
 }
 .vignette-accueil .bloc-produit { position: relative; vertical-align: middle; }
+.vignette-accueil .bloc-produit a:after { 
+    background: url(../images/etiquette-buy.png) no-repeat;
+    background-size: 75% 75%;   
+    content: ""; 
+    height: 58px;
+    position: absolute; 
+    right: 0;
+    top: 10px;
+    width: 58px;
+    opacity: 1;
+    transition: opacity 500ms ease-out;
+}
+.vignette-accueil .bloc-produit a:hover:after { opacity: 0.8; }
 .vignette-accueil .bloc-produit h2 { text-align: left; }
 
 /* ===================================================================
@@ -1416,6 +1427,10 @@ a.modifierOuAjouter:hover {
     font-size: 18px;
     margin-left: 20px;
 }
+
+/* page merci retour paiement
+-------------------------------------------------------- */
+.page-merci .btn-retour { margin-top: 30px; }
 
 /* ===================================================================
  * COMPTE
@@ -2055,7 +2070,8 @@ iframe.FbLike{
 -------------------------------------------------------- */
 .etiquettePromo{
     position:absolute;
-    top:10px;
+    top:0;
+    left: -10px;
 }
 
 
@@ -2226,16 +2242,9 @@ iframe.FbLike{
 
 
 .infoProdRubrique .prixProduit{
-font-weight:bold;
+    font-weight:bold;
 }
-/*
-.barre{
-    height:2px;
-    background:#bbbdbf;
-    width:100%;
-    float:left;
-}
-*/
+.infoProdRubrique .prix-barre { text-decoration: line-through; font-size: 11px; }
 
 /* Nombre de pages
 -------------------------------------------------------- */
